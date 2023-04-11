@@ -47,7 +47,7 @@ theme = createTheme(theme, {
         h1: {
             // fontFamily: "Raleway",
             // fontFamily: "EB Garamond",
-            fontFamily: "Ornamental",
+            fontFamily: "FancyPants",
             color: theme.palette.custom.primary,
             // color: theme.palette.primary.off,
             // fontWeight: "400",

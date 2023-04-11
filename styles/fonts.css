@@ -8,6 +8,11 @@
     src: url("/fonts/ExtraOrnamentalNo2.ttf") format("truetype");
     font-weight: 1 999;
 }
+@font-face {
+    font-family: "FancyPants";
+    src: url("/fonts/FancyPantsNF.ttf") format("truetype");
+    font-weight: 1 999;
+}
 
 @font-face {
     font-family: "Playfair Display";
