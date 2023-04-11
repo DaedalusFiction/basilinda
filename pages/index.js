@@ -20,6 +20,8 @@ import theme from "../styles/themes/theme";
 import MiscPreview from "../components/previews/MiscPreview";
 import SidebarInfo from "../components/layout/SidebarInfo";
 import OutandAboutPreview from "../components/previews/OutandAboutPreview";
+import SizedImage from "../components/general/SizedImage";
+import { hero } from "../siteInfo";
 
 export default function Home() {
     return (
@@ -36,6 +38,7 @@ export default function Home() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    flexDirection: "column",
                 }}
             >
                 <Box>
@@ -48,6 +51,20 @@ export default function Home() {
                     >
                         Basilinda
                     </Typography>
+                    <Box
+                        sx={{
+                            transform: "scaleY(1)",
+                            display: { xs: "none", md: "flex" },
+                            justifyContent: "center",
+                            marginBottom: ".5rem",
+                        }}
+                    >
+                        <SizedImage
+                            image={hero.imageTwo}
+                            height={50}
+                            width={125}
+                        />
+                    </Box>
                     <Typography
                         variant="h3"
                         sx={{

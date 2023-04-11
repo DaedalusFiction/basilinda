@@ -16,6 +16,17 @@ const header = {
     },
 };
 
+const hero = {
+    imageOne: {
+        url: "/images/flourish2.svg",
+        alt: "decorative flourish",
+    },
+    imageTwo: {
+        url: "/images/flourish3.svg",
+        alt: "decorative flourish",
+    },
+};
+
 const uploadCategories = [
     {
         name: "misc",
@@ -409,6 +420,7 @@ const pages = [
 ];
 
 export {
+    hero,
     siteName,
     pages,
     navbar,
