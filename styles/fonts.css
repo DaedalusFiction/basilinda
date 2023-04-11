@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+    font-weight: 1 999;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "EB Garamond";
+    src: url("/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "EB Garamond Italic";
+    src: url("/fonts/EBGaramond-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "Anton";
+    src: url("/fonts/Anton-Regular.ttf") format("truetype");
+    font-weight: 1 999;
+}
+
+.color-test {
+    color: #f7d195;
+    color: rgb(255, 90, 95);
+}
