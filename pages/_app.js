@@ -38,9 +38,7 @@ const MyApp = (props) => {
                     }}
                 />
 
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <Component {...pageProps} />
             </ThemeProvider>
         </CacheProvider>
     );

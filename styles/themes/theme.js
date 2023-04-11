@@ -46,13 +46,14 @@ theme = createTheme(theme, {
     typography: {
         h1: {
             // fontFamily: "Raleway",
-            fontFamily: "EB Garamond",
+            // fontFamily: "EB Garamond",
+            fontFamily: "Ornamental",
             color: theme.palette.custom.primary,
             // color: theme.palette.primary.off,
-            fontWeight: "400",
-            lineHeight: ".85em",
+            // fontWeight: "400",
+            // lineHeight: ".85em",
             fontSize: "clamp(3.5rem, 5vw, 7rem)",
-            letterSpacing: ".025em",
+            // letterSpacing: ".025em",
         },
         h2: {
             color: theme.palette.custom.primary,
