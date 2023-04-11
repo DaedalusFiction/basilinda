@@ -21,7 +21,7 @@ import MiscPreview from "../components/previews/MiscPreview";
 import SidebarInfo from "../components/layout/SidebarInfo";
 import OutandAboutPreview from "../components/previews/OutandAboutPreview";
 
-export default function Home({ misc, outandabout, advice, bestof, opinions }) {
+export default function Home() {
     return (
         <Container maxWidth="xl" disableGutters>
             <Meta />
@@ -63,75 +63,75 @@ export default function Home({ misc, outandabout, advice, bestof, opinions }) {
     );
 }
 
-export const getServerSideProps = async (context) => {
-    const publicationsRef = collection(db, "publications");
+// export const getServerSideProps = async (context) => {
+//     const publicationsRef = collection(db, "publications");
 
-    const miscQuery = query(
-        publicationsRef,
-        where("categories", "array-contains", "misc"),
-        orderBy("dateUploaded", "desc"),
-        limit(1)
-    );
-    const outandaboutQuery = query(
-        collection(db, "outandabout"),
-        orderBy("dateUploaded", "desc"),
-        limit(2)
-    );
-    const adviceQuery = query(
-        publicationsRef,
-        where("categories", "array-contains", "advice"),
+//     const miscQuery = query(
+//         publicationsRef,
+//         where("categories", "array-contains", "misc"),
+//         orderBy("dateUploaded", "desc"),
+//         limit(1)
+//     );
+//     const outandaboutQuery = query(
+//         collection(db, "outandabout"),
+//         orderBy("dateUploaded", "desc"),
+//         limit(2)
+//     );
+//     const adviceQuery = query(
+//         publicationsRef,
+//         where("categories", "array-contains", "advice"),
 
-        orderBy("dateUploaded", "desc"),
-        limit(5)
-    );
-    const bestofQuery = query(
-        publicationsRef,
-        where("categories", "array-contains", "bestof"),
+//         orderBy("dateUploaded", "desc"),
+//         limit(5)
+//     );
+//     const bestofQuery = query(
+//         publicationsRef,
+//         where("categories", "array-contains", "bestof"),
 
-        orderBy("dateUploaded", "desc"),
-        limit(4)
-    );
-    const opinionsQuery = query(
-        publicationsRef,
-        where("categories", "array-contains", "opinions"),
+//         orderBy("dateUploaded", "desc"),
+//         limit(4)
+//     );
+//     const opinionsQuery = query(
+//         publicationsRef,
+//         where("categories", "array-contains", "opinions"),
 
-        orderBy("dateUploaded", "desc"),
-        limit(2)
-    );
+//         orderBy("dateUploaded", "desc"),
+//         limit(2)
+//     );
 
-    const miscSnapshot = await getDocs(miscQuery);
-    const outandaboutSnapshot = await getDocs(outandaboutQuery);
-    const adviceSnapshot = await getDocs(adviceQuery);
-    const bestofSnapshot = await getDocs(bestofQuery);
-    const opinionsSnapshot = await getDocs(opinionsQuery);
-    let misc = [];
-    miscSnapshot.docs.forEach((doc, index) => {
-        misc = [...misc, doc.data()];
-    });
-    let outandabout = [];
-    outandaboutSnapshot.docs.forEach((doc, index) => {
-        outandabout = [...outandabout, doc.data()];
-    });
-    let advice = [];
-    adviceSnapshot.docs.forEach((doc, index) => {
-        advice = [...advice, doc.data()];
-    });
-    let bestof = [];
-    bestofSnapshot.docs.forEach((doc, index) => {
-        bestof = [...bestof, doc.data()];
-    });
-    let opinions = [];
-    opinionsSnapshot.docs.forEach((doc, index) => {
-        opinions = [...opinions, doc.data()];
-    });
+//     const miscSnapshot = await getDocs(miscQuery);
+//     const outandaboutSnapshot = await getDocs(outandaboutQuery);
+//     const adviceSnapshot = await getDocs(adviceQuery);
+//     const bestofSnapshot = await getDocs(bestofQuery);
+//     const opinionsSnapshot = await getDocs(opinionsQuery);
+//     let misc = [];
+//     miscSnapshot.docs.forEach((doc, index) => {
+//         misc = [...misc, doc.data()];
+//     });
+//     let outandabout = [];
+//     outandaboutSnapshot.docs.forEach((doc, index) => {
+//         outandabout = [...outandabout, doc.data()];
+//     });
+//     let advice = [];
+//     adviceSnapshot.docs.forEach((doc, index) => {
+//         advice = [...advice, doc.data()];
+//     });
+//     let bestof = [];
+//     bestofSnapshot.docs.forEach((doc, index) => {
+//         bestof = [...bestof, doc.data()];
+//     });
+//     let opinions = [];
+//     opinionsSnapshot.docs.forEach((doc, index) => {
+//         opinions = [...opinions, doc.data()];
+//     });
 
-    return {
-        props: {
-            misc,
-            outandabout,
-            advice,
-            bestof,
-            opinions,
-        },
-    };
-};
+//     return {
+//         props: {
+//             misc,
+//             outandabout,
+//             advice,
+//             bestof,
+//             opinions,
+//         },
+//     };
+// };
