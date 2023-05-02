@@ -388,16 +388,16 @@ const leftPages = [
     },
     {
         name: "Visual Art",
-        nameAlt: "The Board",
+        nameAlt: "Soldiers",
         href: "/publications/visual",
         subPages: [],
     },
 ];
 const rightPages = [
     {
-        name: "About",
+        name: "About Us",
         href: "/about",
-        nameAlt: "Soldiers",
+        nameAlt: "The Board",
         subPages: [
             { name: "Masthead", href: "/about/masthead" },
             {
@@ -407,7 +407,7 @@ const rightPages = [
         ],
     },
     {
-        name: "Submissions",
+        name: "Submit",
         nameAlt: "How to Play",
         href: "/submissions",
         subPages: [],
