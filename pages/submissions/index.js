@@ -32,25 +32,59 @@ const index = () => {
                                 </Typography>
                                 <br />
                                 <Typography>
-                                    We publish all things pertaining to
-                                    Charlottesville. That&rsquo;s it. We realize
-                                    that this is very open-ended, perhaps
-                                    frustratingly so, but if you want an idea of
-                                    what sorts of things we are looking for,
-                                    then just head over to the front page and
-                                    look around a bit.
+                                    Basilinda accepts submissions in the form of
+                                    visual art, poetry, songs, and letters from
+                                    everyone with a strong preference for
+                                    players who identify as women and/or
+                                    non-binary. We are committed to publishing
+                                    writers, musicians, and artists from diverse
+                                    backgrounds, encouraging both emerging and
+                                    established creators to submit their finest
+                                    works. We are most interested in works
+                                    showcasing subversion and strategy with
+                                    fine-tuned tactic. Which is to say, move
+                                    your idea-pieces like confident vectors
+                                    across the board&mdash;with magnitudes of
+                                    depth and unwavering direction&mdash;and you
+                                    may succeed in taking down the king.
+                                </Typography>
+                                <List>
+                                    <ListItem>
+                                        <ListItemText>
+                                            Poetry: Emphasis on Confessional
+                                            Poetry
+                                        </ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemText>Visual Art</ListItemText>
+                                    </ListItem>
+                                </List>
+                                <Typography variant="h4">
+                                    Tips & Tricks
+                                </Typography>
+                                <br />
+                                <Typography>
+                                    To win this round, play with a focus on
+                                    individuality, versatility, and victory. Be
+                                    less preoccupied with epiphany, and more so
+                                    with keeping us on our toes. Like we said,
+                                    this is a whole new level&mdash;so
+                                    don&rsquo;t be afraid to break the rules,
+                                    challenge our expectations and, most
+                                    importantly, make us <strong>think.</strong>
                                 </Typography>
                                 <br />
                                 <Typography variant="h4">
-                                    How to Submit:
+                                    How to Play
                                 </Typography>
+
                                 <List>
                                     <ListItem>
                                         <ListItemText>
                                             All submissions should be emailed
                                             directly to{" "}
                                             <strong>
-                                                CharlottesvilleCurbiture@gmail.com
+                                                teardownthismall@gmail.com
                                             </strong>
                                         </ListItemText>
                                     </ListItem>
@@ -76,7 +110,7 @@ const index = () => {
                                         <ListItemText>
                                             We accept simultaneous submissions
                                             but please let us know if you work
-                                            was accepted elsewhere
+                                            was accepted elsewhere.
                                         </ListItemText>
                                     </ListItem>
                                     <ListItem>

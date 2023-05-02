@@ -219,12 +219,12 @@ const outandaboutConfig = {
 };
 
 const subscribeConfig = {
-    website: "CURBITURE",
+    website: "Basilinda",
     category: "contact",
     fields: [{ name: "Email", type: "text", value: "" }],
 };
 const contactConfig = {
-    website: "CURBITURE",
+    website: "Basilinda",
     category: "contact",
     fields: [
         { name: "Name", type: "text", value: "" },
