@@ -276,6 +276,7 @@ const Navbar = () => {
                                                 transition: "300ms",
                                                 textAlign: "center",
                                                 cursor: "pointer",
+                                                letterSpacing: ".1em",
                                                 color: theme.palette.primary
                                                     .main,
                                                 "&:hover": {

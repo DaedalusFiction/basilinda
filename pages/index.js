@@ -54,14 +54,45 @@ export default function Home() {
                     <Box>
                         <Divider sx={{ margin: "1rem" }} />
                     </Box>
+                    <br />
                     <Typography
-                        variant="h3"
+                        variant="h4"
                         sx={{
                             textAlign: "center",
                             color: theme.palette.custom.dark,
                         }}
                     >
-                        Poetry and Visual Arts
+                        Poetry
+                    </Typography>
+                    <br />
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            textAlign: "center",
+                            color: theme.palette.custom.dark,
+                        }}
+                    >
+                        and
+                    </Typography>
+                    <br />
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            textAlign: "center",
+                            color: theme.palette.custom.dark,
+                        }}
+                    >
+                        Visual
+                    </Typography>
+                    <br />
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            textAlign: "center",
+                            color: theme.palette.custom.dark,
+                        }}
+                    >
+                        Arts
                     </Typography>
                 </Box>
             </Box>
