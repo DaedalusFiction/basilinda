@@ -49,7 +49,7 @@ export default function Home() {
                             color: theme.palette.custom.dark,
                         }}
                     >
-                        A Queer and Feminist Journal
+                        A Queer & Feminist Journal
                     </Typography>
                     <Box>
                         <Divider sx={{ margin: "1rem" }} />

@@ -35,6 +35,21 @@
     src: url("/fonts/Anton-Regular.ttf") format("truetype");
     font-weight: 1 999;
 }
+@font-face {
+    font-family: "Cormorant";
+    src: url("/fonts/cormorant.ttf") format("truetype");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "Pluton";
+    src: url("/fonts/pluton.woff") format("woff");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "PlutonItalic";
+    src: url("/fonts/plutonItalic.woff2") format("woff2");
+    font-weight: 1 999;
+}
 
 .color-test {
     color: #f7d195;

@@ -16,7 +16,6 @@ const PageLayout = ({ name, children }) => {
                         sx={{
                             textAlign: "center",
                             textTransform: "uppercase",
-                            fontFamily: "Anton",
                         }}
                     >
                         {name}

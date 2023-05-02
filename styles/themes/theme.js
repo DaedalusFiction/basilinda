@@ -34,6 +34,10 @@ let theme = createTheme({
             secondaryMuted: "#cacaca",
         },
     },
+    fonts: {
+        primary: "Raleway",
+        secondary: "Cormorant",
+    },
 });
 
 theme = createTheme(theme, {
@@ -47,18 +51,18 @@ theme = createTheme(theme, {
     typography: {
         h1: {
             // fontFamily: "Raleway",
-            // fontFamily: "EB Garamond",
-            fontFamily: "FancyPants",
+            // fontFamily: theme.fonts.secondary,
+            fontFamily: theme.fonts.secondary,
             color: theme.palette.custom.primary,
             // color: theme.palette.primary.off,
-            // fontWeight: "400",
+            fontWeight: "600",
             // lineHeight: ".85em",
             fontSize: "clamp(3rem, 3.75vw, 7rem)",
             // letterSpacing: ".025em",
         },
         h2: {
             color: theme.palette.custom.primary,
-            fontFamily: "EB Garamond",
+            fontFamily: theme.fonts.secondary,
             fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
             fontSize: "clamp(3rem, 4vw, 10rem)",
@@ -66,7 +70,7 @@ theme = createTheme(theme, {
         },
         h3: {
             color: theme.palette.custom.primary,
-            fontFamily: "EB Garamond",
+            fontFamily: theme.fonts.secondary,
             letterSpacing: ".025em",
             fontWeight: "400",
             fontSize: "1rem",
@@ -74,7 +78,7 @@ theme = createTheme(theme, {
         },
         h4: {
             color: theme.palette.custom.primary,
-            fontFamily: "EB Garamond",
+            fontFamily: theme.fonts.secondary,
             fontSize: "1.75rem",
             fontWeight: "400",
             lineHeight: "1.75rem",
@@ -82,7 +86,7 @@ theme = createTheme(theme, {
         },
         h5: {
             // color: theme.palette.custom.primary,
-            fontFamily: "EB Garamond",
+            fontFamily: theme.fonts.secondary,
             fontSize: "1rem",
             fontWeight: "600",
             // color: darkTheme.palette.custom.dark,
@@ -91,7 +95,7 @@ theme = createTheme(theme, {
             fontWeight: "500",
             fontSize: "1rem",
             fontFamily: "EB Garamond Italic",
-            // fontFamily: "EB Garamond",
+            // fontFamily: theme.fonts.secondary,
         },
 
         subtitle1: {
