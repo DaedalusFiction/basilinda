@@ -9,18 +9,38 @@ const index = () => {
     return (
         <PageLayout name="ABOUT US">
             <AboutNavbar />
-            <Container maxWidth="md">
+            <Container maxWidth="sm">
                 <Box className="section">
                     <Grid container>
                         <Grid item xs={12}>
                             <Typography>
-                                CURBITURE was formed as a venue for the editors
-                                and their friends to publish whatever they want,
-                                whenever they want. We publish the stuff we like
-                                to read and we do so while making as few
-                                apologies as possible. And just like the
-                                furniture you find on the curb, Curbiture might
-                                just be exactly what you&rsquo;re looking for.
+                                <em>Basilinda</em> is a journal centered at the
+                                junction of identity, strategy and mobility. We
+                                may be named after the 19th-century board game
+                                consisting of men, cannons, and captains, but
+                                that&rsquo;s not how we play here.
+                            </Typography>
+                            <br />
+                            <Typography>
+                                This version of Basilinda invites you to
+                                participate on a new level that didn&rsquo;t
+                                come in the box, because we didn&rsquo;t come in
+                                the box. Our pieces don&rsquo;t solely consist
+                                of cis white men and cannons, because our
+                                stories will never be cis white men&rsquo;s
+                                canons. No&mdash;playing on this echelon means
+                                to be a part of a broad and inclusive identity
+                                that is constantly evolving and thinking,
+                                shifting and persisting. Our rules are
+                                constantly changing, but this one must be
+                                followed:{" "}
+                            </Typography>
+                            <br />
+                            <Typography>
+                                <strong>
+                                    No misogynistic, homophobic, transphobic,
+                                    racist etc. shit
+                                </strong>
                             </Typography>
                         </Grid>
                     </Grid>

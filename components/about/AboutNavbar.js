@@ -1,6 +1,6 @@
 import { Box, Button, Link } from "@mui/material";
 import React from "react";
-import { pages } from "../../siteInfo";
+import { rightPages } from "../../siteInfo";
 
 const AboutNavbar = () => {
     return (
@@ -13,7 +13,7 @@ const AboutNavbar = () => {
             }}
         >
             {/* pages[2] returns About subpages from /siteinfo */}
-            {pages[5].subPages.map((subPage, index) => {
+            {rightPages[0].subPages.map((subPage, index) => {
                 return (
                     <Link
                         key={index}

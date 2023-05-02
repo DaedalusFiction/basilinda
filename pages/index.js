@@ -31,7 +31,7 @@ export default function Home() {
                 sx={{
                     height: "100%",
                     backgroundImage:
-                        "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/collage-background.webp)",
+                        "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
                     backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
                     height: "100vh",
@@ -43,27 +43,16 @@ export default function Home() {
             >
                 <Box>
                     <Typography
-                        variant="h1"
+                        variant="h2"
                         sx={{
                             textAlign: "center",
                             color: theme.palette.custom.dark,
                         }}
                     >
-                        Basilinda
+                        A Queer and Feminist Journal
                     </Typography>
-                    <Box
-                        sx={{
-                            transform: "scaleY(1)",
-                            display: { xs: "none", md: "flex" },
-                            justifyContent: "center",
-                            marginBottom: ".5rem",
-                        }}
-                    >
-                        <SizedImage
-                            image={hero.imageTwo}
-                            height={50}
-                            width={125}
-                        />
+                    <Box>
+                        <Divider sx={{ margin: "1rem" }} />
                     </Box>
                     <Typography
                         variant="h3"
@@ -72,7 +61,7 @@ export default function Home() {
                             color: theme.palette.custom.dark,
                         }}
                     >
-                        Coming Soon
+                        Poetry and Visual Arts
                     </Typography>
                 </Box>
             </Box>

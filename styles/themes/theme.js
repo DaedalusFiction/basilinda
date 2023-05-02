@@ -5,14 +5,15 @@ let theme = createTheme({
         mode: "light",
         primary: {
             // main: "#341a05", //Bistre
-            main: "#ff5a5f", //Bittersweet
+            main: "#c35747", //reddish
             // main: "#084C61",
             off: "#DB504A",
         },
         secondary: {
             // main: "#FFFBC3",
             // main: "#f4f1bb", //lemon chiffon
-            main: "#b7FFD8",
+            // main: "#b7FFD8",
+            main: "#aaa725", //yellowish
             // main: "#E3B505",
         },
         background: {
@@ -52,7 +53,7 @@ theme = createTheme(theme, {
             // color: theme.palette.primary.off,
             // fontWeight: "400",
             // lineHeight: ".85em",
-            fontSize: "clamp(3.5rem, 5vw, 7rem)",
+            fontSize: "clamp(3rem, 3.75vw, 7rem)",
             // letterSpacing: ".025em",
         },
         h2: {

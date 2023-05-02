@@ -1,4 +1,4 @@
-const siteName = "Curbiture";
+const siteName = "Basilinda";
 
 const navbar = {
     buttonOne: {
@@ -271,23 +271,23 @@ const leadProfile = {
 const secondaryProfiles = [
     {
         image: {
-            url: "/images/buffBec.webp",
-            alt: "Buff Bec",
+            url: "/images/davidBio.webp",
+            alt: "Sydney",
         },
-        name: "Buff Bec",
+        name: "Sydney",
         content: "Bruce is the greatest.",
     },
     {
         image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
-        name: "Owen Cash",
+        name: "Dave",
         content: "Owen likes to PARTY!",
     },
     {
         image: {
-            url: "/images/jamesBio.webp",
-            alt: "Kithis the Salient",
+            url: "/images/davidBio.webp",
+            alt: "Anthony",
         },
-        name: "Kithis the Salient",
+        name: "Anthony",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
     },
@@ -379,35 +379,25 @@ const imageSubmissionsConfig = {
     timeUploaded: new Date(),
 };
 
-const pages = [
+const leftPages = [
     {
-        name: "Misc",
-        href: "/publications/misc",
+        name: "Poetry",
+        href: "/publications/poetry",
+        nameAlt: "Canons",
         subPages: [],
     },
     {
-        name: "Best Of",
-        href: "/publications/bestof",
+        name: "Visual Art",
+        nameAlt: "The Board",
+        href: "/publications/visual",
         subPages: [],
     },
-    {
-        name: "Opinions",
-        href: "/publications/opinions",
-        subPages: [],
-    },
-    {
-        name: "Advice",
-        href: "/publications/advice",
-        subPages: [],
-    },
-    {
-        name: "Events",
-        href: "/events",
-        subPages: [],
-    },
+];
+const rightPages = [
     {
         name: "About",
         href: "/about",
+        nameAlt: "Soldiers",
         subPages: [
             { name: "Masthead", href: "/about/masthead" },
             {
@@ -416,13 +406,19 @@ const pages = [
             },
         ],
     },
-    { name: "Submissions", href: "/submissions", subPages: [] },
+    {
+        name: "Submissions",
+        nameAlt: "How to Play",
+        href: "/submissions",
+        subPages: [],
+    },
 ];
 
 export {
     hero,
     siteName,
-    pages,
+    leftPages,
+    rightPages,
     navbar,
     header,
     uploadCategories,

@@ -33,14 +33,6 @@ const Header = ({ light }) => {
                         <Link href="/">{siteName}</Link>
                     </Typography>
                 </Box>
-                <Link href={header.buttonOne.href}>
-                    <Button
-                        variant={header.buttonOne.variant}
-                        color={light ? "primary" : "secondary"}
-                    >
-                        {header.buttonOne.text}
-                    </Button>
-                </Link>
             </Box>
         </Container>
     );

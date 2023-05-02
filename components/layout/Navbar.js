@@ -11,8 +11,9 @@ import Link from "next/link";
 import theme from "../../styles/themes/theme";
 import { useEffect, useState } from "react";
 import { navigateToTop } from "../../utility/navigateToTop";
-import { pages, siteName, navbar } from "../../siteInfo";
+import { leftPages, navbar, rightPages } from "../../siteInfo";
 import { useRouter } from "next/router";
+import NavBarLinkAnimation from "../general/NavBarLinkAnimation";
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -134,7 +135,24 @@ const Navbar = () => {
                                         display: { xs: "block", lg: "none" },
                                     }}
                                 >
-                                    {pages.map((page, index) => {
+                                    {leftPages.map((page, index) => {
+                                        return (
+                                            <MenuItem
+                                                onClick={() => {
+                                                    navigateToTop();
+                                                    handleCloseNavMenu();
+                                                }}
+                                                key={index}
+                                            >
+                                                <Typography textAlign="center">
+                                                    <Link href={page.href}>
+                                                        {page.name}
+                                                    </Link>
+                                                </Typography>
+                                            </MenuItem>
+                                        );
+                                    })}
+                                    {rightPages.map((page, index) => {
                                         return (
                                             <MenuItem
                                                 onClick={() => {
@@ -196,14 +214,7 @@ const Navbar = () => {
                                                 color: logoColorSecondary,
                                             }}
                                         >
-                                            <span
-                                                style={{
-                                                    color: logoColorPrimary,
-                                                }}
-                                            >
-                                                CURB
-                                            </span>
-                                            ITURE
+                                            BASILINDA
                                         </Typography>
                                     </Link>
                                 </Typography>
@@ -219,6 +230,30 @@ const Navbar = () => {
                                     sx={{
                                         display: "flex",
                                         alignItems: "center",
+                                        justifyContent: "end",
+                                        width: "100%",
+                                        height: "100%",
+                                        gap: "1.5em",
+                                    }}
+                                >
+                                    {leftPages.map((page, index) => (
+                                        <NavBarLinkAnimation key={index}>
+                                            <Typography>{page.name}</Typography>
+                                            <Link href={page.href}>
+                                                <Typography>
+                                                    {page.nameAlt}
+                                                </Typography>
+                                            </Link>
+                                        </NavBarLinkAnimation>
+                                    ))}
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
                                         height: "100%",
                                         gap: ".5rem",
                                     }}
@@ -232,98 +267,48 @@ const Navbar = () => {
                                     <Link href="/">
                                         <Typography
                                             // className="nav-link"
-                                            variant="h3"
+                                            variant="h1"
                                             onClick={() => {
                                                 navigateToTop();
                                             }}
-                                            onMouseEnter={() => {
-                                                invertLogoColors();
-                                            }}
-                                            onMouseLeave={() => {
-                                                restoreLogoColors();
-                                            }}
                                             sx={{
                                                 margin: "0",
-                                                transition: "150ms",
-                                                fontSize: titleFontSize,
-                                                letterSpacing: ".1em",
-                                                fontFamily: "Anton",
+                                                transition: "300ms",
                                                 textAlign: "center",
                                                 cursor: "pointer",
-                                                textTransform: "uppercase",
-                                                color: logoColorSecondary,
+                                                color: theme.palette.primary
+                                                    .main,
+                                                "&:hover": {
+                                                    color: theme.palette
+                                                        .secondary.main,
+                                                },
                                             }}
                                         >
-                                            <span
-                                                style={{
-                                                    color: logoColorPrimary,
-                                                }}
-                                            >
-                                                CURB
-                                            </span>
-                                            ITURE
+                                            BASILINDA
                                         </Typography>
                                     </Link>
                                 </Box>
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid item xs={4}>
                                 <Box
                                     sx={{
                                         display: "flex",
                                         alignItems: "center",
                                         width: "100%",
                                         height: "100%",
-                                        justifyContent: "end",
                                         gap: "1.5em",
                                     }}
                                 >
-                                    {pages.map((page, index) => (
-                                        <Typography
-                                            key={index}
-                                            className="hover-underline-animation"
-                                            sx={{
-                                                lineHeight: "1.25em",
-                                                color: theme.palette.secondary
-                                                    .main,
-                                            }}
-                                        >
+                                    {rightPages.map((page, index) => (
+                                        <NavBarLinkAnimation key={index}>
+                                            <Typography>{page.name}</Typography>
                                             <Link href={page.href}>
-                                                {page.name}
+                                                <Typography>
+                                                    {page.nameAlt}
+                                                </Typography>
                                             </Link>
-                                        </Typography>
+                                        </NavBarLinkAnimation>
                                     ))}
-                                    {/* <Link key={index} href={page.href}>
-                                            <Button
-                                                onMouseEnter={handleMouseEnter}
-                                                component="a"
-                                                sx={{
-                                                    color: path.includes(
-                                                        page.name
-                                                            .split(" ")
-                                                            .join("")
-                                                    )
-                                                        ? theme.palette.primary
-                                                              .main
-                                                        : theme.palette.custom
-                                                              .light,
-                                                    "&:hover": {
-                                                        color: theme.palette
-                                                            .primary.main,
-                                                    },
-                                                }}
-                                            >
-                                                {page.name}
-                                            </Button>
-                                        </Link> */}
-
-                                    <Link href={navbar.buttonOne.href}>
-                                        <Button
-                                            color="secondary"
-                                            variant={navbar.buttonOne.variant}
-                                        >
-                                            {navbar.buttonOne.text}
-                                        </Button>
-                                    </Link>
                                 </Box>
                             </Grid>
                         </Grid>

@@ -10,12 +10,8 @@ export default class MyDocument extends Document {
                 <Head>
                     <meta
                         name="keywords"
-                        content="art, portfolio, photography, clothing"
+                        content="art, portfolio, photography, music"
                     />
-                    {/* <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-                    /> */}
                 </Head>
                 <body>
                     <Main />

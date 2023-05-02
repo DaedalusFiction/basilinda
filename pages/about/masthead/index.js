@@ -15,42 +15,29 @@ const index = () => {
                     <Grid item key={index} xs={12} md={4}>
                         <Profile profile={secondaryProfiles[0]}>
                             <Typography>
-                                Buff Bec grew up with The Rose, Atlas
-                                Underground, and crappy apartments on 5th st.
-                                extended. She is a supporter of The Bridge, Live
-                                Arts, and Cosaic.
+                                Sydney writes wicked poetry about autism,
+                                women&rsquo;s rights, body parts, and
+                                photographers. Do not mess with her.
                             </Typography>
                         </Profile>
                     </Grid>
                     <Grid item key={index} xs={12} md={4}>
                         <Profile profile={secondaryProfiles[1]}>
                             <Typography>
-                                Owen Cash lives life on the edge. Whether
-                                it&rsquo;s skydiving in Rio, amateur bullriding,
-                                investing in the latest cryptocurrencies, or
-                                eating soft cheese that he left out overnight,
-                                Owen doesn&rsquo;t let things like potential
-                                consequences get in the way of living his life.
+                                Dave is an ancillary part of both Basilinda and
+                                the Charlottesville poetry scene. If you have
+                                any comments, suggestions, or deep concerns
+                                relating to the design or functionality of this
+                                website, please contact him posthaste.
                             </Typography>
                         </Profile>
                     </Grid>
                     <Grid item key={index} xs={12} md={4}>
                         <Profile profile={secondaryProfiles[2]}>
                             <Typography>
-                                Kithis the Salient is a human being who was born
-                                on Earth. He enjoys writing, reading, eating,
-                                taking showers, and talking to other human
-                                beings. He is very interested in human anatomy
-                                and physiology, and dreams of someday being
-                                inducted into a Hall of Fame somewhere.
-                            </Typography>
-                            <br />
-                            <Typography>
-                                If you would like to meet Kithis in person,
-                                please get naked and stand outside at or around
-                                1am on a full or new moon and loudly recite the
-                                poetry of Geoffrey Chaucer, preferably from
-                                memory.
+                                Anthony keeps it real with her music and killer
+                                fashion sense. She enjoys hanging out with
+                                friends and discussing deep shit.
                             </Typography>
                         </Profile>
                     </Grid>
