@@ -9,8 +9,8 @@
     font-weight: 1 999;
 }
 @font-face {
-    font-family: "FancyPants";
-    src: url("/fonts/FancyPantsNF.ttf") format("truetype");
+    font-family: "LibreBaskerville";
+    src: url("/fonts/LibreBaskerville-Regular.ttf") format("truetype");
     font-weight: 1 999;
 }
 
@@ -50,8 +50,18 @@
     src: url("/fonts/plutonItalic.woff2") format("woff2");
     font-weight: 1 999;
 }
+@font-face {
+    font-family: "Bostonia";
+    src: url("/fonts/Bostonia.woff2") format("woff2");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "NotoSans";
+    src: url("/fonts/NotoSans-Regular.ttf") format("truetype");
+    font-weight: 1 999;
+}
 
 .color-test {
     color: #f7d195;
-    color: rgb(255, 90, 95);
+    color: rgb(39, 45, 45);
 }

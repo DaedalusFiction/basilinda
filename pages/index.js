@@ -1,27 +1,8 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 
-import {
-    collection,
-    getDocs,
-    limit,
-    orderBy,
-    query,
-    where,
-} from "firebase/firestore";
-import { db } from "../firebase";
 import Meta from "../components/home/Meta";
-import Link from "next/link";
-import AdvicePreview from "../components/previews/AdvicePreview";
-import BestofPreview from "../components/previews/BestofPreview";
-import OpinionPreview from "../components/previews/OpinionPreview";
-import theme from "../styles/themes/theme";
-import MiscPreview from "../components/previews/MiscPreview";
-import SidebarInfo from "../components/layout/SidebarInfo";
-import OutandAboutPreview from "../components/previews/OutandAboutPreview";
-import SizedImage from "../components/general/SizedImage";
-import { hero } from "../siteInfo";
 
 export default function Home() {
     return (
@@ -29,73 +10,116 @@ export default function Home() {
             <Meta />
             <Box
                 sx={{
-                    height: "100%",
                     backgroundImage:
-                        "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
+                        "linear-gradient(rgba(39, 45, 45, 0.65), rgba(39, 45, 45, 1)), url(/images/collage-background.webp)",
+                    // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
-                    backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
-                    height: "100vh",
+                    // backgroundAttachment: "fixed",
+                    padding: "8rem 2rem 8rem 2rem",
                     display: "flex",
-                    alignItems: "center",
+                    // alignItems: "center",
                     justifyContent: "center",
-                    flexDirection: "column",
+                    // flexDirection: "column",
                 }}
-            >
-                <Box>
-                    <Typography
-                        variant="h2"
+            ></Box>
+            <Box sx={{ padding: "2rem 0" }}></Box>
+
+            <Grid container spacing={0}>
+                <Grid item xs={12} md={6}>
+                    <Box
                         sx={{
-                            textAlign: "center",
-                            color: theme.palette.custom.dark,
+                            height: "100%",
+                            // border:
+                            //     "1px solid " + theme.palette.custom.lightMuted,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
-                        A Queer & Feminist Journal
-                    </Typography>
-                    <Box>
-                        <Divider sx={{ margin: "1rem" }} />
+                        <Typography variant="h2" sx={{ textAlign: "center" }}>
+                            Poetry
+                        </Typography>
                     </Box>
-                    <br />
-                    <Typography
-                        variant="h4"
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Box
                         sx={{
-                            textAlign: "center",
-                            color: theme.palette.custom.dark,
+                            backgroundImage:
+                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visualArtsHeader.png)",
+                            backgroundSize: "cover",
+                            backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
+                            padding: "10rem 0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                    ></Box>
+                </Grid>
+            </Grid>
+            <Grid container spacing={0}>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            backgroundImage:
+                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visArts.webp)",
+                            backgroundSize: "cover",
+                            backgroundPosition: { xs: "0% 0%", md: "0% 20%" },
+                            padding: "10rem 0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                    ></Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            height: "100%",
+                            // border:
+                            //     "1px solid " + theme.palette.custom.lightMuted,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
-                        Poetry
-                    </Typography>
-                    <br />
-                    <Typography
-                        variant="h4"
+                        <Typography variant="h2" sx={{ textAlign: "center" }}>
+                            Mixed Media
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid container spacing={0}>
+                <Grid item xs={12} md={6}>
+                    <Box
                         sx={{
-                            textAlign: "center",
-                            color: theme.palette.custom.dark,
+                            height: "100%",
+                            // border:
+                            //     "1px solid " + theme.palette.custom.lightMuted,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
-                        and
-                    </Typography>
-                    <br />
-                    <Typography
-                        variant="h4"
+                        <Typography variant="h2" sx={{ textAlign: "center" }}>
+                            Letters
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Box
                         sx={{
-                            textAlign: "center",
-                            color: theme.palette.custom.dark,
+                            backgroundImage:
+                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
+                            backgroundSize: "cover",
+                            backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
+                            padding: "10rem 0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
-                    >
-                        Visual
-                    </Typography>
-                    <br />
-                    <Typography
-                        variant="h4"
-                        sx={{
-                            textAlign: "center",
-                            color: theme.palette.custom.dark,
-                        }}
-                    >
-                        Arts
-                    </Typography>
-                </Box>
-            </Box>
+                    ></Box>
+                </Grid>
+            </Grid>
         </Container>
     );
 }

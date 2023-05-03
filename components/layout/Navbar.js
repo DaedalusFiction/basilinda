@@ -14,6 +14,7 @@ import { navigateToTop } from "../../utility/navigateToTop";
 import { leftPages, navbar, rightPages } from "../../siteInfo";
 import { useRouter } from "next/router";
 import NavBarLinkAnimation from "../general/NavBarLinkAnimation";
+import TextJustify from "../general/TextJustify";
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -23,6 +24,7 @@ const Navbar = () => {
     const path = router.pathname.split("/");
     const [logoColorPrimary, setLogoColorPrimary] = useState("#ff5a5f");
     const [logoColorSecondary, setLogoColorSecondary] = useState("#b7FFD8");
+    const [backgroundColor, setBackgroundColor] = useState("transparent");
 
     const [trigger, setTrigger] = useState(true);
 
@@ -39,7 +41,12 @@ const Navbar = () => {
                 return;
             }
             setTrigger(scrollY > lastScrollY ? false : true);
-            setTitleFontSize(scrollY < lastScrollY ? "2.75rem" : "1.75rem");
+
+            setBackgroundColor(
+                scrollY < lastScrollY
+                    ? "transparent"
+                    : theme.palette.custom.dark
+            );
             lastScrollY = scrollY > 0 ? scrollY : 0;
             ticking = false;
         };
@@ -95,7 +102,7 @@ const Navbar = () => {
             <AppBar
                 position="static"
                 onMouseLeave={handleMouseLeave}
-                style={{ background: theme.palette.custom.dark }}
+                style={{ background: backgroundColor, transition: "600ms" }}
             >
                 <Container sx={{ padding: ".5rem 0" }} maxWidth="xl">
                     <Grid container>
@@ -196,6 +203,7 @@ const Navbar = () => {
                                 >
                                     <Link href="/">
                                         <Typography
+                                            variant="h1"
                                             onMouseEnter={() => {
                                                 invertLogoColors();
                                             }}
@@ -205,13 +213,12 @@ const Navbar = () => {
                                             sx={{
                                                 margin: "0",
                                                 transition: "150ms",
-                                                fontSize: titleFontSize,
-                                                letterSpacing: ".1em",
-                                                fontFamily: "Anton",
                                                 textAlign: "center",
                                                 cursor: "pointer",
                                                 textTransform: "uppercase",
-                                                color: logoColorSecondary,
+                                                fontSize: "2rem",
+                                                color: theme.palette.primary
+                                                    .main,
                                             }}
                                         >
                                             BASILINDA
@@ -264,30 +271,35 @@ const Navbar = () => {
                                             maxSize={85}
                                         />
                                     </Box> */}
-                                    <Link href="/">
-                                        <Typography
-                                            // className="nav-link"
-                                            variant="h1"
-                                            onClick={() => {
-                                                navigateToTop();
-                                            }}
-                                            sx={{
-                                                margin: "0",
-                                                transition: "300ms",
-                                                textAlign: "center",
-                                                cursor: "pointer",
-                                                letterSpacing: ".1em",
-                                                color: theme.palette.primary
-                                                    .main,
-                                                "&:hover": {
-                                                    color: theme.palette
-                                                        .secondary.main,
-                                                },
-                                            }}
-                                        >
-                                            BASILINDA
-                                        </Typography>
-                                    </Link>
+                                    <Box>
+                                        <Link href="/">
+                                            <Typography
+                                                // className="nav-link"
+                                                variant="h1"
+                                                onClick={() => {
+                                                    navigateToTop();
+                                                }}
+                                                sx={{
+                                                    margin: "0",
+                                                    transition: "300ms",
+                                                    textAlign: "center",
+                                                    cursor: "pointer",
+                                                    letterSpacing: ".1em",
+                                                    color: theme.palette.primary
+                                                        .main,
+                                                    "&:hover": {
+                                                        color: theme.palette
+                                                            .secondary.main,
+                                                    },
+                                                }}
+                                            >
+                                                BASILINDA
+                                            </Typography>
+                                        </Link>
+                                        <TextJustify>
+                                            A Queer & Feminist Journal
+                                        </TextJustify>
+                                    </Box>
                                 </Box>
                             </Grid>
                             <Grid item xs={4}>

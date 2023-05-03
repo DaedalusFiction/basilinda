@@ -18,6 +18,7 @@ a {
 
 * {
     box-sizing: border-box;
+    box-shadow: none !important;
 }
 
 .publication-body a {

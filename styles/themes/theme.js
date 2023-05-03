@@ -17,7 +17,8 @@ let theme = createTheme({
             // main: "#E3B505",
         },
         background: {
-            default: "#fefefe",
+            // default: "#fefefe", //creamy yellow
+            default: "#272D2D", //dark
             accent: "#ffeccd",
             dark: "#ffeccd",
         },
@@ -28,15 +29,17 @@ let theme = createTheme({
             lightMuted: "#cacaca",
         },
         text: {
-            primary: "#272D2D",
+            // primary: "#272D2D", //dark
+            primary: "#F6F8FF", //dark
             primaryMuted: "#757575",
             secondary: "#F6F8FF",
             secondaryMuted: "#cacaca",
         },
     },
     fonts: {
-        primary: "Raleway",
-        secondary: "Cormorant",
+        primary: "LibreBaskerville",
+        secondary: "Bostonia",
+        body: "NotoSans",
     },
 });
 
@@ -55,22 +58,22 @@ theme = createTheme(theme, {
             fontFamily: theme.fonts.secondary,
             color: theme.palette.custom.primary,
             // color: theme.palette.primary.off,
-            fontWeight: "600",
+            fontWeight: "400",
             // lineHeight: ".85em",
-            fontSize: "clamp(3rem, 3.75vw, 7rem)",
-            // letterSpacing: ".025em",
+            fontSize: "clamp(3rem, 2.75vw, 7rem)",
+            letterSpacing: ".025em",
         },
         h2: {
             color: theme.palette.custom.primary,
-            fontFamily: theme.fonts.secondary,
-            fontWeight: "400",
+            fontFamily: theme.fonts.primary,
+            fontWeight: "300",
             // color: darkTheme.palette.custom.dark,
-            fontSize: "clamp(3rem, 4vw, 10rem)",
+            fontSize: "clamp(2.5rem, 2vw, 10rem)",
             letterSpacing: ".025em",
         },
         h3: {
             color: theme.palette.custom.primary,
-            fontFamily: theme.fonts.secondary,
+            fontFamily: theme.fonts.primary,
             letterSpacing: ".025em",
             fontWeight: "400",
             fontSize: "1rem",
@@ -78,7 +81,7 @@ theme = createTheme(theme, {
         },
         h4: {
             color: theme.palette.custom.primary,
-            fontFamily: theme.fonts.secondary,
+            fontFamily: theme.fonts.primary,
             fontSize: "1.75rem",
             fontWeight: "400",
             lineHeight: "1.75rem",
@@ -86,7 +89,7 @@ theme = createTheme(theme, {
         },
         h5: {
             // color: theme.palette.custom.primary,
-            fontFamily: theme.fonts.secondary,
+            fontFamily: theme.fonts.primary,
             fontSize: "1rem",
             fontWeight: "600",
             // color: darkTheme.palette.custom.dark,
@@ -111,18 +114,18 @@ theme = createTheme(theme, {
             color: theme.palette.custom.primaryMuted,
         },
         body1: {
-            fontFamily: "Raleway",
+            fontFamily: theme.fonts.body,
             fontWeight: "400",
             fontSize: "1rem",
             // lineHeight: "1.25rem",
-            color: theme.palette.custom.dark,
+            color: theme.palette.custom.light,
             // fontFamily: darkTheme.typography.darkTheme.main,
         },
         body2: {
             fontFamily: "EB Garamond Italic",
             fontSize: "1.25rem",
             // lineHeight: "1.5rem",
-            color: theme.palette.custom.dark,
+            color: theme.palette.custom.light,
             // fontFamily: darkTheme.typography.darkTheme.decorative,
         },
         caption: {
