@@ -26,13 +26,13 @@ const index = () => {
                                     that push traditional boundaries with an
                                     emphasis on risky, confessional,
                                     transgressional, and challenging subject
-                                    matters. To win this round, be preoccupied
-                                    with epiphany, and more so with keeping us
-                                    on our toes. Like we said, this is a whole
-                                    new level&mdash;so don&rsquo;t be afraid to
-                                    break create the rules, challenge our
-                                    expectations and, most importantly, make us
-                                    think. We encourage both emerging and
+                                    matters. To win this round, be less
+                                    preoccupied with epiphany and more focused
+                                    on curling our toes. Like we said, this is a
+                                    whole new level&mdash;so don&rsquo;t be
+                                    afraid to break create the rules, challenge
+                                    our expectations and, most importantly, make
+                                    us think. We encourage both emerging and
                                     established artists to submit their finest
                                     works and we are especially committed to
                                     uplifting the voices of those who identify
