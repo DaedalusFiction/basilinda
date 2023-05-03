@@ -225,9 +225,9 @@ const leftPages = [
         subPages: [],
     },
     {
-        name: "Visual Art",
+        name: "Letters",
         nameAlt: "Soldiers",
-        href: "/publications/visual",
+        href: "/publications/letters",
         subPages: [],
     },
 ];
@@ -245,7 +245,7 @@ const rightPages = [
         ],
     },
     {
-        name: "Submit",
+        name: "Submissions",
         nameAlt: "How to Play",
         href: "/submissions",
         subPages: [],

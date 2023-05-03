@@ -143,9 +143,6 @@ const Header = ({ light }) => {
                             variant="h3"
                             component="span"
                             noWrap
-                            onClick={() => {
-                                navigateToTop();
-                            }}
                             sx={{
                                 fontSize: "1.75rem",
                                 fontWeight: 700,
@@ -155,12 +152,6 @@ const Header = ({ light }) => {
                             <Link href="/">
                                 <Typography
                                     variant="h1"
-                                    onMouseEnter={() => {
-                                        invertLogoColors();
-                                    }}
-                                    onMouseLeave={() => {
-                                        restoreLogoColors();
-                                    }}
                                     sx={{
                                         margin: "0",
                                         transition: "150ms",

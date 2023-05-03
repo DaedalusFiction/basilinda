@@ -4,6 +4,7 @@ import { Container } from "@mui/system";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -33,6 +34,7 @@ export default function Home() {
                 sx={{
                     borderTop: "2px solid " + theme.palette.custom.lightMuted,
                 }}
+                wrap="wrap-reverse"
             >
                 <Grid item xs={12} md={6}>
                     <Box
@@ -45,40 +47,59 @@ export default function Home() {
                             justifyContent: "center",
                         }}
                     >
-                        <Typography variant="h2" sx={{ textAlign: "center" }}>
-                            Poetry
-                        </Typography>
+                        <Link href="/publications/poetry">
+                            <Typography
+                                variant="h2"
+                                className="link"
+                                sx={{ textAlign: "center", margin: "2em 0" }}
+                            >
+                                Poetry
+                            </Typography>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            backgroundImage:
-                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visualArtsHeader.png)",
-                            backgroundSize: "cover",
-                            backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
-                            padding: "10rem 0",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    ></Box>
+                    <Link href="/publications/poetry">
+                        <Box
+                            sx={{
+                                backgroundImage:
+                                    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visualArtsHeader.png)",
+                                backgroundSize: "cover",
+                                padding: "12rem 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                cursor: "pointer",
+                                transition: "300ms",
+                                "&:hover": {
+                                    opacity: "60%",
+                                },
+                            }}
+                        ></Box>
+                    </Link>
                 </Grid>
             </Grid>
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            backgroundImage:
-                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visArts.webp)",
-                            backgroundSize: "cover",
-                            backgroundPosition: { xs: "0% 0%", md: "0% 20%" },
-                            padding: "10rem 0",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    ></Box>
+                    <Link href="/publications/mixedmedia">
+                        <Box
+                            sx={{
+                                backgroundImage:
+                                    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visArts.webp)",
+                                backgroundSize: "cover",
+
+                                padding: "12rem 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                cursor: "pointer",
+                                transition: "300ms",
+                                "&:hover": {
+                                    opacity: "60%",
+                                },
+                            }}
+                        ></Box>
+                    </Link>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box
@@ -91,9 +112,15 @@ export default function Home() {
                             justifyContent: "center",
                         }}
                     >
-                        <Typography variant="h2" sx={{ textAlign: "center" }}>
-                            Mixed Media
-                        </Typography>
+                        <Link href="/publications/mixedmedia">
+                            <Typography
+                                variant="h2"
+                                className="link"
+                                sx={{ textAlign: "center", margin: "2em 0" }}
+                            >
+                                Mixed Media
+                            </Typography>
+                        </Link>
                     </Box>
                 </Grid>
             </Grid>
@@ -104,6 +131,7 @@ export default function Home() {
                     borderBottom:
                         "2px solid " + theme.palette.custom.lightMuted,
                 }}
+                wrap="wrap-reverse"
             >
                 <Grid item xs={12} md={6}>
                     <Box
@@ -116,24 +144,36 @@ export default function Home() {
                             justifyContent: "center",
                         }}
                     >
-                        <Typography variant="h2" sx={{ textAlign: "center" }}>
-                            Letters
-                        </Typography>
+                        <Link href="/publications/letters">
+                            <Typography
+                                variant="h2"
+                                className="link"
+                                sx={{ textAlign: "center", margin: "2em 0" }}
+                            >
+                                Letters
+                            </Typography>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            backgroundImage:
-                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
-                            backgroundSize: "cover",
-                            backgroundPosition: { xs: "0% 0%", md: "40% 0%" },
-                            padding: "10rem 0",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    ></Box>
+                    <Link href="/publications/letters">
+                        <Box
+                            sx={{
+                                backgroundImage:
+                                    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
+                                backgroundSize: "cover",
+                                padding: "12rem 0",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                cursor: "pointer",
+                                transition: "300ms",
+                                "&:hover": {
+                                    opacity: "60%",
+                                },
+                            }}
+                        ></Box>
+                    </Link>
                 </Grid>
             </Grid>
         </Container>
