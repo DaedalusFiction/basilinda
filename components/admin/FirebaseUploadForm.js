@@ -260,9 +260,10 @@ const FirebaseUploadForm = ({
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-                backgroundColor: theme.palette.background.accent,
+                backgroundColor: theme.palette.background.main,
                 padding: "1em",
                 borderRadius: "5px",
+                border: "2px solid " + theme.palette.custom.lightMuted,
             }}
         >
             <Typography variant="h3">Upload new item to {folder}.</Typography>

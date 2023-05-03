@@ -3,48 +3,43 @@ import { Box, Container } from "@mui/system";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React from "react";
 import PageLayout from "../../../components/layout/PageLayout";
-import AdvicePreview from "../../../components/previews/AdvicePreview";
+import OpinionPreview from "../../../components/previews/OpinionPreview";
 import { db } from "../../../firebase";
 
-const index = ({ advice }) => {
+const index = ({ opinion }) => {
     return (
-        <PageLayout name="Damn Good Advice">
-            <Container maxWidth="md">
-                <Grid className="section" container>
-                    {advice.map((advice, index) => {
-                        return (
-                            <Grid key={index} item xs={12}>
-                                <AdvicePreview
-                                    item={advice}
-                                    category="advice"
-                                />
-                            </Grid>
-                        );
-                    })}
-                </Grid>
-            </Container>
+        <PageLayout name="Poetry">
+            <Grid className="section" container spacing={3}>
+                {opinion.map((item, index) => {
+                    return (
+                        <Grid key={index} item xs={12} sm={6} md={3}>
+                            <OpinionPreview opinion={item} category="opinion" />
+                        </Grid>
+                    );
+                })}
+            </Grid>
         </PageLayout>
     );
 };
 
 export const getServerSideProps = async (context) => {
     const publicationsRef = collection(db, "publications");
-    const adviceQuery = query(
+    const opinionQuery = query(
         publicationsRef,
-        where("categories", "array-contains", "advice"),
+        where("categories", "array-contains", "poetry"),
         orderBy("dateUploaded", "desc")
     );
 
-    const adviceSnapshot = await getDocs(adviceQuery);
+    const opinionSnapshot = await getDocs(opinionQuery);
 
-    let advice = [];
-    adviceSnapshot.docs.forEach((doc, index) => {
-        advice = [...advice, doc.data()];
+    let opinion = [];
+    opinionSnapshot.docs.forEach((doc, index) => {
+        opinion = [...opinion, doc.data()];
     });
 
     return {
         props: {
-            advice,
+            opinion,
         },
     };
 };

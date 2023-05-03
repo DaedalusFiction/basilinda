@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 
 import Meta from "../components/home/Meta";
+import theme from "../styles/themes/theme";
 
 export default function Home() {
     return (
@@ -16,21 +17,29 @@ export default function Home() {
                     backgroundSize: "cover",
                     // backgroundAttachment: "fixed",
                     padding: "8rem 2rem 8rem 2rem",
+                    position: "relative",
+                    marginBottom: "4rem",
                     display: "flex",
                     // alignItems: "center",
                     justifyContent: "center",
+                    zIndex: "-3",
                     // flexDirection: "column",
                 }}
             ></Box>
-            <Box sx={{ padding: "2rem 0" }}></Box>
 
-            <Grid container spacing={0}>
+            <Grid
+                container
+                spacing={0}
+                sx={{
+                    borderTop: "2px solid " + theme.palette.custom.lightMuted,
+                }}
+            >
                 <Grid item xs={12} md={6}>
                     <Box
                         sx={{
                             height: "100%",
-                            // border:
-                            //     "1px solid " + theme.palette.custom.lightMuted,
+                            // borderTop:
+                            //     "2px solid " + theme.palette.custom.lightMuted,
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -88,7 +97,14 @@ export default function Home() {
                     </Box>
                 </Grid>
             </Grid>
-            <Grid container spacing={0}>
+            <Grid
+                container
+                spacing={0}
+                sx={{
+                    borderBottom:
+                        "2px solid " + theme.palette.custom.lightMuted,
+                }}
+            >
                 <Grid item xs={12} md={6}>
                     <Box
                         sx={{

@@ -1,68 +1,41 @@
 const siteName = "Basilinda";
 
-const navbar = {
-    buttonOne: {
-        text: "Subscribe",
-        href: "/subscribe",
-        variant: "outlined",
-    },
-};
-
-const header = {
-    buttonOne: {
-        text: "Contact",
-        href: "/contact",
-        variant: "outlined",
-    },
-};
-
-const hero = {
-    imageOne: {
-        url: "/images/flourish2.svg",
-        alt: "decorative flourish",
-    },
-    imageTwo: {
-        url: "/images/flourish3.svg",
-        alt: "decorative flourish",
-    },
-};
-
 const uploadCategories = [
     {
-        name: "misc",
-        href: "/publications/misc",
+        name: "Poetry",
+        href: "/publications/poetry",
         image: {
             url: "/images/placeholder.webp",
             alt: "alt upload image text",
         },
         subCategories: [
             {
-                name: "downtown",
-                href: "/publications/misc/downtown",
+                name: "Free Verse",
+                href: "/publications/poetry/freeverse",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt upload image text",
                 },
             },
             {
-                name: "interview",
-                href: "/publications/misc/interview",
+                name: "Traditional",
+                href: "/publications/poetry/traditional",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt upload image text",
                 },
             },
             {
-                name: "news",
-                href: "/publications/misc/news",
+                name: "Prose Poetry",
+                href: "/publications/poetry/prosepoetry",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt upload image text",
                 },
             },
             {
-                name: "poetry",
-                href: "/publications/misc/poetry",
+                name: "Experimental",
+                href: "/publications/poetry/experimental",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt upload image text",
@@ -71,98 +44,44 @@ const uploadCategories = [
         ],
     },
     {
-        name: "advice",
-        href: "/publications/advice",
+        name: "Letters",
+        href: "/publications/letters",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
             {
-                name: "relationships",
-                href: "/publications/advice/relationships",
+                name: "Dear John",
+                href: "/publications/letters/dearjohn",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "career",
-                href: "/publications/advice/career",
+                name: "Resignations",
+                href: "/publications/letters/resignations",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "writing",
-                href: "/publications/advice/writing",
+                name: "Open",
+                href: "/publications/letters/open",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
     },
     {
-        name: "opinions",
-        href: "/publications/opinions",
+        name: "Mixed Media",
+        href: "/publications/mixedmedia",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
             {
-                name: "editorial",
-                href: "/publications/opinions/editorials",
+                name: "visual",
+                href: "/publications/mixedmedia/visual",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "letter",
-                href: "/publications/opinions/letters",
+                name: "Audio",
+                href: "/publications/mixedmedia/audio",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
     },
-    {
-        name: "bestof",
-        href: "/publications/bestof",
-        image: { url: "/images/placeholder.webp", alt: "alt text" },
-        subCategories: [
-            {
-                name: "craigslist",
-                href: "/publications/bestof/craigslist",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "style",
-                href: "/publications/bestof/style",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "food",
-                href: "/publications/bestof/food",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "events",
-                href: "/publications/bestof/events",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-        ],
-    },
-    // {
-    //     name: "out and about",
-    //     href: "/publications/out-and-about",
-    //     image: { url: "/images/placeholder.webp", alt: "alt text" },
-    //     subCategories: [
-    //         {
-    //             name: "fashion",
-    //             href: "/publications/out-and-about/fashion",
-    //             image: { url: "/images/placeholder.webp", alt: "alt text" },
-    //         },
-    //         {
-    //             name: "animals",
-    //             href: "/publications/out-and-about/animals",
-    //             image: { url: "/images/placeholder.webp", alt: "alt text" },
-    //         },
-    //         {
-    //             name: "performances",
-    //             href: "/publications/out-and-about/performances",
-    //             image: { url: "/images/placeholder.webp", alt: "alt text" },
-    //         },
-    //         {
-    //             name: "characters",
-    //             href: "/publications/out-and-about/characters",
-    //             image: { url: "/images/placeholder.webp", alt: "alt text" },
-    //         },
-    //     ],
-    // },
 ];
 
 const uploadConfig = {
@@ -180,41 +99,6 @@ const uploadConfig = {
         },
         { name: "Published", type: "text", value: "" },
         { name: "Artist", type: "text", value: "" },
-    ],
-};
-const eventConfig = {
-    categories: [],
-    subCategories: [],
-    fields: [
-        { name: "Title", type: "text", value: "" },
-        { name: "Location", type: "text", value: "" },
-        { name: "Date", type: "date", value: "" },
-        { name: "Time", type: "text", value: "" },
-        {
-            name: "Description",
-            type: "text",
-            value: "",
-            multiline: true,
-            rows: 4,
-        },
-        { name: "href", type: "text", value: "" },
-    ],
-};
-const outandaboutConfig = {
-    categories: [],
-    subCategories: [],
-    fields: [
-        { name: "Title", type: "text", value: "" },
-        { name: "Location", type: "text", value: "" },
-        { name: "Date", type: "date", value: "" },
-        { name: "Time", type: "text", value: "" },
-        {
-            name: "Description",
-            type: "text",
-            value: "",
-            multiline: true,
-            rows: 4,
-        },
     ],
 };
 
@@ -236,37 +120,6 @@ const contactConfig = {
 // 7. About
 
 // 7a. About
-
-const aboutContent = {
-    image: {
-        url: "/images/about2.webp",
-        alt: "Prize Bull, by H. Call (1876)",
-        // alt: "Moses Striking the Rock, by Joachim Anthonisz Wetwael",
-    },
-    name: "OUR ROOTS",
-    buttons: [
-        {
-            text: "Button Text",
-            href: "/about/masthead",
-            variant: "contained",
-        },
-        {
-            text: "Button Text",
-            href: "/about/missionstatement",
-            variant: "contained",
-        },
-    ],
-    content: "The Insomniad is a literary journal founded in 2022.",
-};
-
-const leadProfile = {
-    image: {
-        url: "/images/profile1.webp",
-        alt: "Self-Portrait, by Henri Fantin-Latour",
-    },
-    name: "Owen Cash",
-    content: "Owen likes to PARTY!!",
-};
 
 const secondaryProfiles = [
     {
@@ -294,21 +147,6 @@ const secondaryProfiles = [
 ];
 
 // 7b. Studio
-
-const studioContent = {
-    imageOne: {
-        url: "/images/missionStatement.webp",
-        alt: "A Young Bull, by John Woodhouse Audubon (1849)",
-        // alt: "Venus Adorned by the Graces, by Annibale Carracci",
-    },
-    imageTwo: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-    imageThree: {
-        url: "/images/placeholder.webp",
-        alt: "alt placeholder text",
-    },
-    header: "This is what we believe",
-    content: "This is where we will talk about our philosophy of fiction etc.",
-};
 
 // 7c. Work
 
@@ -415,23 +253,15 @@ const rightPages = [
 ];
 
 export {
-    hero,
     siteName,
     leftPages,
     rightPages,
-    navbar,
-    header,
     uploadCategories,
     uploadConfig,
-    eventConfig,
-    outandaboutConfig,
     subscribeConfig,
     contributorConfig,
     textSubmissionsConfig,
     imageSubmissionsConfig,
     contactConfig,
-    aboutContent,
-    leadProfile,
     secondaryProfiles,
-    studioContent,
 };

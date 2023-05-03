@@ -10,75 +10,52 @@ import {
     where,
 } from "firebase/firestore";
 import { db } from "../../../firebase";
-import { Grid, Typography } from "@mui/material";
 import PublicationBody from "../../../components/publications/PublicationBody";
+import PublicationsHeader from "../../../components/publications/PublicationsHeader";
+import { Grid } from "@mui/material";
 import ShareIcons from "../../../components/general/ShareIcons";
 
-const page = ({ articles, misc }) => {
+const Page = ({ articles, story }) => {
+    const authorHref = "/contributors/" + story.fields[1].value;
     return (
         <Box className="section">
             <Container>
-                <Grid container>
-                    <Grid
-                        item
-                        xs={0}
-                        md={1}
-                        sx={{
-                            position: "relative",
-                        }}
-                    >
-                        <Box
+                <Box sx={{ padding: "3rem 0" }}>
+                    <Grid container>
+                        <Grid
+                            item
+                            xs={0}
+                            md={1}
                             sx={{
-                                position: "sticky",
-                                top: "4rem",
-                                margin: "42vh 1.25rem 1.25rem 1.25rem",
+                                position: "relative",
                             }}
                         >
-                            <ShareIcons color="primary" direction="column" />
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={11}>
-                        <Box sx={{ paddingTop: "5rem" }}>
-                            <Grid container>
-                                <Grid item xs={12} md={8}>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            gap: ".25em",
-                                        }}
-                                    >
-                                        {misc.subCategories.map(
-                                            (subCategory, index) => {
-                                                return (
-                                                    <Typography
-                                                        key={index}
-                                                        variant="caption"
-                                                    >
-                                                        [{subCategory}]
-                                                    </Typography>
-                                                );
-                                            }
-                                        )}
-                                    </Box>
-                                    <Typography
-                                        sx={{
-                                            margin: ".25em 0",
-                                            fontSize: "3rem",
-                                        }}
-                                        variant="h1"
-                                    >
-                                        {misc.fields[0].value}?
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                            <PublicationBody
-                                sidebarCategory="Opinions"
-                                sidebarItems={articles}
-                                story={misc}
+                            <Box
+                                sx={{
+                                    position: "sticky",
+                                    top: "4rem",
+                                    margin: "42vh 1.25rem 1.25rem 1.25rem",
+                                }}
+                            >
+                                <ShareIcons
+                                    color="primary"
+                                    direction="column"
+                                />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={11}>
+                            <PublicationsHeader
+                                publication={story}
+                                authorHref={authorHref}
                             />
-                        </Box>
+                            <PublicationBody
+                                sidebarCategory="Misc"
+                                sidebarItems={articles}
+                                story={story}
+                            />
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Box>
             </Container>
         </Box>
     );
@@ -86,14 +63,14 @@ const page = ({ articles, misc }) => {
 
 export const getServerSideProps = async (context) => {
     const docSnap = await getDoc(doc(db, `publications/${context.params.id}`));
-    let misc = docSnap.data();
+    let story = docSnap.data();
 
     const publicationsRef = collection(db, "publications");
     const articlesQuery = query(
         publicationsRef,
-        where("categories", "array-contains", "opinions"),
+        where("categories", "array-contains", "misc"),
         orderBy("dateUploaded", "desc"),
-        limit(2)
+        limit(3)
     );
 
     const articlesSnapshot = await getDocs(articlesQuery);
@@ -106,9 +83,9 @@ export const getServerSideProps = async (context) => {
     return {
         props: {
             articles,
-            misc,
+            story,
         },
     };
 };
 
-export default page;
+export default Page;

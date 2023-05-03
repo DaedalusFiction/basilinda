@@ -14,9 +14,6 @@ import {
     uploadConfig,
 } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout.js";
-import FirestoreSubmissionsListing from "../../components/admin/FirestoreSubmissionsListing.js";
-import FirebaseEventUploadForm from "../../components/admin/FirebaseEventUploadForm.js";
-import FirebaseOutandaboutUploadForm from "../../components/admin/FirebaseOutandaboutUploadForm.js";
 import FirebaseContributorUploadForm from "../../components/admin/FirebaseContributorUploadForm.js";
 import FirebaseContributorListing from "../../components/admin/FirebaseContributorListing.js";
 
@@ -41,16 +38,24 @@ const Admin = () => {
             <Container maxWidth="xl">
                 <Box sx={{ padding: "4rem 0" }}>
                     <Container maxWidth="sm">
-                        {!isLoggedIn && (
-                            <Button
-                                variant="contained"
-                                color="secondary"
-                                onClick={handleSignIn}
-                                sx={{ marginBottom: "1rem" }}
-                            >
-                                Sign in with google
-                            </Button>
-                        )}
+                        <Box
+                            sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                margin: "1rem 0",
+                            }}
+                        >
+                            {!isLoggedIn && (
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    onClick={handleSignIn}
+                                    sx={{ marginBottom: "1rem" }}
+                                >
+                                    Sign in with google
+                                </Button>
+                            )}
+                        </Box>
                     </Container>
                     {isAdmin ? (
                         <Box sx={{ marginBottom: "3rem" }}>
@@ -71,22 +76,7 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
-                                <Grid item xs={12} md={6}>
-                                    <FirebaseEventUploadForm
-                                        config={eventConfig}
-                                        folder="events"
-                                        updateCounter={updateCounter}
-                                        setUpdateCounter={setUpdateCounter}
-                                    />
-                                </Grid>
-                                <Grid item xs={12} md={6}>
-                                    <FirebaseOutandaboutUploadForm
-                                        config={outandaboutConfig}
-                                        folder="outandabout"
-                                        updateCounter={updateCounter}
-                                        setUpdateCounter={setUpdateCounter}
-                                    />
-                                </Grid>
+
                                 <Grid item xs={12} md={6}>
                                     <FirebaseContributorUploadForm
                                         config={contributorConfig}
@@ -107,7 +97,7 @@ const Admin = () => {
                         </Box>
                     ) : (
                         <Container maxWidth="sm">
-                            <Typography>
+                            <Typography sx={{ textAlign: "center" }}>
                                 You are not logged in as an administrator.
                                 Please contact Dave at hello@fictionalweb.com if
                                 you continue to experience difficulties.
