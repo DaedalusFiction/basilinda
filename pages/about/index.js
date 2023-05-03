@@ -14,33 +14,27 @@ const index = () => {
                     <Grid container>
                         <Grid item xs={12}>
                             <Typography>
-                                <em>Basilinda</em> is a journal centered at the
-                                junction of identity, strategy and mobility. We
-                                may be named after the 19th-century board game
-                                consisting of men, cannons, and captains, but
-                                that&rsquo;s not how we play here.
-                            </Typography>
-                            <br />
-                            <Typography>
-                                This version of Basilinda invites you to
+                                <em>Basilinda</em> is a multimedia journal
+                                inviting queer and feminist artists to
                                 participate on a new level that didn&rsquo;t
                                 come in the box, because we didn&rsquo;t come in
-                                the box. Our pieces don&rsquo;t solely consist
-                                of cis white men and cannons, because our
+                                the box. We may be named after the 19th-century
+                                board game consisting of men, cannons, and
+                                captains, but that&rsquo;s not how we play here.
+                                As a team of LGBTQIA+ and women editors whose
                                 stories will never be cis white men&rsquo;s
-                                canons. No&mdash;playing on this echelon means
-                                to be a part of a broad and inclusive identity
-                                that is constantly evolving and thinking,
-                                shifting and persisting. Our rules are
-                                constantly changing, but this one must be
-                                followed:{" "}
-                            </Typography>
-                            <br />
-                            <Typography>
-                                <strong>
-                                    No misogynistic, homophobic, transphobic,
-                                    racist etc. shit
-                                </strong>
+                                canons, playing on this echelon means to be a
+                                part of a broad and inclusive identity that is
+                                constantly evolving and thinking, shifting and
+                                persisting. We are interested in individuality,
+                                versatility, and victory. We are most interested
+                                in works exploring personal truths and
+                                identities through strategic subversion with
+                                fine-tuned tactics. Which is to say, move your
+                                idea-pieces like confident vectors across the
+                                board&mdash;with magnitudes of depth and
+                                unwavering direction&mdash;and let us succeed in
+                                taking down the king.
                             </Typography>
                         </Grid>
                     </Grid>

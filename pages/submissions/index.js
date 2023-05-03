@@ -14,69 +14,32 @@ import Link from "next/link";
 const index = () => {
     return (
         <Container>
-            <PageLayout name="Submissions Guidelines">
+            <PageLayout name="How to Play">
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <Container maxWidth="md">
                             <Box sx={{ margin: "4rem 0" }}>
-                                {/* <Typography>
-                                    CURBITURE only publishes the dumbest shit.
-                                    But we don&rsquo;t mean this in a
-                                    self-deprecatory way--we like the stuff we
-                                    print, and we would only print it if we
-                                    thought you&rsquo;d like it too.
-                                </Typography>
-                                <br /> */}
-                                <Typography variant="h4" component="h3">
-                                    What we Publish:
-                                </Typography>
-                                <br />
                                 <Typography>
-                                    Basilinda accepts submissions in the form of
-                                    visual art, poetry, songs, and letters from
-                                    everyone with a strong preference for
-                                    players who identify as women and/or
-                                    non-binary. We are committed to publishing
-                                    writers, musicians, and artists from diverse
-                                    backgrounds, encouraging both emerging and
-                                    established creators to submit their finest
-                                    works. We are most interested in works
-                                    showcasing subversion and strategy with
-                                    fine-tuned tactic. Which is to say, move
-                                    your idea-pieces like confident vectors
-                                    across the board&mdash;with magnitudes of
-                                    depth and unwavering direction&mdash;and you
-                                    may succeed in taking down the king.
+                                    <em>Basilinda</em> is currently accepting
+                                    submissions in the form of poetry,
+                                    multimedia arts, and letters. We want works
+                                    that push traditional boundaries with an
+                                    emphasis on risky, confessional,
+                                    transgressional, and challenging subject
+                                    matters. To win this round, be preoccupied
+                                    with epiphany, and more so with keeping us
+                                    on our toes. Like we said, this is a whole
+                                    new level&mdash;so don&rsquo;t be afraid to
+                                    break create the rules, challenge our
+                                    expectations and, most importantly, make us
+                                    think. We encourage both emerging and
+                                    established artists to submit their finest
+                                    works and we are especially committed to
+                                    uplifting the voices of those who identify
+                                    as women and/or non-binary.
                                 </Typography>
-                                <List>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Poetry: Emphasis on Confessional
-                                            Poetry
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>Visual Art</ListItemText>
-                                    </ListItem>
-                                </List>
-                                <Typography variant="h4">
-                                    Tips & Tricks
-                                </Typography>
+
                                 <br />
-                                <Typography>
-                                    To win this round, play with a focus on
-                                    individuality, versatility, and victory. Be
-                                    less preoccupied with epiphany, and more so
-                                    with keeping us on our toes. Like we said,
-                                    this is a whole new level&mdash;so
-                                    don&rsquo;t be afraid to break the rules,
-                                    challenge our expectations and, most
-                                    importantly, make us <strong>think.</strong>
-                                </Typography>
-                                <br />
-                                <Typography variant="h4">
-                                    How to Play
-                                </Typography>
 
                                 <List>
                                     <ListItem>
