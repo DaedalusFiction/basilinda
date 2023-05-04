@@ -1,8 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
 import ShareIcons from "../general/ShareIcons";
 import PublicationBody from "../publications/PublicationBody";
-import theme from "../../styles/themes/theme";
 
 const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
     return (

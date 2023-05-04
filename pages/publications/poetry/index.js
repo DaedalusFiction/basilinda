@@ -35,7 +35,7 @@ export const getServerSideProps = async (context) => {
     const publicationsRef = collection(db, "publications");
     const itemsQuery = query(
         publicationsRef,
-        where("categories", "array-contains", category),
+        where("categories", "array-contains", "Poetry"),
         orderBy("dateUploaded", "desc")
     );
 
