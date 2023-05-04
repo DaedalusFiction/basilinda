@@ -62,41 +62,40 @@ const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
                     {publication.fields[1].value}
                 </Typography>
             </Box>
-            <Grid container>
-                <Grid
-                    item
-                    xs={0}
-                    md={1}
-                    sx={{
-                        position: "relative",
-                    }}
-                >
-                    <Box
+            <Container>
+                <Grid container>
+                    <Grid
+                        item
+                        xs={0}
+                        md={1}
                         sx={{
-                            position: "sticky",
-                            top: "8rem",
-                            margin: {
-                                xs: "0",
-                                md: "42vh 1.25rem 1.25rem 1.25rem",
-                            },
+                            position: "relative",
                         }}
                     >
-                        <ShareIcons color="primary" direction="column" />
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={11}>
-                    <Box>
-                        <Grid container></Grid>
-                        <Container>
+                        <Box
+                            sx={{
+                                position: "sticky",
+                                top: "8rem",
+                                margin: {
+                                    xs: "0",
+                                    md: "1.25rem",
+                                },
+                            }}
+                        >
+                            <ShareIcons color="primary" direction="column" />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={11}>
+                        <Box>
                             <PublicationBody
                                 sidebarCategory={sidebarCategory}
                                 sidebarItems={sidebarItems}
                                 story={publication}
                             />
-                        </Container>
-                    </Box>
+                        </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Container>
         </Box>
     );
 };
