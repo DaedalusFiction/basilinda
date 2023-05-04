@@ -1,6 +1,6 @@
 import { Button, Grid, Input, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Image from "next/image";
 import React from "react";
@@ -136,17 +136,6 @@ const FirebaseUploadForm = ({
             }
         );
 
-        //check to see if document with selected Title already exists
-        const checkTask = await getDoc(
-            doc(db, folder, formData.fields[0].value)
-        );
-        if (checkTask.exists()) {
-            setFileError(
-                "Please select a different title. An image with that title already exists."
-            );
-            return;
-        }
-
         if (error) {
             setFileError(
                 "Cannot upload. An image or text file with this name already exists in storage. Please rename the image and/or markdown file and try again."
@@ -213,23 +202,15 @@ const FirebaseUploadForm = ({
                                             downloadURLs.length >=
                                             selectedImages.length
                                         ) {
-                                            setDoc(
-                                                doc(
-                                                    db,
-                                                    folder,
-                                                    formData.fields[0].value
-                                                ),
-                                                {
-                                                    ...formData,
-                                                    id: formData.fields[0]
-                                                        .value,
-                                                    markdownURL: textFileURL,
-                                                    markdownFileName:
-                                                        selectedTextFile.name,
-                                                    URLs: downloadURLs,
-                                                    dateUploaded: Date.now(),
-                                                }
-                                            );
+                                            addDoc(collection(db, folder), {
+                                                ...formData,
+                                                id: formData.fields[0].value,
+                                                markdownURL: textFileURL,
+                                                markdownFileName:
+                                                    selectedTextFile.name,
+                                                URLs: downloadURLs,
+                                                dateUploaded: Date.now(),
+                                            });
                                         }
 
                                         setFormData(

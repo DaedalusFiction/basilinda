@@ -5,6 +5,7 @@ import { Stack } from "@mui/system";
 import Link from "next/link";
 import Reddit from "@mui/icons-material/Reddit";
 import Head from "next/head";
+import theme from "../../styles/themes/theme";
 
 const ShareIcons = ({ fontSize, color, direction }) => {
     const handleShare = (e) => {
@@ -49,7 +50,13 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                 }}
             >
                 <Stack direction={direction} spacing={1}>
-                    <Typography variant="h3" sx={{ fontSize: ".75rem" }}>
+                    <Typography
+                        variant="h3"
+                        sx={{
+                            fontSize: ".75rem",
+                            color: theme.palette.custom.darkMuted,
+                        }}
+                    >
                         SHARE
                     </Typography>
                     <Link href="https://reddit.com" title="testshare">

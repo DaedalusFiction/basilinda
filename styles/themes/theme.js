@@ -60,7 +60,7 @@ theme = createTheme(theme, {
             // color: theme.palette.primary.off,
             fontWeight: "400",
             // lineHeight: ".85em",
-            fontSize: "clamp(3rem, 2.75vw, 7rem)",
+            fontSize: "3rem",
             letterSpacing: ".025em",
         },
         h2: {

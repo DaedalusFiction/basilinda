@@ -124,25 +124,25 @@ const contactConfig = {
 const secondaryProfiles = [
     {
         image: {
-            url: "/images/davidBio.webp",
+            url: "/images/sydneyBio.webp",
             alt: "Sydney",
         },
         name: "Sydney",
-        content: "Bruce is the greatest.",
-    },
-    {
-        image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
-        name: "Dave",
-        content: "Owen likes to PARTY!",
+        content: "Sydney is the greatest.",
     },
     {
         image: {
-            url: "/images/davidBio.webp",
+            url: "/images/anthonyBio.webp",
             alt: "Anthony",
         },
         name: "Anthony",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+    },
+    {
+        image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
+        name: "Dave",
+        content: "Owen likes to PARTY!",
     },
 ];
 
@@ -226,23 +226,27 @@ const leftPages = [
     },
     {
         name: "Letters",
-        nameAlt: "Soldiers",
+        nameAlt: "Objectives",
         href: "/publications/letters",
+        subPages: [],
+    },
+    {
+        name: "Mixed Media",
+        nameAlt: "Components",
+        href: "/publications/mixedmedia",
         subPages: [],
     },
 ];
 const rightPages = [
     {
-        name: "About Us",
-        href: "/about",
-        nameAlt: "The Board",
-        subPages: [
-            { name: "Masthead", href: "/about/masthead" },
-            {
-                name: "Mission Statement",
-                href: "/about/missionstatement",
-            },
-        ],
+        name: "Masthead",
+        href: "/about/masthead",
+        nameAlt: "Soldiers",
+    },
+    {
+        name: "Mission Statement",
+        href: "/about/missionstatement",
+        nameAlt: "Victory Conditions",
     },
     {
         name: "Submissions",

@@ -1,4 +1,3 @@
-import { Box, Container } from "@mui/system";
 import {
     collection,
     doc,
@@ -10,103 +9,44 @@ import {
     where,
 } from "firebase/firestore";
 import { db } from "../../../firebase";
-import { Grid, Typography } from "@mui/material";
-import PublicationBody from "../../../components/publications/PublicationBody";
-import ShareIcons from "../../../components/general/ShareIcons";
+import Publication from "../../../components/layout/Publication";
 
-const page = ({ articles, misc }) => {
+const sidebarCategory = "Letters";
+
+const page = ({ sidebarItems, publication }) => {
     return (
-        <Box className="section">
-            <Container>
-                <Grid container>
-                    <Grid
-                        item
-                        xs={0}
-                        md={1}
-                        sx={{
-                            position: "relative",
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                position: "sticky",
-                                top: "4rem",
-                                margin: "42vh 1.25rem 1.25rem 1.25rem",
-                            }}
-                        >
-                            <ShareIcons color="primary" direction="column" />
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={11}>
-                        <Box sx={{ paddingTop: "5rem" }}>
-                            <Grid container>
-                                <Grid item xs={12} md={8}>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            gap: ".25em",
-                                        }}
-                                    >
-                                        {misc.subCategories.map(
-                                            (subCategory, index) => {
-                                                return (
-                                                    <Typography
-                                                        key={index}
-                                                        variant="caption"
-                                                    >
-                                                        [{subCategory}]
-                                                    </Typography>
-                                                );
-                                            }
-                                        )}
-                                    </Box>
-                                    <Typography
-                                        sx={{
-                                            margin: ".25em 0",
-                                            fontSize: "3rem",
-                                        }}
-                                        variant="h1"
-                                    >
-                                        {misc.fields[0].value}?
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                            <PublicationBody
-                                sidebarCategory="Opinions"
-                                sidebarItems={articles}
-                                story={misc}
-                            />
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Container>
-        </Box>
+        <Publication
+            publication={publication}
+            sidebarCategory={sidebarCategory}
+            sidebarItems={sidebarItems}
+        />
     );
 };
 
 export const getServerSideProps = async (context) => {
     const docSnap = await getDoc(doc(db, `publications/${context.params.id}`));
-    let misc = docSnap.data();
+    let publication = docSnap.data();
 
     const publicationsRef = collection(db, "publications");
-    const articlesQuery = query(
+
+    const sidebarItemsQuery = query(
         publicationsRef,
-        where("categories", "array-contains", "opinions"),
+        where("categories", "array-contains", sidebarCategory.toLowerCase()),
         orderBy("dateUploaded", "desc"),
         limit(2)
     );
 
-    const articlesSnapshot = await getDocs(articlesQuery);
+    const sidebarItemsSnapshot = await getDocs(sidebarItemsQuery);
 
-    let articles = [];
-    articlesSnapshot.docs.forEach((doc, index) => {
-        articles = [...articles, doc.data()];
+    let sidebarItems = [];
+    sidebarItemsSnapshot.docs.forEach((doc, index) => {
+        sidebarItems = [...sidebarItems, doc.data()];
     });
 
     return {
         props: {
-            articles,
-            misc,
+            sidebarItems,
+            publication,
         },
     };
 };

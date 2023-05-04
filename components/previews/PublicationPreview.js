@@ -4,24 +4,26 @@ import Link from "next/link";
 import React, { useState } from "react";
 import theme from "../../styles/themes/theme";
 
-const OpinionPreview = ({ opinion }) => {
+const PublicationPreview = ({ item, id, category }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9
     const [isLoaded, setIsLoaded] = useState(false);
     const handleLoaded = (naturalWidth, naturalHeight) => {
         setRatio(naturalWidth / naturalHeight);
         setIsLoaded(true);
     };
-    const opinionHref = "/publications/opinions/" + opinion.fields[0].value;
-    const authorHref = "/contributors/" + opinion.fields[1].value;
+    const itemHref = `/publications/${category
+        .toLowerCase()
+        .replace(" ", "")}/${id}`;
+    const authorHref = "/contributors/" + item.fields[1].value;
 
     return (
         <Box>
-            <Link href={opinionHref}>
+            <Link href={itemHref}>
                 <Fade in={isLoaded}>
                     <div>
                         <Image
                             className="link link-image"
-                            src={opinion.URLs[0]}
+                            src={item.URLs[0]}
                             //has to be unoptimized to work with firebase storage, apparently
                             unoptimized
                             width="100"
@@ -31,7 +33,7 @@ const OpinionPreview = ({ opinion }) => {
                                 naturalHeight,
                             }) => handleLoaded(naturalWidth, naturalHeight)}
                             layout="responsive"
-                            alt="opinion"
+                            alt="item"
                         />
                     </div>
                 </Fade>
@@ -42,7 +44,7 @@ const OpinionPreview = ({ opinion }) => {
                 }}
             >
                 <Box sx={{ display: "flex", gap: ".25em", flexWrap: "wrap" }}>
-                    {opinion.subCategories.map((subCategory, index) => {
+                    {item.subCategories.map((subCategory, index) => {
                         return (
                             <Typography key={index} variant="caption">
                                 [{subCategory}]
@@ -56,7 +58,7 @@ const OpinionPreview = ({ opinion }) => {
                     variant="h4"
                     sx={{ marginBottom: ".25em" }}
                 >
-                    <Link href={opinionHref}>{opinion.fields[0].value}</Link>
+                    <Link href={itemHref}>{item.fields[0].value}</Link>
                 </Typography>
                 <Typography
                     variant="body1"
@@ -66,7 +68,7 @@ const OpinionPreview = ({ opinion }) => {
                         color: theme.palette.custom.darkMuted,
                     }}
                 >
-                    {opinion.fields[2].value}
+                    {item.fields[2].value}
                 </Typography>
                 <Box>
                     <Typography
@@ -84,7 +86,7 @@ const OpinionPreview = ({ opinion }) => {
                             display: "inline-block",
                         }}
                     >
-                        <Link href={authorHref}>{opinion.fields[1].value}</Link>
+                        <Link href={authorHref}>{item.fields[1].value}</Link>
                     </Typography>
                 </Box>
             </Box>
@@ -93,4 +95,4 @@ const OpinionPreview = ({ opinion }) => {
     );
 };
 
-export default OpinionPreview;
+export default PublicationPreview;

@@ -1,4 +1,3 @@
-import { Box, Container } from "@mui/system";
 import {
     collection,
     doc,
@@ -10,82 +9,46 @@ import {
     where,
 } from "firebase/firestore";
 import { db } from "../../../firebase";
-import PublicationBody from "../../../components/publications/PublicationBody";
-import PublicationsHeader from "../../../components/publications/PublicationsHeader";
-import { Grid } from "@mui/material";
-import ShareIcons from "../../../components/general/ShareIcons";
+import Publication from "../../../components/layout/Publication";
 
-const Page = ({ articles, story }) => {
-    const authorHref = "/contributors/" + story.fields[1].value;
+const sidebarCategory = "Mixed Media";
+
+const page = ({ sidebarItems, publication }) => {
     return (
-        <Box className="section">
-            <Container>
-                <Box sx={{ padding: "3rem 0" }}>
-                    <Grid container>
-                        <Grid
-                            item
-                            xs={0}
-                            md={1}
-                            sx={{
-                                position: "relative",
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    position: "sticky",
-                                    top: "4rem",
-                                    margin: "42vh 1.25rem 1.25rem 1.25rem",
-                                }}
-                            >
-                                <ShareIcons
-                                    color="primary"
-                                    direction="column"
-                                />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={11}>
-                            <PublicationsHeader
-                                publication={story}
-                                authorHref={authorHref}
-                            />
-                            <PublicationBody
-                                sidebarCategory="Misc"
-                                sidebarItems={articles}
-                                story={story}
-                            />
-                        </Grid>
-                    </Grid>
-                </Box>
-            </Container>
-        </Box>
+        <Publication
+            publication={publication}
+            sidebarCategory={sidebarCategory}
+            sidebarItems={sidebarItems}
+        />
     );
 };
 
 export const getServerSideProps = async (context) => {
     const docSnap = await getDoc(doc(db, `publications/${context.params.id}`));
-    let story = docSnap.data();
+    let publication = docSnap.data();
 
     const publicationsRef = collection(db, "publications");
-    const articlesQuery = query(
+
+    const sidebarItemsQuery = query(
         publicationsRef,
-        where("categories", "array-contains", "misc"),
+        where("categories", "array-contains", sidebarCategory.toLowerCase()),
         orderBy("dateUploaded", "desc"),
-        limit(3)
+        limit(2)
     );
 
-    const articlesSnapshot = await getDocs(articlesQuery);
+    const sidebarItemsSnapshot = await getDocs(sidebarItemsQuery);
 
-    let articles = [];
-    articlesSnapshot.docs.forEach((doc, index) => {
-        articles = [...articles, doc.data()];
+    let sidebarItems = [];
+    sidebarItemsSnapshot.docs.forEach((doc, index) => {
+        sidebarItems = [...sidebarItems, doc.data()];
     });
 
     return {
         props: {
-            articles,
-            story,
+            sidebarItems,
+            publication,
         },
     };
 };
 
-export default Page;
+export default page;

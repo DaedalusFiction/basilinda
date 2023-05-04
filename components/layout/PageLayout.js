@@ -8,7 +8,21 @@ const PageLayout = ({ name, children }) => {
     return (
         <>
             {/* <Header /> */}
-            <Box sx={{ padding: "8rem 0" }}>
+            <Box
+                sx={{
+                    backgroundImage:
+                        "linear-gradient(rgba(39, 45, 45, 0.65), rgba(39, 45, 45, 1)), url(/images/collage-background.webp)",
+                    // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
+                    backgroundSize: "cover",
+                    // backgroundAttachment: "fixed",
+                    paddingTop: "12rem ",
+                    position: "relative",
+                    display: "flex",
+                    // alignItems: "center",
+                    justifyContent: "center",
+                    // flexDirection: "column",
+                }}
+            >
                 {/* <Meta siteName={name} /> */}
                 <Container maxWidth="xl">
                     <Typography

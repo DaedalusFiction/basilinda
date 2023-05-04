@@ -3,43 +3,52 @@ import { Box, Container } from "@mui/system";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React from "react";
 import PageLayout from "../../../components/layout/PageLayout";
-import OpinionPreview from "../../../components/previews/OpinionPreview";
 import { db } from "../../../firebase";
+import PublicationPreview from "../../../components/previews/PublicationPreview";
+import { InsertEmoticon } from "@mui/icons-material";
 
-const index = ({ opinion }) => {
+const category = "Poetry";
+
+const index = ({ items }) => {
     return (
-        <PageLayout name="Poetry">
-            <Grid className="section" container spacing={3}>
-                {opinion.map((item, index) => {
-                    return (
-                        <Grid key={index} item xs={12} sm={6} md={3}>
-                            <OpinionPreview opinion={item} category="opinion" />
-                        </Grid>
-                    );
-                })}
-            </Grid>
+        <PageLayout name={category}>
+            <Container maxWidth="md">
+                <Grid className="section" container>
+                    {items.map((item, index) => {
+                        return (
+                            <Grid key={InsertEmoticon} item xs={12}>
+                                <PublicationPreview
+                                    item={item.data}
+                                    id={item.id}
+                                    category={category}
+                                />
+                            </Grid>
+                        );
+                    })}
+                </Grid>
+            </Container>
         </PageLayout>
     );
 };
 
 export const getServerSideProps = async (context) => {
     const publicationsRef = collection(db, "publications");
-    const opinionQuery = query(
+    const itemsQuery = query(
         publicationsRef,
-        where("categories", "array-contains", "poetry"),
+        where("categories", "array-contains", category),
         orderBy("dateUploaded", "desc")
     );
 
-    const opinionSnapshot = await getDocs(opinionQuery);
+    const itemsSnapshot = await getDocs(itemsQuery);
 
-    let opinion = [];
-    opinionSnapshot.docs.forEach((doc, index) => {
-        opinion = [...opinion, doc.data()];
+    let items = [];
+    itemsSnapshot.docs.forEach((doc, index) => {
+        items = [...items, { data: doc.data(), id: doc.id }];
     });
 
     return {
         props: {
-            opinion,
+            items,
         },
     };
 };
