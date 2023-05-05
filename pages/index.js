@@ -1,10 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
 import Link from "next/link";
+import TypingAnimation from "../components/general/TypingAnimation";
 
 export default function Home() {
     return (
@@ -20,119 +21,47 @@ export default function Home() {
                     paddingTop: "12rem",
                     position: "relative",
                     marginBottom: "4rem",
-                    display: "flex",
-                    // alignItems: "center",
-                    justifyContent: "center",
                     // flexDirection: "column",
                 }}
             >
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Box
+                        sx={{
+                            padding: ".5em",
+                            border:
+                                "1px solid " + theme.palette.custom.lightMuted,
+                        }}
+                    >
+                        <Typography
+                            variant="h1"
+                            component="p"
+                            sx={{
+                                fontSize: "1.25rem",
+                                textAlign: "center",
+                                color: theme.palette.custom.light,
+                            }}
+                        >
+                            Est.
+                        </Typography>
+                        <Typography
+                            variant="h1"
+                            component="p"
+                            sx={{
+                                fontSize: "1.25rem",
+                                textAlign: "center",
+                                color: theme.palette.custom.light,
+                            }}
+                        >
+                            2023
+                        </Typography>
+                    </Box>
+                </Box>
                 <Container maxWidth="xl" disableGutters>
-                    <Container maxWidth="sm">
-                        <Box sx={{ display: "flex", justifyContent: "center" }}>
-                            <Box>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    They shut me up in Prose &mdash;
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    As when a little Girl
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    They put me in the Closet &mdash;
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    Because they liked me &ldquo;still&rdquo;{" "}
-                                    &mdash;
-                                </Typography>
-                                <br />
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    Still! Could themself have peeped &mdash;
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    And seen my Brain &mdash; go round &mdash;
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    They might as wise have lodged a Bird
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    For Treason &mdash; in the Pound &mdash;
-                                </Typography>
-                                <br />
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    Himself has but to will
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    And easy as a Star
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    Look down upon Captivity
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontStyle: "italic",
-                                        color: theme.palette.custom.lightMuted,
-                                    }}
-                                >
-                                    And laugh &mdash; No more have I &mdash;
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Container>
-
                     <Grid
                         container
                         spacing={0}
@@ -163,7 +92,7 @@ export default function Home() {
                                             margin: "2em 0",
                                         }}
                                     >
-                                        Poetry
+                                        &#123;POETRY&#125;
                                     </Typography>
                                 </Link>
                             </Box>
@@ -231,7 +160,7 @@ export default function Home() {
                                             margin: "2em 0",
                                         }}
                                     >
-                                        Mixed Media
+                                        &#123;MIXED MEDIA&#125;
                                     </Typography>
                                 </Link>
                             </Box>
@@ -266,9 +195,13 @@ export default function Home() {
                                             margin: "2em 0",
                                         }}
                                     >
-                                        Letters
+                                        &#123;LETTERS&#125;
                                     </Typography>
                                 </Link>
+                                {/* <TypingAnimation
+                                    string="teststring"
+                                    alternateString="testalternate"
+                                /> */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -294,6 +227,116 @@ export default function Home() {
                     </Grid>
                 </Container>
             </Box>
+            <Container maxWidth="sm">
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        marginBottom: "4rem",
+                    }}
+                >
+                    <Box>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            They shut me up in Prose &mdash;
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            As when a little Girl
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            They put me in the Closet &mdash;
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            Because they liked me &ldquo;still&rdquo; &mdash;
+                        </Typography>
+                        <br />
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            Still! Could themself have peeped &mdash;
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            And seen my Brain &mdash; go round &mdash;
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            They might as wise have lodged a Bird
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            For Treason &mdash; in the Pound &mdash;
+                        </Typography>
+                        <br />
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            Himself has but to will
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            And easy as a Star
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            Look down upon Captivity
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontStyle: "italic",
+                                color: theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            And laugh &mdash; No more have I &mdash;
+                        </Typography>
+                    </Box>
+                </Box>
+            </Container>
         </>
     );
 }
