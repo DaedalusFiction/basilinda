@@ -5,7 +5,9 @@ import { Container } from "@mui/system";
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
 import Link from "next/link";
-import TypingAnimation from "../components/general/TypingAnimation";
+import ExpandingText from "../components/general/ExpandingText";
+import NativeImage from "../components/general/NativeImage";
+import { hero } from "../siteInfo";
 
 export default function Home() {
     return (
@@ -18,9 +20,8 @@ export default function Home() {
                     // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
                     // backgroundAttachment: "fixed",
-                    paddingTop: "12rem",
+                    paddingTop: "8rem",
                     position: "relative",
-                    marginBottom: "4rem",
                     // flexDirection: "column",
                 }}
             >
@@ -28,8 +29,11 @@ export default function Home() {
                     sx={{
                         display: "flex",
                         justifyContent: "center",
+                        alignItems: "end",
+                        gap: "1.5rem",
                     }}
                 >
+                    <NativeImage src={hero.image.src} maxSize={100} />
                     <Box
                         sx={{
                             padding: ".5em",
@@ -60,13 +64,16 @@ export default function Home() {
                             2023
                         </Typography>
                     </Box>
+                    <Box sx={{ transform: "scaleX(-1)" }}>
+                        <NativeImage src={hero.image.src} maxSize={100} />
+                    </Box>
                 </Box>
                 <Container maxWidth="xl" disableGutters>
                     <Grid
                         container
                         spacing={0}
                         sx={{
-                            marginTop: "8rem",
+                            marginTop: "3rem",
                             borderTop:
                                 "2px solid " + theme.palette.custom.darkMuted,
                         }}
@@ -81,6 +88,9 @@ export default function Home() {
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
+                                    flexDirection: "column",
+                                    margin: "2em 0",
+                                    gap: ".25rem",
                                 }}
                             >
                                 <Link href="/publications/poetry">
@@ -89,12 +99,29 @@ export default function Home() {
                                         className="link"
                                         sx={{
                                             textAlign: "center",
-                                            margin: "2em 0",
                                         }}
                                     >
-                                        &#123;POETRY&#125;
+                                        &#123;poetry&#125;
                                     </Typography>
                                 </Link>
+
+                                <Divider
+                                    sx={{
+                                        margin: ".5rem 0",
+                                        padding: "1px 0",
+                                        minWidth: "8rem",
+                                        backgroundColor:
+                                            theme.palette.custom.lightMuted,
+                                    }}
+                                />
+
+                                <ExpandingText>
+                                    <Typography>
+                                        <Link href="/publications/poetry">
+                                            see more
+                                        </Link>
+                                    </Typography>
+                                </ExpandingText>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -146,9 +173,12 @@ export default function Home() {
                                     height: "100%",
                                     // border:
                                     //     "1px solid " + theme.palette.custom.lightMuted,
+                                    margin: "2em 0",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
+                                    flexDirection: "column",
+                                    gap: ".25rem",
                                 }}
                             >
                                 <Link href="/publications/mixedmedia">
@@ -157,12 +187,28 @@ export default function Home() {
                                         className="link"
                                         sx={{
                                             textAlign: "center",
-                                            margin: "2em 0",
                                         }}
                                     >
                                         &#123;MIXED MEDIA&#125;
                                     </Typography>
                                 </Link>
+                                <Divider
+                                    sx={{
+                                        margin: ".5rem 0",
+                                        padding: "1px 0",
+                                        minWidth: "8rem",
+                                        backgroundColor:
+                                            theme.palette.custom.lightMuted,
+                                    }}
+                                />
+
+                                <ExpandingText>
+                                    <Typography>
+                                        <Link href="/publications/mixedmedia">
+                                            see more
+                                        </Link>
+                                    </Typography>
+                                </ExpandingText>
                             </Box>
                         </Grid>
                     </Grid>
@@ -181,9 +227,12 @@ export default function Home() {
                                     height: "100%",
                                     // border:
                                     //     "1px solid " + theme.palette.custom.lightMuted,
+                                    margin: "2em 0",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
+                                    flexDirection: "column",
+                                    gap: ".25rem",
                                 }}
                             >
                                 <Link href="/publications/letters">
@@ -192,16 +241,28 @@ export default function Home() {
                                         className="link"
                                         sx={{
                                             textAlign: "center",
-                                            margin: "2em 0",
                                         }}
                                     >
                                         &#123;LETTERS&#125;
                                     </Typography>
                                 </Link>
-                                {/* <TypingAnimation
-                                    string="teststring"
-                                    alternateString="testalternate"
-                                /> */}
+                                <Divider
+                                    sx={{
+                                        margin: ".5rem 0",
+                                        padding: "1px 0",
+                                        minWidth: "8rem",
+                                        backgroundColor:
+                                            theme.palette.custom.lightMuted,
+                                    }}
+                                />
+
+                                <ExpandingText>
+                                    <Typography>
+                                        <Link href="/publications/letters">
+                                            see more
+                                        </Link>
+                                    </Typography>
+                                </ExpandingText>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -232,7 +293,7 @@ export default function Home() {
                     sx={{
                         display: "flex",
                         justifyContent: "center",
-                        marginBottom: "4rem",
+                        margin: "4rem 0",
                     }}
                 >
                     <Box>

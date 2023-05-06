@@ -1,11 +1,18 @@
 const siteName = "Basilinda";
 
+const hero = {
+    image: {
+        src: "/images/cannon.svg",
+        alt: "alt upload image text",
+    },
+};
+
 const uploadCategories = [
     {
         name: "Poetry",
         href: "/publications/poetry",
         image: {
-            url: "/images/placeholder.webp",
+            url: "/images/cannon.svg",
             alt: "alt upload image text",
         },
         subCategories: [
@@ -257,6 +264,7 @@ const rightPages = [
 ];
 
 export {
+    hero,
     siteName,
     leftPages,
     rightPages,

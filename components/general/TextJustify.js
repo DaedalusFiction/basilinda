@@ -8,7 +8,7 @@ const TextJustify = ({ children }) => {
             sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                padding: "0 .9rem 0 0",
+                padding: { xs: "none", md: "0 .9rem 0 0" },
             }}
         >
             {textArray.map((word, index) => {
@@ -18,6 +18,7 @@ const TextJustify = ({ children }) => {
                             sx={{
                                 fontStyle: "italic",
                                 fontFamily: "LibreBaskerville",
+                                fontSize: "clamp(.5rem, 2vw, 1rem)",
                             }}
                         >
                             {word}

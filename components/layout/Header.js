@@ -87,9 +87,12 @@ const Header = ({ light }) => {
                                             color: theme.palette.primary.main,
                                         }}
                                     >
-                                        BASILINDA
+                                        BASILINDA!
                                     </Typography>
                                 </Link>
+                                <TextJustify>
+                                    A Queer & Feminist Journal
+                                </TextJustify>
                             </Typography>
                         </Box>
                     </Grid>
@@ -169,7 +172,7 @@ const Header = ({ light }) => {
                                                 },
                                             }}
                                         >
-                                            BASILINDA
+                                            BASILINDA!
                                         </Typography>
                                     </Link>
                                     <TextJustify>

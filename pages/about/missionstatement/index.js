@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import ImageFadeIn from "../../../components/general/ImageFadeIn";
 import PageLayout from "../../../components/layout/PageLayout";
 import AboutNavbar from "../../../components/about/AboutNavbar";
+import NativeImage from "../../../components/general/NativeImage";
 
 const index = () => {
     return (
@@ -10,15 +11,18 @@ const index = () => {
                 <Box className="section">
                     <Grid container>
                         <Grid item xs={12}>
-                            {/* <ImageFadeIn
-                                src="/images/preacherman.webp"
-                                height={580}
-                                width={910}
+                            <NativeImage
+                                src="/images/womanWithCannon.svg"
+                                maxSize={800}
                             />
-                            <br /> */}
-                            <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                                We are on a mission to change the world. More on
-                                that later.
+                            <Typography
+                                sx={{
+                                    whiteSpace: "pre-wrap",
+                                    textAlign: "center",
+                                    marginTop: "1rem",
+                                }}
+                            >
+                                It&rsquo;s not that we hate men PER SE
                             </Typography>
                         </Grid>
                     </Grid>
