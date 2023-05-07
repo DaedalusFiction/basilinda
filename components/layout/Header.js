@@ -87,7 +87,7 @@ const Header = ({ light }) => {
                                             color: theme.palette.primary.main,
                                         }}
                                     >
-                                        BASILINDA!
+                                        BASILINDA
                                     </Typography>
                                 </Link>
                                 <TextJustify>
@@ -172,7 +172,7 @@ const Header = ({ light }) => {
                                                 },
                                             }}
                                         >
-                                            BASILINDA!
+                                            BASILINDA
                                         </Typography>
                                     </Link>
                                     <TextJustify>

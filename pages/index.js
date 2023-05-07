@@ -129,7 +129,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visualArtsHeader.png)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
                                         backgroundSize: "cover",
                                         padding: "12rem 0",
                                         display: "flex",
@@ -151,7 +151,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/visArts.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/mixedMediaHeader.webp)",
                                         backgroundSize: "cover",
 
                                         padding: "12rem 0",
@@ -270,7 +270,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/lettersHeader.webp)",
                                         backgroundSize: "cover",
                                         padding: "12rem 0",
                                         display: "flex",
