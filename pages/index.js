@@ -189,7 +189,7 @@ export default function Home() {
                                             textAlign: "center",
                                         }}
                                     >
-                                        &#123;MIXED MEDIA&#125;
+                                        &#123;mixed media&#125;
                                     </Typography>
                                 </Link>
                                 <Divider
@@ -243,7 +243,7 @@ export default function Home() {
                                             textAlign: "center",
                                         }}
                                     >
-                                        &#123;LETTERS&#125;
+                                        &#123;letters&#125;
                                     </Typography>
                                 </Link>
                                 <Divider

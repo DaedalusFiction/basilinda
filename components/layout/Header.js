@@ -66,7 +66,7 @@ const Header = ({ light }) => {
                         >
                             <Typography
                                 variant="h3"
-                                component="span"
+                                component="p"
                                 noWrap
                                 sx={{
                                     fontSize: "1.75rem",
@@ -82,7 +82,6 @@ const Header = ({ light }) => {
                                             transition: "150ms",
                                             textAlign: "center",
                                             cursor: "pointer",
-                                            textTransform: "uppercase",
                                             fontSize: "2rem",
                                             color: theme.palette.primary.main,
                                         }}

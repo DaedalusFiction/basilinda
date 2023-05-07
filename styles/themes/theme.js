@@ -77,7 +77,6 @@ theme = createTheme(theme, {
             letterSpacing: ".025em",
             fontWeight: "400",
             fontSize: "1rem",
-            textTransform: "uppercase",
         },
         h4: {
             color: theme.palette.custom.primary,
