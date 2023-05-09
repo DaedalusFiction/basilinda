@@ -89,7 +89,7 @@ export default function Home() {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     flexDirection: "column",
-                                    margin: "2em 0",
+                                    padding: "4rem 0",
                                     gap: ".25rem",
                                 }}
                             >
@@ -116,11 +116,9 @@ export default function Home() {
                                 />
 
                                 <ExpandingText>
-                                    <Typography>
-                                        <Link href="/publications/poetry">
-                                            see more
-                                        </Link>
-                                    </Typography>
+                                    <Link href="/publications/poetry">
+                                        see more
+                                    </Link>
                                 </ExpandingText>
                             </Box>
                         </Grid>
@@ -173,7 +171,7 @@ export default function Home() {
                                     height: "100%",
                                     // border:
                                     //     "1px solid " + theme.palette.custom.lightMuted,
-                                    margin: "2em 0",
+                                    padding: "4rem 0",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -203,11 +201,9 @@ export default function Home() {
                                 />
 
                                 <ExpandingText>
-                                    <Typography>
-                                        <Link href="/publications/mixedmedia">
-                                            see more
-                                        </Link>
-                                    </Typography>
+                                    <Link href="/publications/mixedmedia">
+                                        see more
+                                    </Link>
                                 </ExpandingText>
                             </Box>
                         </Grid>
@@ -227,7 +223,7 @@ export default function Home() {
                                     height: "100%",
                                     // border:
                                     //     "1px solid " + theme.palette.custom.lightMuted,
-                                    margin: "2em 0",
+                                    padding: "4rem 0",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -257,11 +253,9 @@ export default function Home() {
                                 />
 
                                 <ExpandingText>
-                                    <Typography>
-                                        <Link href="/publications/letters">
-                                            see more
-                                        </Link>
-                                    </Typography>
+                                    <Link href="/publications/letters">
+                                        see more
+                                    </Link>
                                 </ExpandingText>
                             </Box>
                         </Grid>
