@@ -1,6 +1,7 @@
 import { Box } from "@mui/system";
 import React, { useRef, useState } from "react";
 import theme from "../../styles/themes/theme";
+import { Typography } from "@mui/material";
 
 const ExpandingText = ({ children }) => {
     const [letterSpacing, setLetterSpacing] = useState(false);
@@ -26,26 +27,28 @@ const ExpandingText = ({ children }) => {
     return (
         <Box
             sx={{
-                "& > *": {
-                    letterSpacing: letterSpacing,
-                    transition: "300ms",
-                    background: background,
-                    display: "inline-block",
-                    position: "relative",
-                    zIndex: "10",
-                    color: color,
-                    padding: ".5em 1em",
-                    border: border,
-                    cursor: "pointer",
-                    // fontWeight: "600",
-                    textTransform: "uppercase",
-                    // boxShadow: shadow,
-                },
+                background: background,
+                position: "relative",
+                zIndex: "10",
+                display: "inline-block",
+                padding: ".5em 1em",
+                transition: "300ms",
+                border: border,
+                cursor: "pointer",
             }}
             onMouseOver={handleOnMouseOver}
             onMouseLeave={handleOnMouseLeave}
         >
-            {children}
+            <Typography
+                sx={{
+                    transition: "300ms",
+                    color: color,
+                    letterSpacing: letterSpacing,
+                    textTransform: "uppercase",
+                }}
+            >
+                {children}
+            </Typography>
         </Box>
     );
 };

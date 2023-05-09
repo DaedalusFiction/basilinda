@@ -14,7 +14,7 @@ import Link from "next/link";
 const index = () => {
     return (
         <PageLayout name="How to Play">
-            <Container>
+            <Container maxWidth="md">
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <Box sx={{ margin: "4rem 0" }}>
@@ -107,18 +107,6 @@ const index = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    {/* <Grid item xs={12} md={6}>
-                        <TextSubmissionsForm
-                            config={textSubmissionsConfig}
-                            folder="storysubmissions"
-                        />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <ImageSubmissionsForm
-                            config={imageSubmissionsConfig}
-                            folder="imagesubmissions"
-                        />
-                    </Grid> */}
                 </Grid>
             </Container>
         </PageLayout>
