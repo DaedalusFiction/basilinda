@@ -65,30 +65,18 @@ const Header = ({ light }) => {
                             }}
                         >
                             <Typography
-                                variant="h3"
-                                component="p"
-                                noWrap
+                                variant="h1"
                                 sx={{
-                                    fontSize: "1.75rem",
-                                    fontWeight: 700,
-                                    color: theme.palette.custom.light,
+                                    margin: "0",
+                                    transition: "150ms",
+                                    textAlign: "center",
+                                    cursor: "pointer",
+                                    fontSize: "2rem",
+                                    color: theme.palette.primary.main,
                                 }}
                             >
-                                <Link href="/">
-                                    <Typography
-                                        variant="h1"
-                                        sx={{
-                                            margin: "0",
-                                            transition: "150ms",
-                                            textAlign: "center",
-                                            cursor: "pointer",
-                                            fontSize: "2rem",
-                                            color: theme.palette.primary.main,
-                                        }}
-                                    >
-                                        BASILINDA
-                                    </Typography>
-                                </Link>
+                                <Link href="/">BASILINDA</Link>
+
                                 <TextJustify>
                                     A Queer & Feminist Journal
                                 </TextJustify>

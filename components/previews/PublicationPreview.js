@@ -18,26 +18,28 @@ const PublicationPreview = ({ item, id, category }) => {
 
     return (
         <Box>
-            <Link href={itemHref}>
-                <Fade in={isLoaded}>
-                    <div>
-                        <Image
-                            className="link link-image"
-                            src={item.URLs[0]}
-                            //has to be unoptimized to work with firebase storage, apparently
-                            unoptimized
-                            width="100"
-                            height={100 / ratio}
-                            onLoadingComplete={({
-                                naturalWidth,
-                                naturalHeight,
-                            }) => handleLoaded(naturalWidth, naturalHeight)}
-                            layout="responsive"
-                            alt="item"
-                        />
-                    </div>
-                </Fade>
-            </Link>
+            {item.URLs && (
+                <Link href={itemHref}>
+                    <Fade in={isLoaded}>
+                        <div>
+                            <Image
+                                className="link link-image"
+                                src={item.URLs[0]}
+                                //has to be unoptimized to work with firebase storage, apparently
+                                unoptimized
+                                width="100"
+                                height={100 / ratio}
+                                onLoadingComplete={({
+                                    naturalWidth,
+                                    naturalHeight,
+                                }) => handleLoaded(naturalWidth, naturalHeight)}
+                                layout="responsive"
+                                alt="item"
+                            />
+                        </div>
+                    </Fade>
+                </Link>
+            )}
             <Box
                 sx={{
                     margin: ".5rem 0",

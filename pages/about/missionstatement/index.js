@@ -22,7 +22,7 @@ const index = () => {
                                     marginTop: "1rem",
                                 }}
                             >
-                                It&rsquo;s not that we hate men PER SE
+                                It&rsquo;s not that we hate men <em>PER SE</em>
                             </Typography>
                         </Grid>
                     </Grid>

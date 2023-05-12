@@ -11,7 +11,7 @@ import { hero } from "../siteInfo";
 
 export default function Home() {
     return (
-        <>
+        <Box>
             <Meta />
             <Box
                 sx={{
@@ -392,7 +392,7 @@ export default function Home() {
                     </Box>
                 </Box>
             </Container>
-        </>
+        </Box>
     );
 }
 

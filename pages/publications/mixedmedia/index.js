@@ -6,7 +6,7 @@ import PublicationIndex from "../../../components/layout/PublicationIndex";
 const category = "Mixed Media";
 
 const index = ({ items }) => {
-    return <PublicationIndex category={category} items={items} />;
+    return <PublicationIndex category={category} items={items} isGrid />;
 };
 
 export const getServerSideProps = async (context) => {

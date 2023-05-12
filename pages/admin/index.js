@@ -6,6 +6,7 @@ import login from "../../utility/login.js";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import FirebaseUploadForm from "../../components/admin/FirebaseUploadForm.js";
+import FirebaseMMUploadForm from "../../components/admin/FirebaseMMUploadForm.js";
 import FirestoreListing from "../../components/admin/FirestoreListing.js";
 import {
     contributorConfig,
@@ -76,6 +77,15 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <FirebaseMMUploadForm
+                                        config={uploadConfig}
+                                        folder="publications"
+                                        updateCounter={updateCounter}
+                                        setUpdateCounter={setUpdateCounter}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} md={6}></Grid>
 
                                 <Grid item xs={12} md={6}>
                                     <FirebaseContributorUploadForm
