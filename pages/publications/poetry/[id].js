@@ -31,7 +31,7 @@ export const getServerSideProps = async (context) => {
 
     const sidebarItemsQuery = query(
         publicationsRef,
-        where("categories", "array-contains", sidebarCategory.toLowerCase()),
+        where("categories", "array-contains", "Mixed Media"),
         orderBy("dateUploaded", "desc"),
         limit(2)
     );
@@ -40,7 +40,7 @@ export const getServerSideProps = async (context) => {
 
     let sidebarItems = [];
     sidebarItemsSnapshot.docs.forEach((doc, index) => {
-        sidebarItems = [...sidebarItems, doc.data()];
+        sidebarItems = [...sidebarItems, { data: doc.data(), id: doc.id }];
     });
 
     return {

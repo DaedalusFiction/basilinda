@@ -1,7 +1,7 @@
 import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import ArticlePreview from "../home/ArticlePreview";
+import PublicationPreview from "../previews/PublicationPreview";
 
 const PreviewsSidebar = ({ sidebarItems, sidebarCategory }) => {
     return (
@@ -11,10 +11,10 @@ const PreviewsSidebar = ({ sidebarItems, sidebarCategory }) => {
             {sidebarItems &&
                 sidebarItems.map((item, index) => {
                     return (
-                        <ArticlePreview
-                            hideImage
+                        <PublicationPreview
                             category={sidebarCategory}
-                            item={item}
+                            item={item.data}
+                            id={item.id}
                             key={index}
                         />
                     );
