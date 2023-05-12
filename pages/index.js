@@ -5,7 +5,6 @@ import { Container } from "@mui/system";
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
 import Link from "next/link";
-import ExpandingText from "../components/general/ExpandingText";
 import NativeImage from "../components/general/NativeImage";
 import { hero } from "../siteInfo";
 
@@ -33,7 +32,7 @@ export default function Home() {
                         gap: "1.5rem",
                     }}
                 >
-                    <NativeImage src={hero.image.src} maxSize={100} />
+                    {/* <NativeImage src={hero.image.src} maxSize={100} /> */}
                     <Box
                         sx={{
                             padding: ".5em",
@@ -64,9 +63,9 @@ export default function Home() {
                             2023
                         </Typography>
                     </Box>
-                    <Box sx={{ transform: "scaleX(-1)" }}>
+                    {/* <Box sx={{ transform: "scaleX(-1)" }}>
                         <NativeImage src={hero.image.src} maxSize={100} />
-                    </Box>
+                    </Box> */}
                 </Box>
                 <Container maxWidth="xl" disableGutters>
                     <Grid
@@ -101,7 +100,7 @@ export default function Home() {
                                             textAlign: "center",
                                         }}
                                     >
-                                        &#123;poetry&#125;
+                                        poetry
                                     </Typography>
                                 </Link>
 
@@ -115,11 +114,11 @@ export default function Home() {
                                     }}
                                 />
 
-                                <ExpandingText>
+                                {/* <ExpandingText>
                                     <Link href="/publications/poetry">
                                         see more
                                     </Link>
-                                </ExpandingText>
+                                </ExpandingText> */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -149,7 +148,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/mixedMediaHeader.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/creepyChildren.webp)",
                                         backgroundSize: "cover",
 
                                         padding: "12rem 0",
@@ -187,7 +186,7 @@ export default function Home() {
                                             textAlign: "center",
                                         }}
                                     >
-                                        &#123;mixed media&#125;
+                                        mixed media
                                     </Typography>
                                 </Link>
                                 <Divider
@@ -200,11 +199,11 @@ export default function Home() {
                                     }}
                                 />
 
-                                <ExpandingText>
+                                {/* <ExpandingText>
                                     <Link href="/publications/mixedmedia">
                                         see more
                                     </Link>
-                                </ExpandingText>
+                                </ExpandingText> */}
                             </Box>
                         </Grid>
                     </Grid>
@@ -239,7 +238,7 @@ export default function Home() {
                                             textAlign: "center",
                                         }}
                                     >
-                                        &#123;letters&#125;
+                                        letters
                                     </Typography>
                                 </Link>
                                 <Divider
@@ -252,11 +251,11 @@ export default function Home() {
                                     }}
                                 />
 
-                                <ExpandingText>
+                                {/* <ExpandingText>
                                     <Link href="/publications/letters">
                                         see more
                                     </Link>
-                                </ExpandingText>
+                                </ExpandingText> */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>

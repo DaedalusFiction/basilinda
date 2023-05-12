@@ -57,7 +57,7 @@ const Header = ({ light }) => {
                     <Grid item xs={9}>
                         <Box
                             sx={{
-                                display: { xs: "flex", xl: "none" },
+                                display: { xs: "flex", lg: "none" },
                                 alignItems: "center",
                                 justifyContent: "end",
                                 paddingRight: "1em",
@@ -85,46 +85,35 @@ const Header = ({ light }) => {
                     </Grid>
                 </Grid>
                 {/* desktop view */}
-                <Box sx={{ display: { xs: "none", xl: "inherit" } }}>
+                <Box sx={{ display: { xs: "none", lg: "inherit" } }}>
                     <Grid container>
-                        <Grid item xs={4}>
+                        <Grid item xs={4.25}>
                             <Box
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "end",
+                                    justifyContent: "center",
                                     width: "100%",
                                     height: "100%",
                                     gap: "1.5em",
                                 }}
                             >
                                 {leftPages.map((page, index) => (
-                                    <NavBarLinkAnimation key={index}>
-                                        <Link href={page.href}>
-                                            <Typography
-                                                sx={{
-                                                    textAlign: "center",
-                                                    textTransform: "uppercase",
-                                                }}
-                                            >
-                                                {page.name}
-                                            </Typography>
-                                        </Link>
-                                        <Link href={page.href}>
-                                            <Typography
-                                                sx={{
-                                                    textAlign: "center",
-                                                    textTransform: "uppercase",
-                                                }}
-                                            >
-                                                {page.nameAlt}
-                                            </Typography>
-                                        </Link>
-                                    </NavBarLinkAnimation>
+                                    <Link href={page.href} key={index}>
+                                        <Typography
+                                            className="link"
+                                            sx={{
+                                                textAlign: "center",
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            {page.name}
+                                        </Typography>
+                                    </Link>
                                 ))}
                             </Box>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={3.5}>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -168,39 +157,29 @@ const Header = ({ light }) => {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={4.25}>
                             <Box
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
+                                    justifyContent: "center",
                                     width: "100%",
                                     height: "100%",
-                                    gap: "1.5em",
+                                    gap: "1.25em",
                                 }}
                             >
                                 {rightPages.map((page, index) => (
-                                    <NavBarLinkAnimation key={index}>
-                                        <Link href={page.href}>
-                                            <Typography
-                                                sx={{
-                                                    textAlign: "center",
-                                                    textTransform: "uppercase",
-                                                }}
-                                            >
-                                                {page.name}
-                                            </Typography>
-                                        </Link>
-                                        <Link href={page.href}>
-                                            <Typography
-                                                sx={{
-                                                    textAlign: "center",
-                                                    textTransform: "uppercase",
-                                                }}
-                                            >
-                                                {page.nameAlt}
-                                            </Typography>
-                                        </Link>
-                                    </NavBarLinkAnimation>
+                                    <Link href={page.href} key={index}>
+                                        <Typography
+                                            className="link"
+                                            sx={{
+                                                textAlign: "center",
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                            {page.name}
+                                        </Typography>
+                                    </Link>
                                 ))}
                             </Box>
                         </Grid>

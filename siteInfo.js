@@ -256,8 +256,8 @@ const rightPages = [
         nameAlt: "Victory Conditions",
     },
     {
-        name: "Submissions",
-        nameAlt: "How to Play",
+        name: "Submit",
+        nameAlt: "Play",
         href: "/submissions",
         subPages: [],
     },

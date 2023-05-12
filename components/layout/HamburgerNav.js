@@ -17,7 +17,7 @@ const HamburgerNav = () => {
     return (
         <Box
             sx={{
-                display: { xs: "flex", xl: "none" },
+                display: { xs: "flex", lg: "none" },
                 height: "100%",
                 alignItems: "center",
             }}
@@ -47,7 +47,7 @@ const HamburgerNav = () => {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                    display: { xs: "block", xl: "none" },
+                    display: { xs: "block", lg: "none" },
                 }}
             >
                 {leftPages.map((page, index) => {

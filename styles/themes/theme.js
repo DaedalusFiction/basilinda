@@ -39,7 +39,7 @@ let theme = createTheme({
     fonts: {
         primary: "LibreBaskerville",
         secondary: "Bostonia",
-        body: "NotoSans",
+        body: "LibreBaskerville",
     },
 });
 

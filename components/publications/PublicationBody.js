@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { marked } from "marked";
 import { Box, Grid, StepContext, Typography } from "@mui/material";
 import PreviewsSidebar from "./PreviewsSidebar";
+import theme from "../../styles/themes/theme";
 
 const PublicationBody = ({ sidebarItems, story, sidebarCategory }) => {
     useEffect(() => {
@@ -31,7 +32,10 @@ const PublicationBody = ({ sidebarItems, story, sidebarCategory }) => {
         <Grid container className="publication-body" spacing={8}>
             <Grid item xs={12} md={8}>
                 <div
-                    style={{ whiteSpace: "pre-wrap" }}
+                    style={{
+                        whiteSpace: "pre-wrap",
+                        fontFamily: theme.fonts.body,
+                    }}
                     id="storyBody"
                     className="storyBody"
                 ></div>
