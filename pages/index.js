@@ -19,7 +19,7 @@ export default function Home() {
                     // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
                     // backgroundAttachment: "fixed",
-                    paddingTop: "8rem",
+                    paddingTop: "5rem",
                     position: "relative",
                     // flexDirection: "column",
                 }}
@@ -33,7 +33,7 @@ export default function Home() {
                     }}
                 >
                     {/* <NativeImage src={hero.image.src} maxSize={100} /> */}
-                    <Box
+                    {/* <Box
                         sx={{
                             padding: ".5em",
                             border:
@@ -62,7 +62,7 @@ export default function Home() {
                         >
                             2023
                         </Typography>
-                    </Box>
+                    </Box> */}
                     {/* <Box sx={{ transform: "scaleX(-1)" }}>
                         <NativeImage src={hero.image.src} maxSize={100} />
                     </Box> */}
