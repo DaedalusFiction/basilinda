@@ -92,7 +92,7 @@ const Header = ({ light }) => {
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "center",
+                                    justifyContent: "space-evenly",
                                     width: "100%",
                                     height: "100%",
                                     gap: "1.5em",
@@ -162,7 +162,7 @@ const Header = ({ light }) => {
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "center",
+                                    justifyContent: "space-evenly",
                                     width: "100%",
                                     height: "100%",
                                     gap: "1.25em",
