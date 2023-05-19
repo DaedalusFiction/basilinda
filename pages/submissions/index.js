@@ -44,9 +44,7 @@ const index = () => {
                                     <ListItemText>
                                         All submissions should be emailed
                                         directly to{" "}
-                                        <strong>
-                                            teardownthismall@gmail.com
-                                        </strong>
+                                        <em>submit@basilinda.com</em>
                                     </ListItemText>
                                 </ListItem>
                                 <ListItem>

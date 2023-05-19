@@ -229,30 +229,39 @@ const leftPages = [
         name: "Poetry",
         href: "/publications/poetry",
         nameAlt: "Canons",
-        subPages: [],
     },
     {
         name: "Letters",
         nameAlt: "Objectives",
         href: "/publications/letters",
-        subPages: [],
     },
     {
-        name: "Mixed Media",
-        nameAlt: "Components",
-        href: "/publications/mixedmedia",
-        subPages: [],
+        name: "Genrequeer",
+        href: "/publications/genrequeer",
+        nameAlt: "Soldiers",
     },
 ];
 const rightPages = [
     {
-        name: "Masthead",
-        href: "/about/masthead",
-        nameAlt: "Soldiers",
+        name: "Mixed Media",
+        nameAlt: "Components",
+        href: "/publications/mixedmedia",
+        subPages: [
+            {
+                name: "Masthead",
+                href: "/about/about/masthead",
+                nameAlt: "Victory Conditions",
+            },
+            {
+                name: "Mission Statement",
+                href: "/about/about/missionstatement",
+                nameAlt: "Victory Conditions",
+            },
+        ],
     },
     {
-        name: "Mission Statement",
-        href: "/about/missionstatement",
+        name: "About Us",
+        href: "/about",
         nameAlt: "Victory Conditions",
     },
     {

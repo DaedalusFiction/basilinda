@@ -11,10 +11,10 @@ const index = () => {
                 <Box className="section">
                     <Grid container>
                         <Grid item xs={12}>
-                            <NativeImage
+                            {/* <NativeImage
                                 src="/images/womanWithCannon.svg"
                                 maxSize={800}
-                            />
+                            /> */}
                             <Typography
                                 sx={{
                                     whiteSpace: "pre-wrap",

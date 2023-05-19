@@ -13,7 +13,7 @@ const PublicationsHeader = ({ publication, authorHref }) => {
                 md={8}
                 sx={{ paddingRight: { xs: "0", md: "6rem" } }}
             >
-                <Box
+                {/* <Box
                     sx={{
                         display: "flex",
                         gap: ".25em",
@@ -26,7 +26,7 @@ const PublicationsHeader = ({ publication, authorHref }) => {
                             </Typography>
                         );
                     })}
-                </Box>
+                </Box> */}
                 <Typography
                     sx={{
                         margin: ".25em 0",

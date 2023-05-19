@@ -104,16 +104,6 @@ export default function Home() {
                                     </Typography>
                                 </Link>
 
-                                <Divider
-                                    sx={{
-                                        margin: ".5rem 0",
-                                        padding: "1px 0",
-                                        minWidth: "8rem",
-                                        backgroundColor:
-                                            theme.palette.custom.lightMuted,
-                                    }}
-                                />
-
                                 {/* <ExpandingText>
                                     <Link href="/publications/poetry">
                                         see more
@@ -189,15 +179,6 @@ export default function Home() {
                                         mixed media
                                     </Typography>
                                 </Link>
-                                <Divider
-                                    sx={{
-                                        margin: ".5rem 0",
-                                        padding: "1px 0",
-                                        minWidth: "8rem",
-                                        backgroundColor:
-                                            theme.palette.custom.lightMuted,
-                                    }}
-                                />
 
                                 {/* <ExpandingText>
                                     <Link href="/publications/mixedmedia">
@@ -241,15 +222,6 @@ export default function Home() {
                                         letters
                                     </Typography>
                                 </Link>
-                                <Divider
-                                    sx={{
-                                        margin: ".5rem 0",
-                                        padding: "1px 0",
-                                        minWidth: "8rem",
-                                        backgroundColor:
-                                            theme.palette.custom.lightMuted,
-                                    }}
-                                />
 
                                 {/* <ExpandingText>
                                     <Link href="/publications/letters">
