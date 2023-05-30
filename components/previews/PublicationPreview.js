@@ -57,7 +57,7 @@ const PublicationPreview = ({ item, id, category }) => {
 
                 <Typography
                     className="link"
-                    variant="h4"
+                    variant="h3"
                     sx={{ marginBottom: ".25em" }}
                 >
                     <Link href={itemHref}>{item.fields[0].value}</Link>
