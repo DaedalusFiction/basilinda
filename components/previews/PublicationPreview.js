@@ -67,7 +67,7 @@ const PublicationPreview = ({ item, id, category }) => {
                     sx={{
                         margin: ".25rem 0",
                         fontSize: "1rem",
-                        color: theme.palette.custom.darkMuted,
+                        color: theme.palette.custom.lightMuted,
                     }}
                 >
                     {item.fields[2].value}
