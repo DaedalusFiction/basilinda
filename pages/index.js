@@ -73,8 +73,6 @@ export default function Home() {
                         spacing={0}
                         sx={{
                             marginTop: "3rem",
-                            borderTop:
-                                "2px solid " + theme.palette.custom.darkMuted,
                         }}
                         wrap="wrap-reverse"
                     >
@@ -82,8 +80,6 @@ export default function Home() {
                             <Box
                                 sx={{
                                     height: "100%",
-                                    // borderTop:
-                                    //     "2px solid " + theme.palette.custom.lightMuted,
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -103,12 +99,6 @@ export default function Home() {
                                         poetry
                                     </Typography>
                                 </Link>
-
-                                {/* <ExpandingText>
-                                    <Link href="/publications/poetry">
-                                        see more
-                                    </Link>
-                                </ExpandingText> */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -117,6 +107,105 @@ export default function Home() {
                                     sx={{
                                         backgroundImage:
                                             "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/poetryHeader.webp)",
+                                        backgroundSize: "cover",
+                                        padding: "12rem 0",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        cursor: "pointer",
+                                        transition: "300ms",
+                                        "&:hover": {
+                                            opacity: "60%",
+                                        },
+                                    }}
+                                ></Box>
+                            </Link>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs={12} md={6}>
+                            <Link href="/publications/letters">
+                                <Box
+                                    sx={{
+                                        backgroundImage:
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/lettersHeader.webp)",
+                                        backgroundSize: "cover",
+
+                                        padding: "12rem 0",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        cursor: "pointer",
+                                        transition: "300ms",
+                                        "&:hover": {
+                                            opacity: "60%",
+                                        },
+                                    }}
+                                ></Box>
+                            </Link>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Box
+                                sx={{
+                                    height: "100%",
+                                    // border:
+                                    //     "1px solid " + theme.palette.custom.lightMuted,
+                                    padding: "4rem 0",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexDirection: "column",
+                                    gap: ".25rem",
+                                }}
+                            >
+                                <Link href="/publications/letters">
+                                    <Typography
+                                        variant="h2"
+                                        className="link"
+                                        sx={{
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        letters
+                                    </Typography>
+                                </Link>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0} wrap="wrap-reverse">
+                        <Grid item xs={12} md={6}>
+                            <Box
+                                sx={{
+                                    height: "100%",
+                                    // border:
+                                    //     "1px solid " + theme.palette.custom.lightMuted,
+                                    padding: "4rem 0",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexDirection: "column",
+                                    gap: ".25rem",
+                                }}
+                            >
+                                <Link href="/publications/genrequeer">
+                                    <Typography
+                                        variant="h2"
+                                        className="link"
+                                        sx={{
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        genrequeer
+                                    </Typography>
+                                </Link>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Link href="/publications/genrequeer">
+                                <Box
+                                    sx={{
+                                        backgroundImage:
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/genrequeerHeader.webp)",
                                         backgroundSize: "cover",
                                         padding: "12rem 0",
                                         display: "flex",
@@ -179,76 +268,7 @@ export default function Home() {
                                         mixed media
                                     </Typography>
                                 </Link>
-
-                                {/* <ExpandingText>
-                                    <Link href="/publications/mixedmedia">
-                                        see more
-                                    </Link>
-                                </ExpandingText> */}
                             </Box>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        spacing={0}
-                        sx={{
-                            borderBottom:
-                                "2px solid " + theme.palette.custom.darkMuted,
-                        }}
-                        wrap="wrap-reverse"
-                    >
-                        <Grid item xs={12} md={6}>
-                            <Box
-                                sx={{
-                                    height: "100%",
-                                    // border:
-                                    //     "1px solid " + theme.palette.custom.lightMuted,
-                                    padding: "4rem 0",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                    gap: ".25rem",
-                                }}
-                            >
-                                <Link href="/publications/letters">
-                                    <Typography
-                                        variant="h2"
-                                        className="link"
-                                        sx={{
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        letters
-                                    </Typography>
-                                </Link>
-
-                                {/* <ExpandingText>
-                                    <Link href="/publications/letters">
-                                        see more
-                                    </Link>
-                                </ExpandingText> */}
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Link href="/publications/letters">
-                                <Box
-                                    sx={{
-                                        backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/lettersHeader.webp)",
-                                        backgroundSize: "cover",
-                                        padding: "12rem 0",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        cursor: "pointer",
-                                        transition: "300ms",
-                                        "&:hover": {
-                                            opacity: "60%",
-                                        },
-                                    }}
-                                ></Box>
-                            </Link>
                         </Grid>
                     </Grid>
                 </Container>
