@@ -8,6 +8,7 @@ const index = () => {
     return (
         <PageLayout name="MISSION STATEMENT">
             <Container maxWidth="md">
+                <AboutNavbar />
                 <Box className="section">
                     <Grid container>
                         <Grid item xs={12}>
@@ -22,7 +23,17 @@ const index = () => {
                                     marginTop: "1rem",
                                 }}
                             >
-                                It&rsquo;s not that we hate men <em>PER SE</em>
+                                Basilinda is an online multimedia literary
+                                journal for queer, non-binary, and
+                                women-identifying artists. We may be named after
+                                the 19th-century board game consisting of men
+                                and cannons, but we play a different game. Our
+                                board incorporates players and canons that have
+                                been historically overlooked, invalidated, and
+                                silenced. Through publishing, we seek to uplift
+                                and encourage the exploration of identities that
+                                are constantly evolving and thinking, shifting
+                                and persisting.
                             </Typography>
                         </Grid>
                     </Grid>

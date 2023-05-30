@@ -15,7 +15,7 @@ const PageLayout = ({ name, children }) => {
                     // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
                     // backgroundAttachment: "fixed",
-                    paddingTop: "12rem ",
+                    paddingTop: "8rem ",
                     position: "relative",
                     display: "flex",
                     // alignItems: "center",

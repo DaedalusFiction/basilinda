@@ -1,37 +1,132 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import PageLayout from "../../components/layout/PageLayout";
+import AboutNavbar from "../../components/about/AboutNavbar";
+import Profile from "../../components/about/Profile";
+import { secondaryProfiles } from "../../siteInfo";
 
 const index = () => {
     return (
-        <PageLayout name="ABOUT US">
-            <Container maxWidth="sm">
+        <PageLayout name="">
+            <Container maxWidth="md">
                 <Box className="section">
-                    <Grid container>
+                    <Grid container spacing={4}>
                         <Grid item xs={12}>
-                            <Typography>
-                                <em>Basilinda</em> is a multimedia journal
-                                inviting queer and feminist artists to
-                                participate on a new level that didn&rsquo;t
-                                come in the box, because we didn&rsquo;t come in
-                                the box. We may be named after the 19th-century
-                                board game consisting of men, cannons, and
-                                captains, but that&rsquo;s not how we play here.
-                                As a team of LGBTQIA+ and women editors whose
-                                stories will never be cis white men&rsquo;s
-                                canons, playing on this echelon means to be a
-                                part of a broad and inclusive identity that is
-                                constantly evolving and thinking, shifting and
-                                persisting. We are interested in individuality,
-                                versatility, and victory. We are most interested
-                                in works exploring personal truths and
-                                identities through strategic subversion with
-                                fine-tuned tactics. Which is to say, move your
-                                idea-pieces like confident vectors across the
-                                board&mdash;with magnitudes of depth and
-                                unwavering direction&mdash;and let us succeed in
-                                taking down the king.
+                            <Typography
+                                variant="h3"
+                                sx={{
+                                    textAlign: {
+                                        xs: "start",
+                                        md: "center",
+                                    },
+                                }}
+                            >
+                                Our Mission
                             </Typography>
+                            <br />
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    textAlign: {
+                                        xs: "start",
+                                        md: "center",
+                                    },
+                                }}
+                            >
+                                <em>Basilinda</em> is an online multimedia
+                                literary journal for queer, non-binary, and
+                                women-identifying artists. We may be named after
+                                the 19th-century board game consisting of men
+                                and cannons, but we play a different game. Our
+                                board incorporates players and canons that have
+                                been historically overlooked, invalidated, and
+                                silenced. Through publishing, we seek to uplift
+                                and encourage the exploration of identities that
+                                are constantly evolving and thinking, shifting
+                                and persisting.
+                            </Typography>
+                            <br />
+                            <br />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography
+                                variant="h3"
+                                sx={{
+                                    textAlign: {
+                                        xs: "start",
+                                        md: "center",
+                                    },
+                                }}
+                            >
+                                About Us
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    textAlign: {
+                                        xs: "start",
+                                        md: "center",
+                                    },
+                                }}
+                            >
+                                Founded by a team of poets, writers, artists,
+                                and musicians, <em>Basilinda</em> is an
+                                experimental journal for queer artists. We
+                                coalesced in Charlottesville, Virginia through a
+                                shared love of inclusivity, community,
+                                collaboration, and activism. Our creative
+                                interests lie in the deeply personal and
+                                cutting-edge: we want boundary-pushing art
+                                exploring individual, interpersonal, and
+                                collective experiences.
+                            </Typography>
+                            <br />
+                            <br />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography
+                                variant="h3"
+                                sx={{
+                                    textAlign: {
+                                        xs: "start",
+                                        md: "center",
+                                    },
+                                }}
+                            >
+                                Curators
+                            </Typography>
+                            <br />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Profile profile={secondaryProfiles[0]}>
+                                <Typography variant="body2">
+                                    Sydney writes wicked poetry about autism,
+                                    women&rsquo;s rights, body parts, and
+                                    photographers. Do not mess with her.
+                                </Typography>
+                            </Profile>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Profile profile={secondaryProfiles[1]}>
+                                <Typography variant="body2">
+                                    Anthony keeps it real with her music and
+                                    killer fashion sense. She enjoys hanging out
+                                    with friends and discussing deep shit.
+                                </Typography>
+                            </Profile>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Profile profile={secondaryProfiles[2]}>
+                                <Typography variant="body2">
+                                    Dave is an ancillary part of both Basilinda
+                                    and the Charlottesville poetry scene. If you
+                                    have any comments, suggestions, or deep
+                                    concerns relating to the design or
+                                    functionality of this website, please
+                                    contact him posthaste.
+                                </Typography>
+                            </Profile>
                         </Grid>
                     </Grid>
                 </Box>

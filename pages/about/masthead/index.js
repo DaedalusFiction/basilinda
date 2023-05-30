@@ -11,7 +11,7 @@ const index = () => {
         <PageLayout name="MASTHEAD">
             <Box className="section">
                 <Grid container spacing={6}>
-                    <Grid item key={index} xs={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Profile profile={secondaryProfiles[0]}>
                             <Typography>
                                 Sydney writes wicked poetry about autism,
@@ -20,7 +20,7 @@ const index = () => {
                             </Typography>
                         </Profile>
                     </Grid>
-                    <Grid item key={index} xs={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Profile profile={secondaryProfiles[1]}>
                             <Typography>
                                 Anthony keeps it real with her music and killer
@@ -29,7 +29,7 @@ const index = () => {
                             </Typography>
                         </Profile>
                     </Grid>
-                    <Grid item key={index} xs={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Profile profile={secondaryProfiles[2]}>
                             <Typography>
                                 Dave is an ancillary part of both Basilinda and

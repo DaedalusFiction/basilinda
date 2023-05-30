@@ -4,20 +4,17 @@ let theme = createTheme({
     palette: {
         mode: "light",
         primary: {
-            // main: "#341a05", //Bistre
             main: "#c35747", //reddish
-            // main: "#084C61",
-            off: "#DB504A",
+            // off: "#f58d4d",
+            off: "#8f4033",
         },
         secondary: {
-            // main: "#FFFBC3",
-            // main: "#f4f1bb", //lemon chiffon
-            // main: "#b7FFD8",
-            main: "#aaa725", //yellowish
-            // main: "#E3B505",
+            // main: "#dcd930", //yellowish
+            main: "#e4b363", //yellowish
+            main: "#FED766", //yellowish
+            main: "#CAFE48", //yellowish
         },
         background: {
-            // default: "#fefefe", //creamy yellow
             default: "#272D2D", //dark
             accent: "#ffeccd",
             dark: "#ffeccd",
@@ -60,7 +57,7 @@ theme = createTheme(theme, {
             // color: theme.palette.primary.off,
             fontWeight: "400",
             // lineHeight: ".85em",
-            fontSize: "2.5rem",
+            fontSize: "3.5rem",
             letterSpacing: ".025em",
         },
         h2: {
@@ -73,10 +70,9 @@ theme = createTheme(theme, {
         },
         h3: {
             color: theme.palette.custom.primary,
-            fontFamily: theme.fonts.primary,
+            fontFamily: theme.fonts.secondary,
             letterSpacing: ".025em",
-            fontWeight: "400",
-            fontSize: "1rem",
+            fontSize: "1.75rem",
         },
         h4: {
             color: theme.palette.custom.primary,
@@ -121,10 +117,10 @@ theme = createTheme(theme, {
             // fontFamily: darkTheme.typography.darkTheme.main,
         },
         body2: {
-            fontFamily: "EB Garamond Italic",
-            fontSize: "1.25rem",
+            fontSize: "1.15rem",
+            fontFamily: theme.fonts.body,
             // lineHeight: "1.5rem",
-            color: theme.palette.custom.light,
+            color: theme.palette.custom.lightMuted,
             // fontFamily: darkTheme.typography.darkTheme.decorative,
         },
         caption: {

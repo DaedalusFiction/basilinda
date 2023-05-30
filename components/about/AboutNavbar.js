@@ -13,7 +13,7 @@ const AboutNavbar = () => {
             }}
         >
             {/* pages[2] returns About subpages from /siteinfo */}
-            {rightPages[0].subPages.map((subPage, index) => {
+            {rightPages[1].subPages.map((subPage, index) => {
                 return (
                     <Link
                         key={index}
@@ -22,7 +22,7 @@ const AboutNavbar = () => {
                         }}
                         href={subPage.href}
                     >
-                        <Button>{subPage.name}</Button>
+                        <Button color="secondary">{subPage.name}</Button>
                     </Link>
                 );
             })}

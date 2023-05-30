@@ -148,7 +148,7 @@ const secondaryProfiles = [
     },
     {
         image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
-        name: "Dave",
+        name: "Queer Dave",
         content: "Owen likes to PARTY!",
     },
 ];
@@ -246,23 +246,23 @@ const rightPages = [
         name: "Mixed Media",
         nameAlt: "Components",
         href: "/publications/mixedmedia",
-        subPages: [
-            {
-                name: "Masthead",
-                href: "/about/about/masthead",
-                nameAlt: "Victory Conditions",
-            },
-            {
-                name: "Mission Statement",
-                href: "/about/about/missionstatement",
-                nameAlt: "Victory Conditions",
-            },
-        ],
     },
     {
         name: "About Us",
         href: "/about",
         nameAlt: "Victory Conditions",
+        subPages: [
+            {
+                name: "Masthead",
+                href: "/about/masthead",
+                nameAlt: "Victory Conditions",
+            },
+            {
+                name: "Mission Statement",
+                href: "/about/missionstatement",
+                nameAlt: "Victory Conditions",
+            },
+        ],
     },
     {
         name: "Submit",

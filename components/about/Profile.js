@@ -5,13 +5,15 @@ import ImageFadeIn from "../general/ImageFadeIn";
 
 const Profile = ({ profile, children }) => {
     return (
-        <Box>
+        <Box sx={{ marginBottom: "2rem" }}>
             <ImageFadeIn src={profile.image.url} height={650} width={500} />
-            <br />
-            <Typography variant="h4" sx={{ textAlign: "center" }}>
+            <Typography
+                variant="h4"
+                sx={{ textAlign: "center", marginTop: "1rem" }}
+            >
                 {profile.name}
             </Typography>
-            <br />
+
             <Divider
                 sx={{
                     maxWidth: "10rem",

@@ -140,11 +140,12 @@ const Header = ({ light }) => {
                                                 textAlign: "center",
                                                 cursor: "pointer",
                                                 letterSpacing: ".1em",
+                                                fontSize: "2.5rem",
                                                 color: theme.palette.primary
                                                     .main,
                                                 "&:hover": {
-                                                    color: theme.palette
-                                                        .secondary.main,
+                                                    color: theme.palette.primary
+                                                        .off,
                                                 },
                                             }}
                                         >
