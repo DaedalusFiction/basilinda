@@ -15,21 +15,6 @@ const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
                     padding: "12rem 0 4rem 0",
                 }}
             >
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: ".25em",
-                    }}
-                >
-                    {publication.subCategories.map((subCategory, index) => {
-                        return (
-                            <Typography key={index} variant="caption">
-                                [{subCategory}]
-                            </Typography>
-                        );
-                    })}
-                </Box>
                 <Typography
                     sx={{
                         margin: ".25em 0",
@@ -62,28 +47,7 @@ const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
             </Box>
             <Container>
                 <Grid container>
-                    <Grid
-                        item
-                        xs={0}
-                        md={1}
-                        sx={{
-                            position: "relative",
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                position: "sticky",
-                                top: "8rem",
-                                margin: {
-                                    xs: "0",
-                                    md: "1.25rem",
-                                },
-                            }}
-                        >
-                            <ShareIcons color="primary" direction="column" />
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={11}>
+                    <Grid item xs={12}>
                         <Box>
                             <PublicationBody
                                 sidebarCategory={sidebarCategory}

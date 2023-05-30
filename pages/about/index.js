@@ -33,17 +33,14 @@ const index = () => {
                                     },
                                 }}
                             >
-                                <em>Basilinda</em> is an online multimedia
-                                literary journal for queer, non-binary, and
-                                women-identifying artists. We may be named after
-                                the 19th-century board game consisting of men
-                                and cannons, but we play a different game. Our
-                                board incorporates players and canons that have
-                                been historically overlooked, invalidated, and
-                                silenced. Through publishing, we seek to uplift
-                                and encourage the exploration of identities that
-                                are constantly evolving and thinking, shifting
-                                and persisting.
+                                We may be named after the 19th-century board
+                                game consisting of men and cannons, but we play
+                                a different game. Our board incorporates players
+                                and canons that have been historically
+                                overlooked, invalidated, and silenced. Through
+                                publishing, we seek to uplift and encourage the
+                                exploration of identities that are constantly
+                                evolving and thinking, shifting and persisting.
                             </Typography>
                             <br />
                             <br />

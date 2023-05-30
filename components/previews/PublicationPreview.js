@@ -45,7 +45,7 @@ const PublicationPreview = ({ item, id, category }) => {
                     margin: ".5rem 0",
                 }}
             >
-                <Box sx={{ display: "flex", gap: ".25em", flexWrap: "wrap" }}>
+                {/* <Box sx={{ display: "flex", gap: ".25em", flexWrap: "wrap" }}>
                     {item.subCategories.map((subCategory, index) => {
                         return (
                             <Typography key={index} variant="caption">
@@ -53,7 +53,7 @@ const PublicationPreview = ({ item, id, category }) => {
                             </Typography>
                         );
                     })}
-                </Box>
+                </Box> */}
 
                 <Typography
                     className="link"
