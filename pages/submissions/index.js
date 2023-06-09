@@ -56,9 +56,11 @@ const index = () => {
                             <List>
                                 <ListItem>
                                     <ListItemText>
-                                        All submissions should be emailed
-                                        directly to{" "}
-                                        <em>basilindajournal@gmail.com</em>
+                                        Please email all submissions to
+                                        basilindajournal@gmail.com as a .docx or
+                                        .pdf for text-based submissions, .mp4 or
+                                        YouTube URL for visual submissions, and
+                                        .wav or .mp3 for audio submissions.
                                     </ListItemText>
                                 </ListItem>
                                 <ListItem>
@@ -73,7 +75,7 @@ const index = () => {
                                         </span>{" "}
                                         include any personal information such as
                                         name, email, or any other contact info
-                                        on your submitted documents
+                                        on your submitted documents.
                                     </ListItemText>
                                 </ListItem>
                                 {/* <ListItem>
@@ -88,14 +90,7 @@ const index = () => {
                                         For visual/audio/etc. submissions, email to basilindajournal@gmail.com. 
                                     </ListItemText>
                                 </ListItem> */}
-                                <ListItem>
-                                    <ListItemText>
-                                        Please email all submissions to
-                                        basilindajournal@gmail.com as a .docx or
-                                        .pdf for text-based submissions and .mp4
-                                        for visual/audio submissions.
-                                    </ListItemText>
-                                </ListItem>
+
                                 <ListItem>
                                     <ListItemText>
                                         If you&rsquo;re unsure under which
@@ -230,7 +225,7 @@ const index = () => {
                                 <ListItem>
                                     <ListItemText>
                                         You may submit up to five hermit crabs
-                                        at a time in a single document.
+                                        at a time.
                                     </ListItemText>
                                 </ListItem>
                             </List>
@@ -244,20 +239,20 @@ const index = () => {
                             </Typography>
                             <br />
                             <Typography>
-                                Art is not just a painting, a song, or a film –
-                                it is all of these media and every combination,
-                                destruction, and dissection of them. We are
-                                seeking to amplify those voices most inclined to
-                                bend these artistic forms, and those least
-                                afraid to challenge the structures wishing to
-                                constrain them. Queer voices have long been at
-                                the forefront of art and culture for their
-                                willingness to go beyond what has already been
-                                seen or heard, into unknown and uncharted
-                                territories. We encourage queer creators to
-                                submit their art of any medium, to break the
-                                rules, and continue this tradition of visionary
-                                art.
+                                Art is not just a painting, a song, or a
+                                film&mdash;it is all of these media and every
+                                combination, destruction, and dissection of
+                                them. We are seeking to amplify those voices
+                                most inclined to bend these artistic forms, and
+                                those least afraid to challenge the structures
+                                wishing to constrain them. Queer voices have
+                                long been at the forefront of art and culture
+                                for their willingness to go beyond what has
+                                already been seen or heard, into unknown and
+                                uncharted territories. We encourage queer
+                                creators to submit their art of any medium, to
+                                break the rules, and continue this tradition of
+                                visionary art.
                             </Typography>
                             <List>
                                 <ListItem>
