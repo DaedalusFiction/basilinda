@@ -58,7 +58,7 @@ const index = () => {
                                     <ListItemText>
                                         All submissions should be emailed
                                         directly to{" "}
-                                        <em>teardownthismall@gmail.com</em>
+                                        <em>basilindajournal@gmail.com</em>
                                     </ListItemText>
                                 </ListItem>
                                 <ListItem>
@@ -76,11 +76,32 @@ const index = () => {
                                         on your submitted documents
                                     </ListItemText>
                                 </ListItem>
-                                <ListItem>
+                                {/* <ListItem>
                                     <ListItemText>
-                                        For poetry and letter submissions, use a
+                                        For text-based submissions, use a
                                         legible font such as Times New Roman,
                                         Garamond, or Calibri.
+                                    </ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText>
+                                        For visual/audio/etc. submissions, email to basilindajournal@gmail.com. 
+                                    </ListItemText>
+                                </ListItem> */}
+                                <ListItem>
+                                    <ListItemText>
+                                        Please email all submissions to
+                                        basilindajournal@gmail.com as a .docx or
+                                        .pdf for text-based submissions and .mp4
+                                        for visual/audio submissions.
+                                    </ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText>
+                                        If you&rsquo;re unsure under which
+                                        category your work would be published,
+                                        email it to us and let us figure out the
+                                        details.
                                     </ListItemText>
                                 </ListItem>
                             </List>
@@ -107,15 +128,72 @@ const index = () => {
                             <List>
                                 <ListItem>
                                     <ListItemText>
-                                        You may submit up to 5 poems at a time,
-                                        using the form below. Poems should be
-                                        attached in a single document, either as
-                                        a .pdf or .docx file.
+                                        You may submit up to five poems at a
+                                        time in a single document.
                                     </ListItemText>
                                 </ListItem>
                                 <ListItem>
                                     <ListItemText>
                                         We welcome long-form poetry.
+                                    </ListItemText>
+                                </ListItem>
+                            </List>
+                            <br />
+                            <br />
+                            <Typography
+                                variant="h3"
+                                sx={{ textAlign: "center" }}
+                            >
+                                Letters
+                            </Typography>
+                            <br />
+                            <Typography>
+                                At <em>Basilinda</em>, we are interested in
+                                inherently risky, collaborative, and vulnerable
+                                works—what better form than a letter? Letters
+                                are a uniquely communicative and intimate art
+                                form: what begins as a conversation between two
+                                people can transform into a prism that reflects
+                                and refracts—directing one back to the self, out
+                                to the community, and to even greater networks
+                                spanning time and space. The letter has a long
+                                history among women and queer people in
+                                particular. Take Emily Dickinson&rsquo;s
+                                envelope poems, for example. Though not always
+                                explicitly letters themselves, the forms they
+                                take, as the critic Mark Ford writes, are
+                                “telling emblems of [Dickinson&rsquo;s] urge to
+                                communicate, and her almost equally strong urge
+                                to withhold communication.” We want to see work
+                                that straddles that inner conflict. For more
+                                information on the letter form, see{" "}
+                                <span className="link-submit">
+                                    <Link href="https://lithub.com/the-magic-and-risk-of-a-handwritten-letter/">
+                                        The Magic and Risk of a Handwritten
+                                        Letter
+                                    </Link>
+                                </span>{" "}
+                                by Meghan Forbes.
+                            </Typography>
+                            <List>
+                                <ListItem>
+                                    <ListItemText>
+                                        You may submit up to three letters at a
+                                        time.
+                                    </ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText>
+                                        Letters can be fictional, non-fictional,
+                                        experimental, traditional, or anything
+                                        in between.
+                                    </ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText>
+                                        Letters can be handwritten or typed. If
+                                        handwritten, please send a clear black
+                                        and white scan in .pdf format.
                                     </ListItemText>
                                 </ListItem>
                             </List>
@@ -148,6 +226,14 @@ const index = () => {
                                 within. To win this round, send us poetry that
                                 wears a found shell.
                             </Typography>
+                            <List>
+                                <ListItem>
+                                    <ListItemText>
+                                        You may submit up to five hermit crabs
+                                        at a time in a single document.
+                                    </ListItemText>
+                                </ListItem>
+                            </List>
                             <br />
                             <br />
                             <Typography
@@ -176,16 +262,8 @@ const index = () => {
                             <List>
                                 <ListItem>
                                     <ListItemText>
-                                        Feel free to submit your art in whatever
-                                        form works best for you, and let us
-                                        figure out the details.
-                                    </ListItemText>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemText>
-                                        If you are unable to submit via the form
-                                        below, please send your submission to
-                                        teardownthismall@gmail.com
+                                        Images may be submitted as individual
+                                        pieces or as a gallery.
                                     </ListItemText>
                                 </ListItem>
                             </List>

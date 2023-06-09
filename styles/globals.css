@@ -34,8 +34,17 @@ a {
     cursor: pointer;
 }
 
+.link-submit {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .link:hover {
-    transition: 300ms;
+    transition: 150ms;
+    color: #8f4033;
+}
+.link-submit:hover {
+    transition: 150ms;
     color: #8f4033;
 }
 
