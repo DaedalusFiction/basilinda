@@ -211,15 +211,15 @@ const index = () => {
                                 manual, or a string of text messages. In her
                                 forward to The Shell Game, Brenda Miller
                                 identifies this genre-crossing approach as
-                                hermit crab forms, describing the poem as
-                                inhabiting the shell of another kind of document
-                                the way that a hermit crab makes its home in the
-                                borrowed shells of other mollusks. This shell
-                                can be thought of as designed for a different
-                                kind of text, but it offers structure and
-                                protection to the soft material of poetry housed
-                                within. To win this round, send us poetry that
-                                wears a found shell.
+                                &ldquo;hermit crab forms&rdquo;, describing the
+                                poem as inhabiting the shell of another kind of
+                                document the way that a hermit crab makes its
+                                home in the borrowed shells of other mollusks.
+                                This shell can be thought of as designed for a
+                                different kind of text, but it offers structure
+                                and protection to the soft material of poetry
+                                housed within. To win this round, send us poetry
+                                that wears a found shell.
                             </Typography>
                             <List>
                                 <ListItem>
