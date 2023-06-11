@@ -180,8 +180,7 @@ const textSubmissionsConfig = {
     fields: [
         { name: "Name", type: "text", value: "" },
         { name: "Email", type: "text", value: "" },
-        { name: "Genre", type: "text", value: "" },
-        { name: "Previously Published", type: "text", value: "" },
+        { name: "Category", type: "text", value: "" },
 
         {
             name: "Comment",
@@ -204,8 +203,7 @@ const imageSubmissionsConfig = {
     fields: [
         { name: "Name", type: "text", value: "" },
         { name: "Email", type: "text", value: "" },
-        { name: "Genre", type: "text", value: "" },
-        { name: "Previously Published", type: "text", value: "" },
+        { name: "category", type: "text", value: "" },
         {
             name: "Comment",
             type: "text",

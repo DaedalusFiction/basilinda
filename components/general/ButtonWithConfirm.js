@@ -9,6 +9,7 @@ import { deleteObject, ref } from "firebase/storage";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
 import Notification from "./Notification";
+import theme from "../../styles/themes/theme";
 
 export default function ButtonWithConfirm({
     buttonText,
@@ -47,10 +48,16 @@ export default function ButtonWithConfirm({
             <Dialog
                 open={dialogIsOpen}
                 onClose={handleNo}
+                sx={{ background: theme.palette.custom.dark }}
                 aria-labelledby="confirm-action"
                 aria-describedby="confirm-action-description"
             >
-                <DialogTitle id="delete-photo">{dialogText}</DialogTitle>
+                <DialogTitle
+                    id="delete-photo"
+                    sx={{ color: "black", fontSize: "1.5rem" }}
+                >
+                    {dialogText}
+                </DialogTitle>
                 <DialogContent>
                     {/* <DialogContentText
                         color="primary"

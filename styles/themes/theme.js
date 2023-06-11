@@ -170,6 +170,14 @@ theme = createTheme(theme, {
                 },
             },
         },
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    border: "1px solid " + theme.palette.custom.darkMuted,
+                    borderRadius: "3px",
+                },
+            },
+        },
     },
 });
 
