@@ -58,7 +58,19 @@ const Admin = () => {
                                     <Container maxWidth="lg">
                                         <FirestoreSubmissionsListing
                                             // category={galleryConfig.category}
+                                            title="Text Submissions"
                                             folder="TextSubmissions"
+                                            updateCounter={updateCounter}
+                                            setUpdateCounter={setUpdateCounter}
+                                        />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <FirestoreSubmissionsListing
+                                            // category={galleryConfig.category}
+                                            title="Image Submissions"
+                                            folder="ImageSubmissions"
                                             updateCounter={updateCounter}
                                             setUpdateCounter={setUpdateCounter}
                                         />

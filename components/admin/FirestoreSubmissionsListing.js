@@ -8,12 +8,13 @@ const FirestoreSubmissionsListing = ({
     folder,
     updateCounter,
     setUpdateCounter,
+    title,
 }) => {
     const [submissions] = useGetSubmissions(updateCounter, folder);
     return (
         <Box>
             <Typography variant="h3" sx={{ textAlign: "center" }}>
-                Manage Story and Poetry Submissions
+                {title}
             </Typography>
             <br />
             <Typography variant="h4" sx={{ textAlign: "center" }}>
