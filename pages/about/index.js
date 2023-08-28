@@ -104,7 +104,7 @@ const index = () => {
                                 </Typography>
                             </Profile>
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        {/* <Grid item xs={12} md={6}>
                             <Profile profile={secondaryProfiles[1]}>
                                 <Typography variant="body2">
                                     Anthony keeps it real with her music and
@@ -112,14 +112,14 @@ const index = () => {
                                     with friends and discussing deep shit.
                                 </Typography>
                             </Profile>
-                        </Grid>
+                        </Grid> */}
                         <Grid item xs={12} md={6}>
-                            <Profile profile={secondaryProfiles[2]}>
+                            <Profile profile={secondaryProfiles[1]}>
                                 <Typography variant="body2">
                                     Dave is an ancillary part of both Basilinda
                                     and the Charlottesville poetry scene. If you
-                                    have any comments, suggestions, or deep
-                                    concerns relating to the design or
+                                    have any comments, suggestions, or deeply
+                                    troubling concerns relating to the design or
                                     functionality of this website, please
                                     contact him posthaste.
                                 </Typography>

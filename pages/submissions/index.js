@@ -234,21 +234,18 @@ const index = () => {
                         </ListItem>
                     </List>
                 </Box>
+            </Container>
 
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
-                        <TextSubmissionsForm
-                            folder="TextSubmissions"
-                            config={textSubmissionsConfig}
-                        />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <ImageSubmissionsForm
-                            folder="ImageSubmissions"
-                            config={imageSubmissionsConfig}
-                        />
-                    </Grid>
-                </Grid>
+            <Container>
+                <TextSubmissionsForm
+                    folder="TextSubmissions"
+                    config={textSubmissionsConfig}
+                />
+                <br />
+                <ImageSubmissionsForm
+                    folder="ImageSubmissions"
+                    config={imageSubmissionsConfig}
+                />
             </Container>
         </PageLayout>
     );

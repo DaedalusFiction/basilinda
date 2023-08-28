@@ -1,13 +1,13 @@
 import { Button, Grid, Input, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Image from "next/image";
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
-import { uploadCategories } from "../../siteInfo";
+import { galleryCategories } from "../../siteInfo";
 import theme from "../../styles/themes/theme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
@@ -94,10 +94,10 @@ const FirebaseUploadForm = ({
     };
 
     const handleUpload = async () => {
-        // if (selectedImages.length === 0) {
-        //     setFileError("Please Select an Image");
-        //     return;
-        // }
+        if (selectedImages.length === 0) {
+            setFileError("Please Select an Image");
+            return;
+        }
         if (formData.fields[0].value === "") {
             setFileError("Please Enter a Title");
             return;
@@ -109,32 +109,47 @@ const FirebaseUploadForm = ({
         var downloadURLs = [];
         let error = false;
 
-        // //check to see if image already exists in storage
-        // await Promise.all(
-        //     selectedImages.map(async (image) => {
-        //         const storageRef = ref(storage, folder);
-        //         const task = await getDownloadURL(storageRef).then(
-        //             (res) => {
-        //                 //file already exists
-        //                 error = true;
-        //             },
-        //             (res) => {
-        //                 //file doesn't exist
-        //             }
-        //         );
-        //     })
-        // );
+        //check to see if image already exists in storage
+        await Promise.all(
+            selectedImages.map(async (image) => {
+                const storageRef = ref(storage, folder);
+                const task = await getDownloadURL(storageRef).then(
+                    (res) => {
+                        //file already exists
+                        console.log("exists");
+                        error = true;
+                    },
+                    (res) => {
+                        //file doesn't exist
+                        console.log("doesn't exist");
+                    }
+                );
+            })
+        );
         //check if markdown file with file name exists
-        // const markdownStorageRef = ref(storage, folder);
-        // const markdownTask = await getDownloadURL(markdownStorageRef).then(
-        //     (res) => {
-        //         //file already exists
-        //         error = true;
-        //     },
-        //     (res) => {
-        //         //file doesn't exist
-        //     }
-        // );
+        const markdownStorageRef = ref(storage, folder);
+        const markdownTask = await getDownloadURL(markdownStorageRef).then(
+            (res) => {
+                //file already exists
+                console.log("exists");
+                error = true;
+            },
+            (res) => {
+                //file doesn't exist
+                console.log("doesn't exist");
+            }
+        );
+
+        //check to see if document with selected Title already exists
+        const checkTask = await getDoc(
+            doc(db, folder, formData.fields[0].value)
+        );
+        if (checkTask.exists()) {
+            setFileError(
+                "Please select a different title. An image with that title already exists."
+            );
+            return;
+        }
 
         if (error) {
             setFileError(
@@ -166,22 +181,76 @@ const FirebaseUploadForm = ({
                         }
                     );
 
-                    addDoc(collection(db, folder), {
-                        ...formData,
-                        id: formData.fields[0].value,
-                        markdownURL: textFileURL,
-                        markdownFileName: selectedTextFile.name,
-                        // URLs: downloadURLs,
-                        dateUploaded: Date.now(),
-                    });
+                    selectedImages.forEach(async (image) => {
+                        const storageRef = ref(
+                            storage,
+                            `${folder}/${image.name}`
+                        );
 
-                    setFormData(JSON.parse(JSON.stringify(config)));
-                    // setPreviews([]);
-                    // setSelectedImages([]);
-                    setIsUploading(false);
-                    setUpdateCounter(updateCounter + 1);
-                    setFileError("");
-                    setSelectedTextFile(null);
+                        const uploadTask = uploadBytesResumable(
+                            storageRef,
+                            image
+                        );
+
+                        uploadTask.on(
+                            "state_changed",
+                            (snapshot) => {
+                                //to show upload progress as percentage
+                                // const progress =
+                                //     (snapshot.bytesTransferred / snapshot.totalBytes) *
+                                //     100;
+                                // setUploadProgress(progress);
+                            },
+                            (error) => {
+                                // setUploadError(true);
+                                console.log(error.message);
+                            },
+                            () => {
+                                // creates firestore database entry
+                                // setUploadProgress(0);
+                                getDownloadURL(uploadTask.snapshot.ref).then(
+                                    (downloadURL) => {
+                                        downloadURLs = [
+                                            ...downloadURLs,
+                                            downloadURL,
+                                        ];
+                                        if (
+                                            downloadURLs.length >=
+                                            selectedImages.length
+                                        ) {
+                                            setDoc(
+                                                doc(
+                                                    db,
+                                                    folder,
+                                                    formData.fields[0].value
+                                                ),
+                                                {
+                                                    ...formData,
+                                                    id: formData.fields[0]
+                                                        .value,
+                                                    markdownURL: textFileURL,
+                                                    markdownFileName:
+                                                        selectedTextFile.name,
+                                                    URLs: downloadURLs,
+                                                    dateUploaded: Date.now(),
+                                                }
+                                            );
+                                        }
+
+                                        setFormData(
+                                            JSON.parse(JSON.stringify(config))
+                                        );
+                                        setPreviews([]);
+                                        setSelectedImages([]);
+                                        setIsUploading(false);
+                                        setUpdateCounter(updateCounter + 1);
+                                        setFileError("");
+                                        setSelectedTextFile(null);
+                                    }
+                                );
+                            }
+                        );
+                    });
                 }
             );
         }
@@ -196,16 +265,12 @@ const FirebaseUploadForm = ({
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-                backgroundColor: theme.palette.background.main,
                 padding: "1em",
                 borderRadius: "5px",
-                border: "2px solid " + theme.palette.custom.lightMuted,
             }}
         >
-            <Typography variant="h3">
-                Upload new item to poetry or letters.
-            </Typography>
-            {/* <Box>
+            <Typography variant="h3">Upload new item to {folder}.</Typography>
+            <Box>
                 <Button
                     variant="outlined"
                     onClick={() => {
@@ -229,7 +294,7 @@ const FirebaseUploadForm = ({
                 <Typography variant="caption">
                     .jpg and .png only. File size must be less than 2MB.
                 </Typography>
-            </Box> */}
+            </Box>
             <Box>
                 <Button
                     variant="outlined"
@@ -312,7 +377,7 @@ const FirebaseUploadForm = ({
             <FirebaseCategorySelect
                 formData={formData}
                 setFormData={setFormData}
-                uploadCategories={uploadCategories}
+                galleryCategories={galleryCategories}
             />
 
             <ButtonWithConfirm

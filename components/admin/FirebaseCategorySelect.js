@@ -12,12 +12,12 @@ import React from "react";
 //will need to refactor this to avoid duplication
 
 const FirebaseCategorySelect = ({
-    uploadCategories,
+    galleryCategories,
     formData,
     setFormData,
 }) => {
     const handleSelectedCategoriesChange = (e, categoryIndex) => {
-        const selectedValue = uploadCategories[categoryIndex].name;
+        const selectedValue = galleryCategories[categoryIndex].name;
         var newSelectedCategories;
         if (e.target.checked) {
             newSelectedCategories = [...formData.categories, selectedValue];
@@ -41,7 +41,7 @@ const FirebaseCategorySelect = ({
         subCategoryIndex
     ) => {
         const selectedValue =
-            uploadCategories[categoryIndex].subCategories[subCategoryIndex]
+            galleryCategories[categoryIndex].subCategories[subCategoryIndex]
                 .name;
         console.log(selectedValue);
         var newSelectedCategories;
@@ -65,7 +65,7 @@ const FirebaseCategorySelect = ({
         <Box>
             <Typography variant="h6">Select Categories: </Typography>
             <List dense>
-                {uploadCategories.map((category, categoryIndex) => {
+                {galleryCategories.map((category, categoryIndex) => {
                     return (
                         <ListItem
                             key={categoryIndex}
@@ -98,7 +98,7 @@ const FirebaseCategorySelect = ({
                 })}
             </List>
             <Typography variant="h6">Select Subcategories: </Typography>
-            {uploadCategories.map((category, categoryIndex) => {
+            {galleryCategories.map((category, categoryIndex) => {
                 return (
                     <List dense key={categoryIndex}>
                         {formData.categories.includes(category.name) &&

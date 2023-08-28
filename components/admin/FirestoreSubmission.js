@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { db, storage } from "../../firebase";
 import theme from "../../styles/themes/theme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
+import RejectionButton from "./RejectionButton";
 
 const FirestoreSubmission = ({
     updateCounter,
@@ -29,7 +30,7 @@ const FirestoreSubmission = ({
         <Box
             sx={{
                 border: "1px solid " + theme.palette.custom.darkMuted,
-                padding: "1rem",
+                padding: ".25rem 1rem",
                 margin: ".5rem 0",
             }}
         >
@@ -37,10 +38,12 @@ const FirestoreSubmission = ({
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
+                    alignItems: "center",
                 }}
             >
                 <Typography>
-                    {submission.data().id} - {submission.data().fileName}
+                    {submission.data().id} - {submission.data().fileName} -{" "}
+                    {submission.data().fields[2].value}
                 </Typography>
                 <Box>
                     <IconButton onClick={toggleExpand}>
@@ -55,7 +58,6 @@ const FirestoreSubmission = ({
             {expanded && (
                 <Box
                     sx={{
-                        backgroundColor: theme.palette.secondary.main,
                         border: "1px solid " + theme.palette.custom.darkMuted,
                         padding: "1rem",
                         display: "flex",
@@ -88,13 +90,20 @@ const FirestoreSubmission = ({
                             </Typography>
                         );
                     })}
-                    <ButtonWithConfirm
-                        buttonText="Mark as Read"
-                        dialogText="Mark as read??"
-                        notificationText="Updating..."
-                        handleClick={handleMarkAsRead}
-                        isDisabled={isDisabled}
-                    />
+                    <Box sx={{ display: "flex", gap: "1rem" }}>
+                        <ButtonWithConfirm
+                            buttonText="Mark as Read"
+                            dialogText="Mark as read?"
+                            notificationText="Updating..."
+                            handleClick={handleMarkAsRead}
+                            isDisabled={isDisabled}
+                        />
+                        <RejectionButton
+                            submission={submission}
+                            updateCounter={updateCounter}
+                            setUpdateCounter={setUpdateCounter}
+                        />
+                    </Box>
                 </Box>
             )}
         </Box>

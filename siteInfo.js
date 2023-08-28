@@ -137,15 +137,15 @@ const secondaryProfiles = [
         name: "Sydney",
         content: "Sydney is the greatest.",
     },
-    {
-        image: {
-            url: "/images/anthonyBio.webp",
-            alt: "Anthony",
-        },
-        name: "Anthony",
-        content:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
-    },
+    // {
+    //     image: {
+    //         url: "/images/anthonyBio.webp",
+    //         alt: "Anthony",
+    //     },
+    //     name: "Anthony",
+    //     content:
+    //         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+    // },
     {
         image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
         name: "Queer Dave",
@@ -174,6 +174,24 @@ const contributorConfig = {
         },
     ],
     timeUploaded: new Date(),
+};
+
+const galleryConfig = {
+    categories: [],
+    subCategories: [],
+    fields: [
+        { name: "Title", type: "text", value: "" },
+        { name: "Author", type: "text", value: "" },
+        {
+            name: "Hook",
+            type: "text",
+            value: "",
+            multiline: true,
+            rows: 4,
+        },
+        { name: "Published", type: "text", value: "" },
+        { name: "Artist", type: "text", value: "" },
+    ],
 };
 
 const textSubmissionsConfig = {
@@ -270,12 +288,94 @@ const rightPages = [
     },
 ];
 
+const galleryCategories = [
+    {
+        name: "fiction",
+        href: "/publications/fiction",
+        image: {
+            url: "/images/placeholder.webp",
+            alt: "alt gallery image text",
+        },
+        subCategories: [
+            {
+                name: "short story",
+                href: "/publications/fiction/shortstories",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt gallery image text",
+                },
+            },
+            {
+                name: "flash fiction",
+                href: "/publications/fiction/flash",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "novella",
+                href: "/publications/fiction/novellas",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
+    },
+    {
+        name: "poetry",
+        href: "/publications/poetry",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+        subCategories: [
+            {
+                name: "free verse",
+                href: "/publications/subcategories/free verse",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "formalist",
+                href: "/publications/subcategories/formalist",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "prose poetry",
+                href: "/publications/subcategories/prose poetry",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
+    },
+    {
+        name: "article",
+        href: "/publications/articles",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+        subCategories: [
+            {
+                name: "editorial",
+                href: "/publications/articles/editorials",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "letter",
+                href: "/publications/articles/letters",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "opinion",
+                href: "/publications/articles/letters",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "memoir",
+                href: "/publications/articles/letters",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
+    },
+];
+
 export {
     hero,
     siteName,
     leftPages,
     rightPages,
     uploadCategories,
+    galleryConfig,
+    galleryCategories,
     uploadConfig,
     subscribeConfig,
     contributorConfig,

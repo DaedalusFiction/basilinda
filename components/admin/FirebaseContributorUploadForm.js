@@ -7,7 +7,7 @@ import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
-import { uploadCategories } from "../../siteInfo";
+import { galleryCategories } from "../../siteInfo";
 import theme from "../../styles/themes/theme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
@@ -218,7 +218,6 @@ const FirebaseUploadForm = ({
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-                backgroundColor: theme.palette.background.accent,
                 padding: "1em",
                 borderRadius: "5px",
             }}
