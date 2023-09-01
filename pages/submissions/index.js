@@ -54,7 +54,7 @@ const index = () => {
                                 or if for any reason you are unable to upload
                                 your text or image via the submissions portal,
                                 you can email your work to
-                                basilindajournal@gmail.com.
+                                basilindasubmissions@gmail.com.
                             </ListItemText>
                         </ListItem>
                         <ListItem>
