@@ -58,19 +58,6 @@ a {
     font-size: 1rem;
 }
 
-.flex-1 {
-    display: flex;
-    gap: 1em;
-}
-.flex-2 {
-    display: flex;
-    gap: 2em;
-}
-.flex-3 {
-    display: flex;
-    gap: 3em;
-}
-
 .m-1 {
     margin: 0.25em;
 }
@@ -98,11 +85,17 @@ a {
     flex-direction: vertical;
 }
 
-.flex-center {
+.flex {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+.flex-center {
     justify-content: center;
+}
+
+.flex-middle {
+    height: 100%;
+    align-items: center;
 }
 
 .video-wrapper {
