@@ -137,20 +137,20 @@ const secondaryProfiles = [
         name: "Sydney",
         content: "Sydney is the greatest.",
     },
-    // {
-    //     image: {
-    //         url: "/images/anthonyBio.webp",
-    //         alt: "Anthony",
-    //     },
-    //     name: "Anthony",
-    //     content:
-    //         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
-    // },
     {
         image: { url: "/images/davidBio.webp", alt: "Editor Owen Cash" },
         name: "Queer Dave",
         content: "Owen likes to PARTY!",
     },
+    // {
+    //     image: {
+    //         url: "/images/anthonyBio.webp",
+    //         alt: "Ava",
+    //     },
+    //     name: "Ava",
+    //     content:
+    //         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+    // },
 ];
 
 // 7b. Studio
