@@ -207,6 +207,7 @@ const ImageSubmissionsForm = ({ config, folder }) => {
                                 >
                                     Select image File
                                 </Input>
+
                                 <br />
                                 {selectedTextFile ? (
                                     <Typography variant="caption">
@@ -214,7 +215,8 @@ const ImageSubmissionsForm = ({ config, folder }) => {
                                     </Typography>
                                 ) : (
                                     <Typography variant="caption">
-                                        .jpg, .jpeg, or .pdf
+                                        .jpg, .jpeg, or .pdf only. File size
+                                        must be less than 2MB
                                     </Typography>
                                 )}
                             </Box>
