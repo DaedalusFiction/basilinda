@@ -85,14 +85,14 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
-                                <Grid item xs={12} md={6}>
+                                {/* <Grid item xs={12} md={6}>
                                     <FirestoreListing
                                         // category={galleryConfig.category}
                                         folder="publications"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
-                                </Grid>
+                                </Grid> */}
                                 <Grid item xs={12} md={6}>
                                     <FirebaseContributorUploadForm
                                         config={contributorConfig}
@@ -101,14 +101,14 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
-                                <Grid item xs={12} md={6}>
+                                {/* <Grid item xs={12} md={6}>
                                     <FirebaseContributorListing
                                         // category={galleryConfig.category}
                                         folder="contributors"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
-                                </Grid>
+                                </Grid> */}
                             </Grid>
                         </Box>
                     ) : (
