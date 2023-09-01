@@ -20,7 +20,7 @@ const page = ({ contributor }) => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={7}>
                         <Box className="flex flex-center flex-middle">
                             <Typography>{contributor.bio}</Typography>
                         </Box>

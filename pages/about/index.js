@@ -8,7 +8,7 @@ import { secondaryProfiles } from "../../siteInfo";
 const index = () => {
     return (
         <PageLayout name="">
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
                 <Box className="section">
                     <Grid container spacing={4}>
                         <Grid item xs={12}>
@@ -95,26 +95,55 @@ const index = () => {
                             </Typography>
                             <br />
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={4}>
                             <Profile profile={secondaryProfiles[0]}>
-                                <Typography variant="body2">
-                                    Sydney writes wicked poetry about autism,
-                                    women&rsquo;s rights, body parts, and
-                                    photographers. Do not mess with her.
+                                <Typography
+                                    variant="body2"
+                                    sx={{ marginBottom: "2rem" }}
+                                >
+                                    Sydney Cox is a person* based out of
+                                    Charlottesville, Virginia. She graduated
+                                    from The University of Virginia in 2022 with
+                                    degrees in English and chemistry. You know
+                                    she is around when—in the midst of silence
+                                    or sheer chaos—clackety croaks erupt from
+                                    the throat of an 8-inch jumbo frog guiro.
+                                    Her current special interests are gonads,
+                                    found poetry, and the Surinam toad.
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{ fontSize: ".75rem" }}
+                                >
+                                    *many find this statement contentious
+                                    because she is in STEM.
                                 </Typography>
                             </Profile>
                         </Grid>
-                        {/* <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={4}>
                             <Profile profile={secondaryProfiles[1]}>
                                 <Typography variant="body2">
-                                    Anthony keeps it real with her music and
-                                    killer fashion sense. She enjoys hanging out
-                                    with friends and discussing deep shit.
+                                    At their best, Keri is a banned literature
+                                    tomb raider and fledgling restoration
+                                    researcher at The University of Virginia. At
+                                    their worst, they are a furniture collector
+                                    who exclusively speaks in sonnets. Each
+                                    morning, they breathe in five metaphysical
+                                    overtures and exhale them in one ensemble.
+                                    Keri writes confessional and occasionally
+                                    transcendentalist poetry. Many believe them
+                                    to be a bit “persnickety” but they prefer to
+                                    not label it. When Keri is not slithering
+                                    around the English department, writing, or
+                                    working on prints, they laboriously track
+                                    vibe shifts in their haunted house which is
+                                    only haunted by the virtue of them being in
+                                    it.
                                 </Typography>
                             </Profile>
-                        </Grid> */}
-                        <Grid item xs={12} md={6}>
-                            <Profile profile={secondaryProfiles[1]}>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Profile profile={secondaryProfiles[2]}>
                                 <Typography variant="body2">
                                     Dave is an ancillary part of both Basilinda
                                     and the Charlottesville poetry scene. If you
