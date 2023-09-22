@@ -172,55 +172,7 @@ export default function Home() {
                             </Box>
                         </Grid>
                     </Grid>
-                    {/* <Grid container spacing={0} wrap="wrap-reverse">
-                        <Grid item xs={12} md={6}>
-                            <Box
-                                sx={{
-                                    height: "100%",
-                                    // border:
-                                    //     "1px solid " + theme.palette.custom.lightMuted,
-                                    padding: "4rem 0",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                    gap: ".25rem",
-                                }}
-                            >
-                                <Link href="/publications/genrequeer">
-                                    <Typography
-                                        variant="h2"
-                                        className="link"
-                                        sx={{
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        genrequeer
-                                    </Typography>
-                                </Link>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Link href="/publications/genrequeer">
-                                <Box
-                                    sx={{
-                                        backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/genrequeerHeader.webp)",
-                                        backgroundSize: "cover",
-                                        padding: "12rem 0",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        cursor: "pointer",
-                                        transition: "300ms",
-                                        "&:hover": {
-                                            opacity: "60%",
-                                        },
-                                    }}
-                                ></Box>
-                            </Link>
-                        </Grid>
-                    </Grid> */}
+
                     <Grid container spacing={0}>
                         <Grid item xs={12} md={6}>
                             <Box
@@ -269,6 +221,55 @@ export default function Home() {
                                     }}
                                 ></Box>
                             </Link>
+                        </Grid>
+                        <Grid container spacing={0} wrap="wrap-reverse">
+                            <Grid item xs={12} md={6}>
+                                <Link href="/publications/genrequeer">
+                                    <Box
+                                        sx={{
+                                            backgroundImage:
+                                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/editorialsHeader.webp)",
+                                            backgroundSize: "cover",
+                                            padding: "12rem 0",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            cursor: "pointer",
+                                            transition: "300ms",
+                                            "&:hover": {
+                                                opacity: "60%",
+                                            },
+                                        }}
+                                    ></Box>
+                                </Link>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Box
+                                    sx={{
+                                        height: "100%",
+                                        // border:
+                                        //     "1px solid " + theme.palette.custom.lightMuted,
+                                        padding: "4rem 0",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                        gap: ".25rem",
+                                    }}
+                                >
+                                    <Link href="/publications/editorials">
+                                        <Typography
+                                            variant="h2"
+                                            className="link"
+                                            sx={{
+                                                textAlign: "center",
+                                            }}
+                                        >
+                                            editorials
+                                        </Typography>
+                                    </Link>
+                                </Box>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Container>
