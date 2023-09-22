@@ -4,9 +4,9 @@ import { Container, Grid } from "@mui/material";
 import PublicationPreview from "../previews/PublicationPreview";
 
 const PublicationIndex = ({ category, items, isGrid }) => {
-    useEffect(() => {
-        console.log(items.length);
-    }, []);
+    // useEffect(() => {
+    //     console.log(items.length);
+    // }, []);
     return (
         <PageLayout name={category}>
             <Container maxWidth={isGrid ? "lg" : "md"}>

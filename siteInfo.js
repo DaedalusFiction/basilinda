@@ -251,11 +251,11 @@ const leftPages = [
         nameAlt: "Objectives",
         href: "/publications/letters",
     },
-    {
-        name: "Genrequeer",
-        href: "/publications/genrequeer",
-        nameAlt: "Soldiers",
-    },
+    // {
+    //     name: "Genrequeer",
+    //     href: "/publications/genrequeer",
+    //     nameAlt: "Soldiers",
+    // },
 ];
 const rightPages = [
     {

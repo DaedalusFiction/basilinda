@@ -18,7 +18,7 @@ const PublicationPreview = ({ item, id, category }) => {
 
     return (
         <Box>
-            {item.URLs && (
+            {/* {item.URLs && (
                 <Link href={itemHref}>
                     <Fade in={isLoaded}>
                         <div>
@@ -39,7 +39,7 @@ const PublicationPreview = ({ item, id, category }) => {
                         </div>
                     </Fade>
                 </Link>
-            )}
+            )} */}
             <Box
                 sx={{
                     margin: ".5rem 0",
