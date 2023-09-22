@@ -3,7 +3,7 @@ import React from "react";
 import { db } from "../../../firebase";
 import PublicationIndex from "../../../components/layout/PublicationIndex";
 
-const category = "Poetry";
+const category = "poetry";
 
 const index = ({ items }) => {
     return <PublicationIndex category={category} items={items} />;
