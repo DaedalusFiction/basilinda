@@ -51,6 +51,32 @@ const uploadCategories = [
         ],
     },
     {
+        name: "editorials",
+        href: "/publications/poetry",
+        image: {
+            url: "/images/cannon.svg",
+            alt: "alt upload image text",
+        },
+        subCategories: [
+            {
+                name: "Essay",
+                href: "/publications/poetry/essay",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt upload image text",
+                },
+            },
+            {
+                name: "Article",
+                href: "/publications/poetry/essay",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt upload image text",
+                },
+            },
+        ],
+    },
+    {
         name: "Letters",
         href: "/publications/letters",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
@@ -264,6 +290,11 @@ const leftPages = [
 ];
 const rightPages = [
     {
+        name: "Editorials",
+        nameAlt: "Components",
+        href: "/publications/editorials",
+    },
+    {
         name: "About Us",
         href: "/about",
         nameAlt: "Victory Conditions",
@@ -340,28 +371,18 @@ const galleryCategories = [
         ],
     },
     {
-        name: "article",
-        href: "/publications/articles",
+        name: "editorials",
+        href: "/publications/editorials",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
             {
-                name: "editorial",
-                href: "/publications/articles/editorials",
+                name: "article",
+                href: "/publications/editorials/articles",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "letter",
-                href: "/publications/articles/letters",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "opinion",
-                href: "/publications/articles/letters",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "memoir",
-                href: "/publications/articles/letters",
+                name: "essay",
+                href: "/publications/editorials/essays",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
