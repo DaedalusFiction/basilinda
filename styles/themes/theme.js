@@ -77,7 +77,7 @@ theme = createTheme(theme, {
         h4: {
             color: theme.palette.custom.light,
             fontFamily: theme.fonts.primary,
-            fontSize: "1rem",
+            fontSize: "1.5rem",
             fontWeight: "400",
             lineHeight: "1.75rem",
             // color: darkTheme.palette.custom.dark,

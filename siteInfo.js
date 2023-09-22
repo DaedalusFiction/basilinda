@@ -251,6 +251,11 @@ const leftPages = [
         nameAlt: "Objectives",
         href: "/publications/letters",
     },
+    {
+        name: "Mixed Media",
+        nameAlt: "Components",
+        href: "/publications/mixedmedia",
+    },
     // {
     //     name: "Genrequeer",
     //     href: "/publications/genrequeer",
@@ -258,11 +263,6 @@ const leftPages = [
     // },
 ];
 const rightPages = [
-    {
-        name: "Mixed Media",
-        nameAlt: "Components",
-        href: "/publications/mixedmedia",
-    },
     {
         name: "About Us",
         href: "/about",

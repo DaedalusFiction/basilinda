@@ -175,7 +175,7 @@ const index = () => {
                     </List>
                     <br />
                     <br />
-                    <Typography variant="h3" sx={{ textAlign: "center" }}>
+                    {/* <Typography variant="h3" sx={{ textAlign: "center" }}>
                         Genrequeer
                     </Typography>
                     <br />
@@ -206,7 +206,7 @@ const index = () => {
                         </ListItem>
                     </List>
                     <br />
-                    <br />
+                    <br /> */}
                     <Typography variant="h3" sx={{ textAlign: "center" }}>
                         Mixed Media
                     </Typography>
