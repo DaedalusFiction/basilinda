@@ -25,16 +25,15 @@ const index = () => {
                     <br />
                     <Typography>
                         Basilinda accepts submissions in the form of poetry,
-                        letters, genrequeer (hermit crab) forms, and mixed
-                        media. We are most interested in genre-bending works
-                        exploring personal truths and identities through
-                        strategic subversion with fine-tuned tactic. To win this
-                        round, be less preoccupied with epiphany and more
-                        focused on curling our toes. Focus on pushing
-                        traditional boundaries through the exploration of risky,
-                        confessional, transgressional, and challenging subject
-                        matters. Like we said, this is a whole new level—so
-                        don&rsquo;t be afraid to{" "}
+                        letters, and mixed media. We are most interested in
+                        genre-bending works exploring personal truths and
+                        identities through strategic subversion with fine-tuned
+                        tactic. To win this round, be less preoccupied with
+                        epiphany and more focused on curling our toes. Focus on
+                        pushing traditional boundaries through the exploration
+                        of risky, confessional, transgressional, and challenging
+                        subject matters. Like we said, this is a whole new
+                        level—so don&rsquo;t be afraid to{" "}
                         <span style={{ textDecoration: "line-through" }}>
                             break
                         </span>{" "}
