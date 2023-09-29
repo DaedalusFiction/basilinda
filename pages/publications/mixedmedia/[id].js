@@ -17,6 +17,7 @@ const page = ({ sidebarItems, publication }) => {
     return (
         <Publication
             publication={publication}
+            image
             sidebarCategory={sidebarCategory}
             sidebarItems={sidebarItems}
         />

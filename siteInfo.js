@@ -393,13 +393,13 @@ const galleryCategories = [
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
             {
-                name: "poetry",
-                href: "/publications/editorials/articles",
+                name: "found poetry",
+                href: "/publications/mixed media/articles",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "visual-art",
-                href: "/publications/editorials/essays",
+                name: "visual art",
+                href: "/publications/mixed media/essays",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
