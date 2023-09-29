@@ -387,6 +387,23 @@ const galleryCategories = [
             },
         ],
     },
+    {
+        name: "mixed-media",
+        href: "/publications/mixed-media",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+        subCategories: [
+            {
+                name: "poetry",
+                href: "/publications/editorials/articles",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "visual-art",
+                href: "/publications/editorials/essays",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
+    },
 ];
 
 export {
