@@ -6,7 +6,7 @@ import Link from "next/link";
 const SocialMediaIcons = ({ fontSize, color }) => {
     return (
         <Stack direction="row" spacing={1}>
-            <Link href="https://instagram.com">
+            <Link href="https://instagram.com/basilindajournal">
                 <Tooltip title="instagram">
                     <IconButton aria-label="instagram">
                         <InstagramIcon
@@ -16,7 +16,7 @@ const SocialMediaIcons = ({ fontSize, color }) => {
                     </IconButton>
                 </Tooltip>
             </Link>
-            <Link href="https://www.facebook.com/CurbitureCharlottesville/">
+            <Link href="https://www.facebook.com/basilindajournal">
                 <Tooltip title="facebook">
                     <IconButton aria-label="facebook">
                         <FacebookIcon
@@ -26,7 +26,7 @@ const SocialMediaIcons = ({ fontSize, color }) => {
                     </IconButton>
                 </Tooltip>
             </Link>
-            <Link href="https://twitter.com/curbiturecville">
+            <Link href="https://twitter.com/basilindamag">
                 <Tooltip title="twitter">
                     <IconButton aria-label="twitter">
                         <TwitterIcon

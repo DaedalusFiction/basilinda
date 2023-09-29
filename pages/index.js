@@ -173,7 +173,7 @@ export default function Home() {
                         </Grid>
                     </Grid>
 
-                    <Grid container spacing={0}>
+                    <Grid container spacing={0} wrap="wrap-reverse">
                         <Grid item xs={12} md={6}>
                             <Box
                                 sx={{
@@ -222,7 +222,7 @@ export default function Home() {
                                 ></Box>
                             </Link>
                         </Grid>
-                        <Grid container spacing={0} wrap="wrap-reverse">
+                        <Grid container spacing={0}>
                             <Grid item xs={12} md={6}>
                                 <Link href="/publications/genrequeer">
                                     <Box

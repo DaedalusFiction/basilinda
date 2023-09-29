@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import ShareIcons from "../general/ShareIcons";
 import PublicationBody from "../publications/PublicationBody";
+import theme from "../../styles/themes/theme";
 
 const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
     return (
@@ -47,7 +48,21 @@ const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
             </Box>
             <Container>
                 <Grid container>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} md={1} sx={{ position: "relative" }}>
+                        <Box
+                            sx={{
+                                position: "sticky",
+                                top: "6rem",
+                                margin: {
+                                    xs: "none",
+                                    md: "20vh 1.25rem 1.25rem 1.25rem",
+                                },
+                            }}
+                        >
+                            <ShareIcons color={theme.palette.primary.main} />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={11}>
                         <Box>
                             <PublicationBody
                                 sidebarCategory={sidebarCategory}

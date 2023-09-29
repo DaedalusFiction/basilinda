@@ -3,9 +3,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Stack } from "@mui/system";
 import Link from "next/link";
-import Reddit from "@mui/icons-material/Reddit";
 import Head from "next/head";
 import theme from "../../styles/themes/theme";
+import { Instagram } from "@mui/icons-material";
 
 const ShareIcons = ({ fontSize, color, direction }) => {
     const handleShare = (e) => {
@@ -38,15 +38,17 @@ const ShareIcons = ({ fontSize, color, direction }) => {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <meta property="og:description" content="Your description" />
-            </Head>
+            </Head> */}
             <Paper
                 sx={{
                     display: { xs: "none", md: "flex" },
                     justifyContent: "center",
                     paddingTop: "1rem",
+
                     paddingBottom: ".75rem",
+                    backgroundColor: theme.palette.background.default,
                 }}
             >
                 <Stack direction={direction} spacing={1}>
@@ -59,21 +61,24 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                     >
                         SHARE
                     </Typography>
-                    <Link href="https://reddit.com" title="testshare">
-                        <Tooltip title="reddit" placement="left">
+
+                    <Link href="https://www.instagram.com/basilindajournal">
+                        <Tooltip title="instagram" placement="left">
                             <IconButton
-                                aria-label="reddit"
-                                id="share-reddit"
+                                aria-label="instagram"
+                                id="share-instagram"
                                 onClick={handleShare}
                             >
-                                <Reddit
-                                    color={color}
-                                    sx={{ fontSize: fontSize }}
+                                <Instagram
+                                    sx={{
+                                        fontSize: fontSize,
+                                        color: color,
+                                    }}
                                 />
                             </IconButton>
                         </Tooltip>
                     </Link>
-                    <Link href="https://www.facebook.com/CurbitureCharlottesville/">
+                    <Link href="https://www.facebook.com/basilindajournal">
                         <Tooltip title="facebook" placement="left">
                             <IconButton
                                 aria-label="facebook"
@@ -81,13 +86,12 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                                 onClick={handleShare}
                             >
                                 <FacebookIcon
-                                    color={color}
-                                    sx={{ fontSize: fontSize }}
+                                    sx={{ fontSize: fontSize, color: color }}
                                 />
                             </IconButton>
                         </Tooltip>
                     </Link>
-                    <Link href="https://twitter.com/curbiturecville">
+                    <Link href="https://twitter.com/basilindamag">
                         <Tooltip title="twitter" placement="left">
                             <IconButton
                                 aria-label="twitter"
@@ -95,8 +99,7 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                                 onClick={handleShare}
                             >
                                 <TwitterIcon
-                                    color={color}
-                                    sx={{ fontSize: fontSize }}
+                                    sx={{ fontSize: fontSize, color: color }}
                                 />
                             </IconButton>
                         </Tooltip>
