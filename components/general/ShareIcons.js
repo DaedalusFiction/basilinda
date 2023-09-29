@@ -1,11 +1,10 @@
 import { IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { Stack } from "@mui/system";
 import Link from "next/link";
-import Head from "next/head";
 import theme from "../../styles/themes/theme";
-import { Instagram } from "@mui/icons-material";
 
 const ShareIcons = ({ fontSize, color, direction }) => {
     const handleShare = (e) => {
@@ -69,7 +68,7 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                                 id="share-instagram"
                                 onClick={handleShare}
                             >
-                                <Instagram
+                                <InstagramIcon
                                     sx={{
                                         fontSize: fontSize,
                                         color: color,
