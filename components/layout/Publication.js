@@ -2,8 +2,9 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import ShareIcons from "../general/ShareIcons";
 import PublicationBody from "../publications/PublicationBody";
 import theme from "../../styles/themes/theme";
+import NativeImage from "../general/NativeImage";
 
-const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
+const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
     return (
         <Box>
             <Box
@@ -62,7 +63,22 @@ const Publication = ({ publication, sidebarItems, sidebarCategory }) => {
                             <ShareIcons color={theme.palette.primary.main} />
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={11}>
+                    <Grid item xs={12} md={10}>
+                        {image && (
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    marginBottom: "2rem",
+                                }}
+                            >
+                                <NativeImage
+                                    src={publication.URLs[0]}
+                                    maxSize={800}
+                                    alt="mixed media post"
+                                />
+                            </Box>
+                        )}
                         <Box>
                             <PublicationBody
                                 sidebarCategory={sidebarCategory}

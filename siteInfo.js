@@ -389,17 +389,17 @@ const galleryCategories = [
     },
     {
         name: "mixed media",
-        href: "/publications/mixed-media",
+        href: "/publications/mixedmedia",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
             {
                 name: "found poetry",
-                href: "/publications/mixed media/articles",
+                href: "/publications/mixedmedia/articles",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "visual art",
-                href: "/publications/mixed media/essays",
+                href: "/publications/mixedmedia/essays",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
