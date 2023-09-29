@@ -22,8 +22,8 @@ const ShareIcons = ({ fontSize, color, direction }) => {
                 link = `https://twitter.com/intent/tweet?url=${encodedAhref}`;
                 open(link);
                 break;
-            case "share-reddit":
-                link = `https://www.reddit.com/submit?url=${encodedAhref}`;
+            case "share-instagram":
+                link = `https://www.instagram.com`;
                 open(link);
                 break;
             default:
