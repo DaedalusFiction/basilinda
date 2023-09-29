@@ -16,12 +16,9 @@ export default function Home() {
                 sx={{
                     backgroundImage:
                         "linear-gradient(rgba(39, 45, 45, 1), rgba(39, 45, 45, 0.65)), url(/images/collage-background.webp)",
-                    // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
-                    // backgroundAttachment: "fixed",
                     paddingTop: "5rem",
                     position: "relative",
-                    // flexDirection: "column",
                 }}
             >
                 <Box
@@ -31,42 +28,7 @@ export default function Home() {
                         alignItems: "end",
                         gap: "1.5rem",
                     }}
-                >
-                    {/* <NativeImage src={hero.image.src} maxSize={100} /> */}
-                    {/* <Box
-                        sx={{
-                            padding: ".5em",
-                            border:
-                                "1px solid " + theme.palette.custom.lightMuted,
-                        }}
-                    >
-                        <Typography
-                            variant="h1"
-                            component="p"
-                            sx={{
-                                fontSize: "1.25rem",
-                                textAlign: "center",
-                                color: theme.palette.custom.light,
-                            }}
-                        >
-                            Est.
-                        </Typography>
-                        <Typography
-                            variant="h1"
-                            component="p"
-                            sx={{
-                                fontSize: "1.25rem",
-                                textAlign: "center",
-                                color: theme.palette.custom.light,
-                            }}
-                        >
-                            2023
-                        </Typography>
-                    </Box> */}
-                    {/* <Box sx={{ transform: "scaleX(-1)" }}>
-                        <NativeImage src={hero.image.src} maxSize={100} />
-                    </Box> */}
-                </Box>
+                ></Box>
                 <Container maxWidth="xl" disableGutters>
                     <Grid
                         container
@@ -178,8 +140,6 @@ export default function Home() {
                             <Box
                                 sx={{
                                     height: "100%",
-                                    // border:
-                                    //     "1px solid " + theme.palette.custom.lightMuted,
                                     padding: "4rem 0",
                                     display: "flex",
                                     alignItems: "center",
@@ -222,54 +182,54 @@ export default function Home() {
                                 ></Box>
                             </Link>
                         </Grid>
-                        <Grid container spacing={0}>
-                            <Grid item xs={12} md={6}>
-                                <Link href="/publications/genrequeer">
-                                    <Box
-                                        sx={{
-                                            backgroundImage:
-                                                "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/editorialsHeader.webp)",
-                                            backgroundSize: "cover",
-                                            padding: "12rem 0",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            justifyContent: "center",
-                                            cursor: "pointer",
-                                            transition: "300ms",
-                                            "&:hover": {
-                                                opacity: "60%",
-                                            },
-                                        }}
-                                    ></Box>
-                                </Link>
-                            </Grid>
-                            <Grid item xs={12} md={6}>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs={12} md={6}>
+                            <Link href="/publications/editorials">
                                 <Box
                                     sx={{
-                                        height: "100%",
-                                        // border:
-                                        //     "1px solid " + theme.palette.custom.lightMuted,
-                                        padding: "4rem 0",
+                                        backgroundImage:
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/editorialsHeader.webp)",
+                                        backgroundSize: "cover",
+                                        padding: "12rem 0",
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        flexDirection: "column",
-                                        gap: ".25rem",
+                                        cursor: "pointer",
+                                        transition: "300ms",
+                                        "&:hover": {
+                                            opacity: "60%",
+                                        },
                                     }}
-                                >
-                                    <Link href="/publications/editorials">
-                                        <Typography
-                                            variant="h2"
-                                            className="link"
-                                            sx={{
-                                                textAlign: "center",
-                                            }}
-                                        >
-                                            editorials
-                                        </Typography>
-                                    </Link>
-                                </Box>
-                            </Grid>
+                                ></Box>
+                            </Link>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Box
+                                sx={{
+                                    height: "100%",
+                                    // border:
+                                    //     "1px solid " + theme.palette.custom.lightMuted,
+                                    padding: "4rem 0",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexDirection: "column",
+                                    gap: ".25rem",
+                                }}
+                            >
+                                <Link href="/publications/editorials">
+                                    <Typography
+                                        variant="h2"
+                                        className="link"
+                                        sx={{
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        editorials
+                                    </Typography>
+                                </Link>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Container>
