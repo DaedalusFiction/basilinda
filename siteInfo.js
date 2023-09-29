@@ -388,7 +388,7 @@ const galleryCategories = [
         ],
     },
     {
-        name: "mixed-media",
+        name: "mixed media",
         href: "/publications/mixed-media",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
         subCategories: [
