@@ -25,7 +25,7 @@ const index = () => {
                     <br />
                     <Typography>
                         Basilinda accepts submissions in the form of poetry,
-                        letters, and mixed media. We are most interested in
+                        letters, and mixed media art. We are most interested in
                         genre-bending works exploring personal truths and
                         identities through strategic subversion with fine-tuned
                         tactic. To win this round, be less preoccupied with
