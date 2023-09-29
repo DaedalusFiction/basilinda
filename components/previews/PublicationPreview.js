@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import theme from "../../styles/themes/theme";
 
-const PublicationPreview = ({ item, id, category }) => {
+const PublicationPreview = ({ item, id, category, image }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9
     const [isLoaded, setIsLoaded] = useState(false);
     const handleLoaded = (naturalWidth, naturalHeight) => {
@@ -18,7 +18,7 @@ const PublicationPreview = ({ item, id, category }) => {
 
     return (
         <Box>
-            {/* {item.URLs && (
+            {image && item.URLs && (
                 <Link href={itemHref}>
                     <Fade in={isLoaded}>
                         <div>
@@ -39,7 +39,7 @@ const PublicationPreview = ({ item, id, category }) => {
                         </div>
                     </Fade>
                 </Link>
-            )} */}
+            )}
             <Box
                 sx={{
                     margin: ".5rem 0",

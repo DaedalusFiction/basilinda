@@ -3,7 +3,7 @@ import PageLayout from "./PageLayout";
 import { Container, Grid } from "@mui/material";
 import PublicationPreview from "../previews/PublicationPreview";
 
-const PublicationIndex = ({ category, items, isGrid }) => {
+const PublicationIndex = ({ category, items, isGrid, image }) => {
     // useEffect(() => {
     //     console.log(items.length);
     // }, []);
@@ -15,6 +15,7 @@ const PublicationIndex = ({ category, items, isGrid }) => {
                         return (
                             <Grid key={index} item xs={isGrid ? 4 : 12}>
                                 <PublicationPreview
+                                    image
                                     item={item.data}
                                     id={item.id}
                                     category={category}
