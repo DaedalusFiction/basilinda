@@ -15,7 +15,7 @@ const PublicationIndex = ({ category, items, isGrid, image }) => {
                         return (
                             <Grid key={index} item xs={isGrid ? 4 : 12}>
                                 <PublicationPreview
-                                    image
+                                    image={image}
                                     item={item.data}
                                     id={item.id}
                                     category={category}

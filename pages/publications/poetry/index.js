@@ -6,7 +6,7 @@ import PublicationIndex from "../../../components/layout/PublicationIndex";
 const category = "poetry";
 
 const index = ({ items }) => {
-    return <PublicationIndex category={category} items={items} />;
+    return <PublicationIndex category={category} items={items} image={false} />;
 };
 
 export const getServerSideProps = async (context) => {
