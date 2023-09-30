@@ -40,12 +40,13 @@ const PublicationPreview = ({ item, id, category, image }) => {
                     </Fade>
                 </Link>
             )}
-            <Box
-                sx={{
-                    margin: ".5rem 0",
-                }}
-            >
-                {/* <Box sx={{ display: "flex", gap: ".25em", flexWrap: "wrap" }}>
+            {!image && (
+                <Box
+                    sx={{
+                        margin: ".5rem 0",
+                    }}
+                >
+                    {/* <Box sx={{ display: "flex", gap: ".25em", flexWrap: "wrap" }}>
                     {item.subCategories.map((subCategory, index) => {
                         return (
                             <Typography key={index} variant="caption">
@@ -55,44 +56,53 @@ const PublicationPreview = ({ item, id, category, image }) => {
                     })}
                 </Box> */}
 
-                <Typography
-                    className="link"
-                    variant="h3"
-                    sx={{ marginBottom: ".25em" }}
-                >
-                    <Link href={itemHref}>{item.fields[0].value}</Link>
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        margin: ".25rem 0",
-                        fontSize: "1rem",
-                        color: theme.palette.custom.lightMuted,
-                    }}
-                >
-                    {item.fields[2].value}
-                </Typography>
-                <Box>
-                    <Typography
-                        variant="h6"
-                        sx={{ display: "inline-block", marginRight: ".35em" }}
-                    >
-                        by
-                    </Typography>
                     <Typography
                         className="link"
-                        variant="h5"
-                        component="p"
+                        variant="h3"
+                        sx={{ marginBottom: ".25em" }}
+                    >
+                        <Link href={itemHref}>{item.fields[0].value}</Link>
+                    </Typography>
+                    <Typography
+                        variant="body1"
                         sx={{
-                            textTransform: "uppercase",
-                            display: "inline-block",
+                            margin: ".25rem 0",
+                            fontSize: "1rem",
+                            color: theme.palette.custom.lightMuted,
                         }}
                     >
-                        <Link href={authorHref}>{item.fields[1].value}</Link>
+                        {item.fields[2].value}
                     </Typography>
+                    <Box>
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                display: "inline-block",
+                                marginRight: ".35em",
+                            }}
+                        >
+                            by
+                        </Typography>
+                        <Typography
+                            className="link"
+                            variant="h5"
+                            component="p"
+                            sx={{
+                                textTransform: "uppercase",
+                                display: "inline-block",
+                            }}
+                        >
+                            <Link href={authorHref}>
+                                {item.fields[1].value}
+                            </Link>
+                        </Typography>
+                    </Box>
+                    <Divider
+                        variant="inset"
+                        sx={{ margin: "1rem 0 1.5rem 0" }}
+                    />
                 </Box>
-            </Box>
-            <Divider variant="inset" sx={{ margin: "1rem 0 1.5rem 0" }} />
+            )}
         </Box>
     );
 };
