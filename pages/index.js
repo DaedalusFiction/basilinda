@@ -90,7 +90,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/lettersHeader.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/letters.GIF)",
                                         backgroundSize: "cover",
 
                                         padding: "12rem 0",
@@ -166,7 +166,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/creepyChildren.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/mmedia.gif)",
                                         backgroundSize: "cover",
 
                                         padding: "12rem 0",
@@ -189,7 +189,7 @@ export default function Home() {
                                 <Box
                                     sx={{
                                         backgroundImage:
-                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/editorialsHeader.webp)",
+                                            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/editorials.webp)",
                                         backgroundSize: "cover",
                                         padding: "12rem 0",
                                         display: "flex",
