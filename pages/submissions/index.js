@@ -44,7 +44,6 @@ const index = () => {
                     <br />
                     <br />
                     <Typography variant="h4">GENERAL GUIDELINES</Typography>
-
                     <List>
                         <ListItem>
                             <ListItemText>
