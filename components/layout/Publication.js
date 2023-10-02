@@ -3,6 +3,7 @@ import ShareIcons from "../general/ShareIcons";
 import PublicationBody from "../publications/PublicationBody";
 import theme from "../../styles/themes/theme";
 import NativeImage from "../general/NativeImage";
+import Link from "next/link";
 
 const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
     return (
@@ -42,9 +43,15 @@ const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
                         margin: ".25em 0",
                         fontSize: "1.25rem",
                         textAlign: "center",
+                        transition: "300ms",
+                        "&:hover": {
+                            color: theme.palette.primary.main,
+                        },
                     }}
                 >
-                    {publication.fields[1].value}
+                    <Link href={`/contributors/${publication.fields[1].value}`}>
+                        {publication.fields[1].value}
+                    </Link>
                 </Typography>
             </Box>
             <Container>

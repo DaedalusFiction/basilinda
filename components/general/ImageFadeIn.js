@@ -10,6 +10,7 @@ const ImageFadeIn = ({ src, alt, height, width }) => {
                 <Image
                     priority={false}
                     unoptimized
+                    loop="infinte"
                     width={width}
                     height={height}
                     src={src}

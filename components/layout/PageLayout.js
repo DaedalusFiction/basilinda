@@ -15,12 +15,12 @@ const PageLayout = ({ name, children }) => {
                     // "linear-gradient(rgba(233, 214, 214, 0.8), rgba(233, 224, 214, 0.8)), url(/images/collage-background.webp)",
                     backgroundSize: "cover",
                     // backgroundAttachment: "fixed",
-                    paddingTop: "8rem ",
                     position: "relative",
                     display: "flex",
                     // alignItems: "center",
                     justifyContent: "center",
                     // flexDirection: "column",
+                    padding: "8rem 0 2rem 0",
                 }}
             >
                 {/* <Meta siteName={name} /> */}
