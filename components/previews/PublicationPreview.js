@@ -18,7 +18,7 @@ const PublicationPreview = ({ item, id, category, image }) => {
 
     return (
         <Box>
-            {image && item.URLs && (
+            {image && item.URLs && !item.video && (
                 <Link href={itemHref}>
                     <Fade in={isLoaded}>
                         <div>
@@ -38,6 +38,17 @@ const PublicationPreview = ({ item, id, category, image }) => {
                             />
                         </div>
                     </Fade>
+                </Link>
+            )}
+            {item.URLs && item.video && (
+                <Link href={itemHref}>
+                    <video
+                        className="link link-image"
+                        width="100%"
+                        preload="metadata"
+                    >
+                        <source src={item.URLs[0]} type="video/mp4" />
+                    </video>
                 </Link>
             )}
             {!image && (

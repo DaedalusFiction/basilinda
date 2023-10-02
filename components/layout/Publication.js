@@ -79,11 +79,24 @@ const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
                                     marginBottom: "2rem",
                                 }}
                             >
-                                <NativeImage
-                                    src={publication.URLs[0]}
-                                    maxSize={800}
-                                    alt="mixed media post"
-                                />
+                                {publication.video ? (
+                                    <video
+                                        controls
+                                        width="100%"
+                                        // preload="metadata"
+                                    >
+                                        <source
+                                            src={publication.URLs[0]}
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                ) : (
+                                    <NativeImage
+                                        src={publication.URLs[0]}
+                                        maxSize={800}
+                                        alt="mixed media post"
+                                    />
+                                )}
                             </Box>
                         )}
                         <Box>

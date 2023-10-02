@@ -98,11 +98,11 @@ const FirestoreSubmission = ({
                             handleClick={handleMarkAsRead}
                             isDisabled={isDisabled}
                         />
-                        <RejectionButton
+                        {/* <RejectionButton
                             submission={submission}
                             updateCounter={updateCounter}
                             setUpdateCounter={setUpdateCounter}
-                        />
+                        /> */}
                     </Box>
                 </Box>
             )}

@@ -24,6 +24,7 @@ const FirebaseUploadForm = ({
     const [selectedImages, setSelectedImages] = useState([]);
     const [selectedTextFile, setSelectedTextFile] = useState(null);
     const [previews, setPreviews] = useState([]);
+    const [isVideo, setIsVideo] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const [fileError, setFileError] = useState("false");
     const fileInputRef = useRef();
@@ -45,11 +46,10 @@ const FirebaseUploadForm = ({
         if (e.target.files.length === 0) {
             return;
         }
-        if (e.target.files[0].size > 1097152) {
-            setFileError("File size must be less than 1MB");
-            return;
+        if (e.target.files[0].type.includes("video")) {
+            setIsVideo(true);
         }
-        setSelectedImages([...selectedImages, e.target.files[0]]);
+        setSelectedImages([e.target.files[0]]);
         setFileError(false);
         if (e.target.files && e.target.files[0]) {
             var reader = new FileReader();
@@ -72,10 +72,10 @@ const FirebaseUploadForm = ({
             setSelectedTextFile(null);
             return;
         }
-        if (e.target.files[0].size > 1097152) {
-            setFileError("File size must be less than 1MB");
-            return;
-        }
+        // if (e.target.files[0].size > 1097152) {
+        //     setFileError("File size must be less than 1MB");
+        //     return;
+        // }
         setSelectedTextFile(e.target.files[0]);
     };
 
@@ -127,18 +127,18 @@ const FirebaseUploadForm = ({
             })
         );
         //check if markdown file with file name exists
-        const markdownStorageRef = ref(storage, folder);
-        const markdownTask = await getDownloadURL(markdownStorageRef).then(
-            (res) => {
-                //file already exists
-                console.log("exists");
-                error = true;
-            },
-            (res) => {
-                //file doesn't exist
-                console.log("doesn't exist");
-            }
-        );
+        // const markdownStorageRef = ref(storage, folder);
+        // const markdownTask = await getDownloadURL(markdownStorageRef).then(
+        //     (res) => {
+        //         //file already exists
+        //         console.log("exists");
+        //         error = true;
+        //     },
+        //     (res) => {
+        //         //file doesn't exist
+        //         console.log("doesn't exist");
+        //     }
+        // );
 
         //check to see if document with selected Title already exists
         const checkTask = await getDoc(
@@ -232,6 +232,9 @@ const FirebaseUploadForm = ({
                                                     markdownFileName:
                                                         selectedTextFile.name,
                                                     URLs: downloadURLs,
+                                                    video: selectedImages[0].type.includes(
+                                                        "video"
+                                                    ),
                                                     dateUploaded: Date.now(),
                                                 }
                                             );
@@ -275,25 +278,25 @@ const FirebaseUploadForm = ({
                     variant="outlined"
                     onClick={() => {
                         fileInputRef.current.children[0].click();
-                        // fileInputRef.current.click();
                     }}
                 >
-                    select Image
+                    select image or video
                 </Button>
                 <Input
                     variant="contained"
-                    accept="image/jpeg, image/png"
+                    accept="image/jpeg, image/png, video/*"
                     type="file"
                     sx={{ display: "none" }}
                     ref={fileInputRef}
                     onChange={handleImagesChange}
                 >
-                    Select Image
+                    Select Image or video
                 </Input>
-                <br />
-                <Typography variant="caption">
-                    .jpg and .png only. File size must be less than 2MB.
-                </Typography>
+                {selectedImages.length > 0 && (
+                    <Typography sx={{ marginTop: ".5em" }}>
+                        {selectedImages[0].name}
+                    </Typography>
+                )}
             </Box>
             <Box>
                 <Button
@@ -321,7 +324,7 @@ const FirebaseUploadForm = ({
                     </Typography>
                 )}
             </Box>
-            <Grid container spacing={1}>
+            {/* <Grid container spacing={1}>
                 {previews.length > 0 &&
                     previews.map((preview, index) => {
                         return (
@@ -355,7 +358,7 @@ const FirebaseUploadForm = ({
                             </Grid>
                         );
                     })}
-            </Grid>
+            </Grid> */}
 
             {formData.fields.map((field, index) => {
                 return (
