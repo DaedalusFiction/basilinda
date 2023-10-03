@@ -23,7 +23,7 @@ const MyApp = (props) => {
                 <CssBaseline />
                 <Script
                     strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=G-NXV0KGQHF7"
+                    src="https://www.googletagmanager.com/gtag/js?id=G-PNQBW8DFZV"
                 />
                 <Script
                     id="google-analytics"
@@ -33,7 +33,7 @@ const MyApp = (props) => {
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
-                                gtag('config', 'G-NXV0KGQHF7');
+                                gtag('config', 'G-PNQBW8DFZV');
                                 `,
                     }}
                 />
