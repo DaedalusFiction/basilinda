@@ -35,6 +35,7 @@ const Footer = () => {
                         </Typography>
 
                         <Typography
+                            variant="span"
                             sx={{ "&:hover": { textDecoration: "underline" } }}
                         >
                             <a
@@ -43,6 +44,19 @@ const Footer = () => {
                                 rel="noreferrer"
                             >
                                 Fictional Web
+                            </a>
+                        </Typography>
+                        <Typography variant="span">&</Typography>
+                        <Typography
+                            variant="span"
+                            sx={{ "&:hover": { textDecoration: "underline" } }}
+                        >
+                            <a
+                                href="https://www.dietcoke.com"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Diet Coke
                             </a>
                         </Typography>
                     </Box>
