@@ -18,41 +18,45 @@ const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
                     padding: "12rem 0 4rem 0",
                 }}
             >
-                <Typography
-                    sx={{
-                        margin: ".25em 0",
-                        fontSize: "3rem",
-                        textAlign: "center",
-                    }}
-                    variant="h1"
-                >
-                    {publication.fields[0].value}
-                </Typography>
-                <Typography
-                    sx={{
-                        fontStyle: "italic",
-                        margin: ".25em 0",
-                        fontSize: ".75rem",
-                        textAlign: "center",
-                    }}
-                >
-                    by
-                </Typography>
-                <Typography
-                    sx={{
-                        margin: ".25em 0",
-                        fontSize: "1.25rem",
-                        textAlign: "center",
-                        transition: "300ms",
-                        "&:hover": {
-                            color: theme.palette.primary.main,
-                        },
-                    }}
-                >
-                    <Link href={`/contributors/${publication.fields[1].value}`}>
-                        {publication.fields[1].value}
-                    </Link>
-                </Typography>
+                <Container maxWidth="md">
+                    <Typography
+                        sx={{
+                            margin: ".25em 0",
+                            fontSize: "3rem",
+                            textAlign: "center",
+                        }}
+                        variant="h1"
+                    >
+                        {publication.fields[0].value}
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontStyle: "italic",
+                            margin: ".25em 0",
+                            fontSize: ".75rem",
+                            textAlign: "center",
+                        }}
+                    >
+                        by
+                    </Typography>
+                    <Typography
+                        sx={{
+                            margin: ".25em 0",
+                            fontSize: "1.25rem",
+                            textAlign: "center",
+                            transition: "300ms",
+                            "&:hover": {
+                                color: theme.palette.primary.main,
+                            },
+                        }}
+                    >
+                        <Link
+                            href={`/contributors/${publication.fields[1].value}`}
+                        >
+                            {publication.fields[1].value}
+                        </Link>
+                    </Typography>
+                </Container>
             </Box>
             <Container>
                 <Grid container>
