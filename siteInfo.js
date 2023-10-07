@@ -321,31 +321,31 @@ const rightPages = [
 
 const galleryCategories = [
     {
-        name: "fiction",
-        href: "/publications/fiction",
+        name: "Letters",
+        href: "/publications/letters",
         image: {
             url: "/images/placeholder.webp",
             alt: "alt gallery image text",
         },
         subCategories: [
-            {
-                name: "short story",
-                href: "/publications/fiction/shortstories",
-                image: {
-                    url: "/images/placeholder.webp",
-                    alt: "alt gallery image text",
-                },
-            },
-            {
-                name: "flash fiction",
-                href: "/publications/fiction/flash",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
-            {
-                name: "novella",
-                href: "/publications/fiction/novellas",
-                image: { url: "/images/placeholder.webp", alt: "alt text" },
-            },
+            // {
+            //     name: "short story",
+            //     href: "/publications/fiction/shortstories",
+            //     image: {
+            //         url: "/images/placeholder.webp",
+            //         alt: "alt gallery image text",
+            //     },
+            // },
+            // {
+            //     name: "flash fiction",
+            //     href: "/publications/fiction/flash",
+            //     image: { url: "/images/placeholder.webp", alt: "alt text" },
+            // },
+            // {
+            //     name: "novella",
+            //     href: "/publications/fiction/novellas",
+            //     image: { url: "/images/placeholder.webp", alt: "alt text" },
+            // },
         ],
     },
     {
