@@ -16,7 +16,7 @@ const PageLayout = ({ name, children }) => {
                     padding: "8rem 0 2rem 0",
                 }}
             >
-                <Container maxWidth="md">
+                <Container maxWidth="xl">
                     <Typography
                         variant="h1"
                         sx={{

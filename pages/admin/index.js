@@ -5,12 +5,10 @@ import login from "../../utility/login.js";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import FirebaseUploadForm from "../../components/admin/FirebaseUploadForm.js";
-import FirestoreListing from "../../components/admin/FirestoreListing.js";
 import { contributorConfig, galleryConfig } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout.js";
 import FirestoreSubmissionsListing from "../../components/admin/FirestoreSubmissionsListing.js";
 import FirebaseContributorUploadForm from "../../components/admin/FirebaseContributorUploadForm.js";
-import FirebaseContributorListing from "../../components/admin/FirebaseContributorListing.js";
 import theme from "../../styles/themes/theme.js";
 
 const Admin = () => {
@@ -55,25 +53,35 @@ const Admin = () => {
                         >
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
-                                    <Container maxWidth="lg">
-                                        <FirestoreSubmissionsListing
-                                            // category={galleryConfig.category}
-                                            title="Text Submissions"
-                                            folder="TextSubmissions"
-                                            updateCounter={updateCounter}
-                                            setUpdateCounter={setUpdateCounter}
-                                        />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <FirestoreSubmissionsListing
-                                            // category={galleryConfig.category}
-                                            title="Image Submissions"
-                                            folder="ImageSubmissions"
-                                            updateCounter={updateCounter}
-                                            setUpdateCounter={setUpdateCounter}
-                                        />
+                                    <Container maxWidth="xl">
+                                        <Grid container>
+                                            <Grid item xs={12} md={6}>
+                                                <FirestoreSubmissionsListing
+                                                    // category={galleryConfig.category}
+                                                    title="Text Submissions"
+                                                    folder="TextSubmissions"
+                                                    updateCounter={
+                                                        updateCounter
+                                                    }
+                                                    setUpdateCounter={
+                                                        setUpdateCounter
+                                                    }
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12} md={6}>
+                                                <FirestoreSubmissionsListing
+                                                    // category={galleryConfig.category}
+                                                    title="Image Submissions"
+                                                    folder="ImageSubmissions"
+                                                    updateCounter={
+                                                        updateCounter
+                                                    }
+                                                    setUpdateCounter={
+                                                        setUpdateCounter
+                                                    }
+                                                />
+                                            </Grid>
+                                        </Grid>
                                     </Container>
                                 </Grid>
 
@@ -85,14 +93,7 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
-                                {/* <Grid item xs={12} md={6}>
-                                    <FirestoreListing
-                                        // category={galleryConfig.category}
-                                        folder="publications"
-                                        updateCounter={updateCounter}
-                                        setUpdateCounter={setUpdateCounter}
-                                    />
-                                </Grid> */}
+
                                 <Grid item xs={12} md={6}>
                                     <FirebaseContributorUploadForm
                                         config={contributorConfig}
