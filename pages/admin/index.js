@@ -10,6 +10,7 @@ import PageLayout from "../../components/layout/PageLayout.js";
 import FirestoreSubmissionsListing from "../../components/admin/FirestoreSubmissionsListing.js";
 import FirebaseContributorUploadForm from "../../components/admin/FirebaseContributorUploadForm.js";
 import theme from "../../styles/themes/theme.js";
+import PublicationsPanel from "../../components/admin/PublicationsPanel.js";
 
 const Admin = () => {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -102,14 +103,13 @@ const Admin = () => {
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
-                                {/* <Grid item xs={12} md={6}>
-                                    <FirebaseContributorListing
-                                        // category={galleryConfig.category}
-                                        folder="contributors"
+                                <Grid item xs="12">
+                                    <PublicationsPanel
+                                        folder="publications"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
-                                </Grid> */}
+                                </Grid>
                             </Grid>
                         </Box>
                     ) : (
