@@ -57,7 +57,7 @@ theme = createTheme(theme, {
             // color: theme.palette.primary.off,
             fontWeight: "400",
             // lineHeight: ".85em",
-            fontSize: "3.5rem",
+            fontSize: "2.75rem",
             letterSpacing: ".025em",
         },
         h2: {
