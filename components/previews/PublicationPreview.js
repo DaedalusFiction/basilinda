@@ -42,16 +42,42 @@ const PublicationPreview = ({ item, id, category, image }) => {
             )}
             {item.URLs && item.video && (
                 <Link href={itemHref}>
-                    <video
-                        className="link link-image"
-                        width="100%"
-                        preload="metadata"
-                    >
-                        <source
-                            src={item.URLs[0] + "#t=0.1"}
-                            type="video/mp4"
-                        />
-                    </video>
+                    <Box sx={{ position: "relative" }}>
+                        <Box sx={{ position: "relative", zIndex: "5" }}>
+                            <video
+                                className="link link-image"
+                                width="100%"
+                                preload="metadata"
+                            >
+                                <source
+                                    src={item.URLs[0] + "#t=0.1"}
+                                    type="video/mp4"
+                                />
+                            </video>
+                        </Box>
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                height: "90%",
+                                width: "100%",
+                                zIndex: "4",
+                                top: "0",
+                                backgroundColor: theme.palette.custom.dark,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    textAlign: "center",
+                                    color: theme.palette.custom.lightMuted,
+                                }}
+                            >
+                                Preview Loading...
+                            </Typography>
+                        </Box>
+                    </Box>
                 </Link>
             )}
             {!image && (

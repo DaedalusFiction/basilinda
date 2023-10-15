@@ -40,7 +40,7 @@ const Header = ({ light }) => {
                 width: "100%",
                 top: "0",
                 left: "0",
-                zIndex: "2",
+                zIndex: "10",
                 padding: "1rem 0",
                 transition: "400ms",
                 background:
