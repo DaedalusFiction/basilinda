@@ -49,7 +49,7 @@ const FirebaseUploadForm = ({
         if (e.target.files[0].type.includes("video")) {
             setIsVideo(true);
         }
-        setSelectedImages([e.target.files[0]]);
+        setSelectedImages([...selectedImages, e.target.files[0]]);
         setFileError(false);
         if (e.target.files && e.target.files[0]) {
             var reader = new FileReader();
@@ -116,29 +116,14 @@ const FirebaseUploadForm = ({
                 const task = await getDownloadURL(storageRef).then(
                     (res) => {
                         //file already exists
-                        console.log("exists");
                         error = true;
                     },
                     (res) => {
                         //file doesn't exist
-                        console.log("doesn't exist");
                     }
                 );
             })
         );
-        //check if markdown file with file name exists
-        // const markdownStorageRef = ref(storage, folder);
-        // const markdownTask = await getDownloadURL(markdownStorageRef).then(
-        //     (res) => {
-        //         //file already exists
-        //         console.log("exists");
-        //         error = true;
-        //     },
-        //     (res) => {
-        //         //file doesn't exist
-        //         console.log("doesn't exist");
-        //     }
-        // );
 
         //check to see if document with selected Title already exists
         const checkTask = await getDoc(
@@ -293,11 +278,28 @@ const FirebaseUploadForm = ({
                     Select Image or video
                 </Input>
                 {selectedImages.length > 0 && (
-                    <Typography sx={{ marginTop: ".5em" }}>
-                        {selectedImages[0].name}
-                    </Typography>
+                    <Box>
+                        {selectedImages.map((image, index) => {
+                            return (
+                                <Typography
+                                    key={index}
+                                    sx={{ margin: ".25em 0" }}
+                                >
+                                    {image.name}
+                                </Typography>
+                            );
+                        })}
+                    </Box>
                 )}
             </Box>
+            <Typography variant="caption">
+                <em>
+                    Last image uploaded will act as thumbnail in preview gallery
+                </em>
+            </Typography>
+            <Typography variant="caption" sx={{ marginBottom: "1rem" }}>
+                <em>Upload only images or video, not both</em>
+            </Typography>
             <Box>
                 <Button
                     variant="outlined"

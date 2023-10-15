@@ -90,16 +90,31 @@ const Publication = ({ publication, sidebarItems, sidebarCategory, image }) => {
                                         // preload="metadata"
                                     >
                                         <source
-                                            src={publication.URLs[0]}
+                                            src={publication.URLs[0] + "#t=0.1"}
                                             type="video/mp4"
                                         />
                                     </video>
                                 ) : (
-                                    <NativeImage
-                                        src={publication.URLs[0]}
-                                        maxSize={800}
-                                        alt="mixed media post"
-                                    />
+                                    <Box>
+                                        {publication.URLs.map(
+                                            (image, index) => {
+                                                return (
+                                                    <Box
+                                                        key={index}
+                                                        sx={{
+                                                            margin: ".5rem 0",
+                                                        }}
+                                                    >
+                                                        <NativeImage
+                                                            src={image}
+                                                            maxSize={800}
+                                                            alt="mixed media post"
+                                                        />
+                                                    </Box>
+                                                );
+                                            }
+                                        )}
+                                    </Box>
                                 )}
                             </Box>
                         )}

@@ -47,7 +47,10 @@ const PublicationPreview = ({ item, id, category, image }) => {
                         width="100%"
                         preload="metadata"
                     >
-                        <source src={item.URLs[0]} type="video/mp4" />
+                        <source
+                            src={item.URLs[0] + "#t=0.1"}
+                            type="video/mp4"
+                        />
                     </video>
                 </Link>
             )}
