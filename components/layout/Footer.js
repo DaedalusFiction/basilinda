@@ -39,24 +39,11 @@ const Footer = () => {
                             sx={{ "&:hover": { textDecoration: "underline" } }}
                         >
                             <a
-                                href="https://www.fictionalweb.com"
+                                href="https://redbrickinc.com"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Fictional Web
-                            </a>
-                        </Typography>
-                        <Typography variant="span">&</Typography>
-                        <Typography
-                            variant="span"
-                            sx={{ "&:hover": { textDecoration: "underline" } }}
-                        >
-                            <a
-                                href="https://www.dietcoke.com"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Diet Coke
+                                Red Brick Inc.
                             </a>
                         </Typography>
                     </Box>

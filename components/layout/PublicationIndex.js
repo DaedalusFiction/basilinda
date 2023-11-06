@@ -38,32 +38,66 @@ const PublicationIndex = ({ category, items, isGrid, image }) => {
                         })}
                     </Grid>
                 )}
-                <Grid container spacing={2}>
-                    {image &&
-                        columns &&
-                        columns.length > 0 &&
-                        columns.map((column, index) => {
-                            return (
-                                <Grid item xs={12} sm={6} md={4} key={index}>
-                                    {column.map((item, index) => {
-                                        return (
-                                            <Box
-                                                key={index}
-                                                sx={{ margin: "1rem 0" }}
-                                            >
-                                                <PublicationPreview
-                                                    image={image}
-                                                    item={item.data}
-                                                    id={item.id}
-                                                    category={category}
-                                                />
-                                            </Box>
-                                        );
-                                    })}
-                                </Grid>
-                            );
-                        })}
-                </Grid>
+                {image && (
+                    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                        <Grid container spacing={2}>
+                            {columns &&
+                                columns.length > 0 &&
+                                columns.map((column, index) => {
+                                    return (
+                                        <Grid
+                                            item
+                                            xs={12}
+                                            sm={6}
+                                            md={4}
+                                            key={index}
+                                        >
+                                            {column.map((item, index) => {
+                                                return (
+                                                    <Box
+                                                        key={index}
+                                                        sx={{
+                                                            margin: "1rem 0",
+                                                        }}
+                                                    >
+                                                        <PublicationPreview
+                                                            image={image}
+                                                            item={item.data}
+                                                            id={item.id}
+                                                            category={category}
+                                                        />
+                                                    </Box>
+                                                );
+                                            })}
+                                        </Grid>
+                                    );
+                                })}
+                        </Grid>
+                    </Box>
+                )}
+                {image && (
+                    <Box
+                        sx={{
+                            display: { xs: "flex", md: "none" },
+                            marginTop: "2rem",
+                        }}
+                    >
+                        <Grid container spacing={4}>
+                            {items.map((item, index) => {
+                                return (
+                                    <Grid key={index} item xs={12}>
+                                        <PublicationPreview
+                                            image={image}
+                                            item={item.data}
+                                            id={item.id}
+                                            category={category}
+                                        />
+                                    </Grid>
+                                );
+                            })}
+                        </Grid>
+                    </Box>
+                )}
             </Container>
         </PageLayout>
     );
