@@ -5,7 +5,6 @@ import theme from "../../styles/themes/theme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { CleaningServices } from "@mui/icons-material";
 
 const PublicationsPanel = ({ updateCounter, setUpdateCounter, folder }) => {
     const [isShowing, setIsShowing] = useState(false);
@@ -45,7 +44,9 @@ const PublicationsPanel = ({ updateCounter, setUpdateCounter, folder }) => {
                                 justifyContent: "space-between",
                             }}
                         >
-                            <Typography>{publication.data().id}</Typography>
+                            <Typography>
+                                {publication.data().fields[0].value}
+                            </Typography>
                             <ButtonWithConfirm
                                 buttonText="Delete"
                                 dialogText="Delete this item from publications?"
@@ -53,9 +54,7 @@ const PublicationsPanel = ({ updateCounter, setUpdateCounter, folder }) => {
                                 isDisabled={isDisabled}
                                 handleClick={() => {
                                     console.log(publication.data().id);
-                                    handleDeletePublication(
-                                        publication.data().id
-                                    );
+                                    handleDeletePublication(publication.id);
                                 }}
                             />
                         </Box>
