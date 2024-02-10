@@ -104,12 +104,12 @@ const index = () => {
                                     Sydney Cox is a person* based out of
                                     Charlottesville, Virginia. She graduated
                                     from The University of Virginia in 2022 with
-                                    degrees in English and chemistry. You know
-                                    she is around when—in the midst of silence
-                                    or sheer chaos—clackety croaks erupt from
-                                    the throat of an 8-inch jumbo frog guiro.
-                                    Her current special interests are gonads,
-                                    found poetry, and the Surinam toad.
+                                    a degree in English. You know she is around
+                                    when—in the midst of silence or sheer
+                                    chaos—clackety croaks erupt from the throat
+                                    of an 8-inch jumbo frog guiro. Her current
+                                    special interests are gonads, found poetry,
+                                    and the Surinam toad.
                                 </Typography>
                                 <Typography
                                     variant="body2"
